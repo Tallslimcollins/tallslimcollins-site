@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decadence Manor: Porch Lounging, Architectural Salvage, and Madison Ave After Dark — TallSlimCollins</title>
+  <meta name="description" content="Madison Avenue, Midtown Memphis. Salvaged clocks, southern magnolias, bohemian gatherings, and the living gothic charm of lost Midtown.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Decadence Manor: Porch Lounging, Architectural Salvage, and Madison Ave After Dark">
+  <meta property="og:description" content="An archival tribute to Madison Avenue's legendary gathering place for artists, eccentrics, and Midtown night owls.">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Threadless Confirmed Active Palette */
+      --sage: #517A71;
+      --sage-dark: #38554E;
+      --sage-deep: #243B35;
+      --sage-light: #709990;
+      --parchment: #DFC08C;
+      --parchment-light: #F7EFE1;
+      --parchment-deep: #CFAF79;
+      --clay: #E5CDC9;
+      --clay-tint: #F8EFEF;
+      --ink: #000000;
+      --charcoal: #1F2825;
+      --white: #FFFFFF;
+
+      /* Canvas & Surfaces (Threadless Match) */
+      --bg-body: #DFC08C;          /* Warm golden parchment canvas */
+      --bg-header: #517A71;        /* Sage banner */
+      --bg-card: #FFFFFF;          /* Crisp white editorial surface */
+      --bg-card-hover: #FFFDF9;
+      --text-main: #000000;        /* Bold black typography */
+      --text-muted: #2E3B37;       /* Readable dark slate subtext */
+      --border: rgba(0, 0, 0, 0.12);
+      --border-focus: #517A71;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: var(--sage-dark);
+      color: var(--parchment-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar a {
+      color: var(--parchment);
+      text-decoration: underline;
+      margin-left: 8px;
+      font-weight: 700;
+    }
+
+    /* Navigation - Threadless Sage Banner */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--sage);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-badge-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--parchment-light);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--clay);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--parchment-light);
+    }
+
+    nav a:hover {
+      color: #FFFFFF;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: var(--radius);
+      color: #FFFFFF !important;
+      font-size: 0.84rem !important;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-bar {
+      padding: 24px 0 16px;
+      font-size: 0.82rem;
+      color: var(--sage-deep);
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb-bar a {
+      color: var(--ink);
+    }
+
+    .breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+      opacity: 0.5;
+    }
+
+    /* Main Article Layout */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      padding: 10px 0 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    /* The Memoir Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 50px 48px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 640px) {
+      .story-card {
+        padding: 30px 22px;
+      }
+    }
+
+    .story-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      background: rgba(81, 122, 113, 0.12);
+      border: 1px solid rgba(81, 122, 113, 0.3);
+      color: var(--sage-deep);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 18px;
+    }
+
+    .story-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.3rem, 4vw, 3.2rem);
+      color: var(--ink);
+      line-height: 1.12;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+
+    .story-headline em {
+      font-style: italic;
+      color: var(--sage-dark);
+    }
+
+    .story-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 34px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item .bullet {
+      color: var(--sage);
+      font-size: 0.75rem;
+    }
+
+    /* Editorial Typography */
+    .story-body {
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      line-height: 1.85;
+    }
+
+    .story-body p {
+      margin-bottom: 24px;
+    }
+
+    .story-body p.drop-cap::first-letter {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 4.6rem;
+      float: left;
+      line-height: 0.82;
+      margin-right: 14px;
+      margin-top: 4px;
+      color: var(--sage-deep);
+      font-weight: 700;
+    }
+
+    .pull-quote {
+      margin: 40px 0;
+      padding: 28px 36px;
+      background: var(--clay-tint);
+      border-left: 4px solid var(--sage);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-style: normal;
+      color: var(--sage-deep);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .author-signoff {
+      margin-top: 50px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .author-badge-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    }
+
+    .author-text h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .author-text p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* Right Column: Physical Merch Artifact & Conversion Card */
+    .artifact-sidebar {
+      position: sticky;
+      top: 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .artifact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .artifact-card:hover {
+      border-color: var(--sage);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+    }
+
+    .artifact-header {
+      padding: 12px 20px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .artifact-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--parchment);
+    }
+
+    .artifact-status {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: var(--sage);
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .artifact-stage {
+      background: var(--clay-tint);
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge-bestseller {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--ink);
+      color: #FFFFFF;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.1;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+
+    .artifact-shirt-img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.16));
+      border-radius: 4px;
+    }
+
+    .artifact-details {
+      padding: 24px;
+    }
+
+    .artifact-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .artifact-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .artifact-price {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .artifact-price-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .artifact-specs {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #364440;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .artifact-specs li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .artifact-specs li::before {
+      content: "✓";
+      color: var(--sage);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .btn-buy-threadless {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--ink);
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-buy-threadless:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .guarantee-note {
+      text-align: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* Footer - Dark Sage Tone */
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+      padding: 60px 0 40px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col h5 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--parchment);
+      margin-bottom: 16px;
+    }
+
+    .footer-col p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .footer-col a:hover {
+      color: var(--parchment);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar in Official Threadless Sage -->
+  <div class="top-bar">
+    ★ Official Threadless Store Drops Active · Wearable Memphis Memoirs & Artifacts
+    <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Shop Threadless Store →</a>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand-mark">
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="TallSlimCollins Tattoo Seal" class="brand-badge-img">
+          <div class="brand-text">
+            <span class="brand-title">TallSlimCollins</span>
+            <span class="brand-subtitle">Stevan Collins Lazich · Memphis, TN</span>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#dispatches">Dispatches</a></li>
+          <li><a href="story-dancing-jimmy.html">Dancing Jimmy</a></li>
+          <li><a href="story-babylon-cafe.html">Babylon Café</a></li>
+          <li><a href="story-antenna-club.html">Antenna Club</a></li>
+          <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
+            Shop Threadless
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container breadcrumb-bar">
+    <a href="index.html">TallSlimCollins</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="index.html#collections">Memphis in the Dark</a>
+    <span class="breadcrumb-sep">/</span>
+    <span style="color: var(--ink);">Decadence Manor (Madison Ave)</span>
+  </div>
+
+  <!-- Main Article Layout -->
+  <main class="container">
+    <div class="article-layout">
+      
+      <!-- Left Column: The Story -->
+      <article class="story-card">
+        <div class="story-badge">
+          ★ Field Dispatch #04 · Memphis in the Dark
+        </div>
+        
+        <h1 class="story-headline">
+          Decadence Manor:<br><em>Porch Lounging, Architectural Salvage, and Madison Ave After Dark</em>
+        </h1>
+
+        <div class="story-meta-bar">
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>Madison Avenue, Midtown</span>
+          </div>
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>Midtown Bohemian Era</span>
+          </div>
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>Stevan Collins Lazich</span>
+          </div>
+        </div>
+
+        <div class="story-body">
+          <p class="drop-cap">
+            If you ever spent a summer night walking the sidewalk of Madison Avenue in the golden age of Midtown, you knew the porch before you even reached the gate. It was a sprawling wooden manor framed by blooming Southern magnolias, thorny heirloom roses, and an uncurated garden of architectural salvage.
+          </p>
+
+          <p>
+            We called it Decadence Manor. It wasn’t a formal institution or an uptight historic landmark—it was a living, breathing sanctuary for Midtown artists, antique hounds, night owls, and lovable eccentrics who refused to live in beige suburbs.
+          </p>
+
+          <p>
+            The front yard was an open-air theater of Southern bohemian life. Weathered grandfather clock faces rested against picket fences. Cast-iron patio sets sat next to vintage motorcycles and classic cars parked haphazardly on the grass. You’d find characters lounging across velvet daybeds dragged onto the front porch, sipping iced tea or cold beer while someone played acoustic guitar and the cicadas roared in the canopy above.
+          </p>
+
+          <div class="pull-quote">
+            “Decadence Manor was the soul of Midtown Memphis: unpolished, deeply cultured, unapologetically gothic, and infinitely welcoming. You didn't knock; you just walked up the porch steps, grabbed a seat, and joined the conversation.”
+            <cite>— Stevan Collins Lazich · The Dispatch</cite>
+          </div>
+
+          <p>
+            That era taught me everything about the power of place. Memphis has always had a strange, poetic gravity where high art and back-alley grease sit together on the exact same porch. It taught me to look at discarded moldings, antique woodwork, and vintage signage not as trash, but as sacred cultural artifacts waiting to be given a second life.
+          </p>
+
+          <p>
+            Decadence Manor lives on in the memory of everyone who ever sat on that porch until three in the morning watching headlights sweep across Madison Avenue.
+          </p>
+
+          <p>
+            This design is an archival tribute to the house, the tribe, and the wild, creative spirit of lost Midtown Memphis.
+          </p>
+        </div>
+
+        <div class="author-signoff">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="Stevan Collins Lazich Seal" class="author-badge-img">
+          <div class="author-text">
+            <h4>Stevan Collins Lazich (TallSlimCollins)</h4>
+            <p>Artist, craftsman, and chronicler of living Mid-South memory. Operating from Spottswood House, Memphis, TN.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Column: Merch Artifact Sidebar -->
+      <aside class="artifact-sidebar">
+        
+        <!-- Live Threadless Merch Card -->
+        <div class="artifact-card">
+          <div class="artifact-header">
+            <span class="artifact-label">The Physical Artifact</span>
+            <span class="artifact-status">Live Drop</span>
+          </div>
+
+          <div class="artifact-stage">
+            <div class="badge-bestseller">Best<br>Seller</div>
+            <img src="assets/product-decadence-manor.png" alt="Decadence Manor Memphis Lost Midtown Tee" class="artifact-shirt-img">
+          </div>
+
+          <div class="artifact-details">
+            <div class="artifact-name">Decadence Manor Memphis Lost Midtown Tee</div>
+            
+            <div class="artifact-price-row">
+              <span class="artifact-price">$28.00</span>
+              <span class="artifact-price-sub">Threadless Extra-Soft Classic Tee</span>
+            </div>
+
+            <ul class="artifact-specs">
+              <li>Madison Ave Archival Southern Gothic Crest</li>
+              <li>100% Combed Ringspun Heavyweight Cotton</li>
+              <li>Available in Classic Black & Vintage Heather</li>
+              <li>Direct fulfillment via Threadless Artist Shop</li>
+            </ul>
+
+            <!-- DIRECT CONVERSION CTA TO THREADLESS -->
+            <a href="https://tallslimcollins.threadless.com/designs/decadence-manor-memphis-lost-midtown-tee" target="_blank" rel="noopener" class="btn-buy-threadless">
+              Claim Decadence Shirt on Threadless →
+            </a>
+
+            <div class="guarantee-note">
+              Threadless 100% happiness guarantee with hassle-free returns.
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Spottswood House</h5>
+          <p>
+            Operating out of the historic Spottswood corridor in Memphis, Tennessee.<br>
+            Preserving narrative, architectural honesty, and Mid-South cultural memory.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <ul>
+            <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival by SCL</a></li>
+            <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Fulfillment Shop</a></li>
+            <li><a href="story-dancing-jimmy.html">Dancing Jimmy Lore</a></li>
+            <li><a href="story-babylon-cafe.html">Babylon Café Dispatch</a></li>
+            <li><a href="story-antenna-club.html">The Antenna Club Lore</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <p>
+            Stevan Collins Lazich<br>
+            <a href="mailto:stevancollinslazich@gmail.com" style="color: var(--parchment);">stevancollinslazich@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stevan Collins Lazich. All rights reserved.</div>
+        <div>TallSlimCollins &trade; · Memphis, TN</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

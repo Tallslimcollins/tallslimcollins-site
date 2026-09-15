@@ -1,0 +1,446 @@
+/* ==========================================================================
+   TALLSLIMCOLLINS ARCHIVAL DOSSIER & SCRAPBOOK DESIGN SYSTEM
+   Visual System Specification: The Archival Dossier & Scrapbook Timeline
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Archival Spec Tokens */
+  --paper-bg: #F4F1EA;              /* Unbleached warm stock */
+  --paper-bg-card: #FFFFFF;         /* Crisp archival photo card */
+  --ink-dark: #121212;              /* Charcoal black */
+  --ink-inverted-bg: #181818;       /* Matte black container */
+  --ink-inverted-text: #EAE6DF;     /* Aged cream text */
+  --accent-red: #C0392B;            /* Archival stamp red */
+  --accent-gold: #C5A059;           /* Monospace labels & hairline rules */
+  --rule-border: 1px solid #2A2A2A; /* Crisp hairline */
+  --rule-hairline: rgba(0, 0, 0, 0.12);
+
+  /* Threadless Confirmed Active Palette Integration */
+  --sage: #517A71;
+  --sage-dark: #38554E;
+  --sage-deep: #243B35;
+  --parchment: #DFC08C;
+  --parchment-light: #F7EFE1;
+  --clay: #E5CDC9;
+  --clay-tint: #F8EFEF;
+
+  /* Font Families */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Space Mono', monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+/* ==========================================================================
+   ARCHIVAL COMPONENT 1: .archive-stamp
+   ========================================================================== */
+.archive-stamp {
+  display: inline-block;
+  border: 2px solid var(--accent-red);
+  color: var(--accent-red);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  transform: rotate(-3deg);
+  border-radius: var(--radius-sm);
+  background: rgba(192, 57, 43, 0.04);
+  box-shadow: 0 1px 4px rgba(192, 57, 43, 0.1);
+  user-select: none;
+  line-height: 1.2;
+}
+
+.archive-stamp-gold {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(197, 160, 89, 0.06);
+  box-shadow: 0 1px 4px rgba(197, 160, 89, 0.15);
+  transform: rotate(2deg);
+}
+
+.archive-stamp-sage {
+  border-color: var(--sage);
+  color: var(--sage-deep);
+  background: rgba(81, 122, 113, 0.08);
+  box-shadow: 0 1px 4px rgba(81, 122, 113, 0.15);
+  transform: rotate(-1.5deg);
+}
+
+/* ==========================================================================
+   ARCHIVAL COMPONENT 2: .scrap-card (Physical Artifact Container)
+   ========================================================================== */
+.scrap-card {
+  background: #FFFFFF;
+  padding: 12px 12px 18px 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E0DCD3;
+  border-radius: var(--radius-sm);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrap-card:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.scrap-card:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+
+.scrap-card:hover {
+  transform: rotate(0deg) translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14), 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  border-color: var(--accent-gold);
+}
+
+/* Tape Accent on Card Corners */
+.scrap-card::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 30%;
+  width: 70px;
+  height: 18px;
+  background: rgba(223, 192, 140, 0.45);
+  border: 1px dashed rgba(197, 160, 89, 0.6);
+  transform: rotate(-2deg);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.scrap-meta-strip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 6px 8px;
+  border-bottom: 1px solid #EFEBE4;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scrap-meta-strip span.tag-loc {
+  color: #7A7265;
+}
+
+.scrap-img-frame {
+  width: 100%;
+  background: #F8F6F0;
+  border: 1px solid #E8E4DA;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrap-img-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.scrap-card:hover .scrap-img-frame img {
+  transform: scale(1.02);
+}
+
+.scrap-caption {
+  padding: 12px 6px 4px;
+  font-family: var(--font-editorial);
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: var(--ink-dark);
+}
+
+.scrap-caption strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.scrap-caption p {
+  font-style: italic;
+  color: #4A453E;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   ARCHIVAL COMPONENT 3: .timeline-spine (Chronological Spine Layout)
+   ========================================================================== */
+.timeline-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+  position: relative;
+}
+
+.timeline-spine {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* The vertical 2px solid hairline rule */
+.timeline-spine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(197, 160, 89, 0.2) 0%,
+    var(--accent-gold) 15%,
+    var(--accent-gold) 85%,
+    rgba(197, 160, 89, 0.2) 100%
+  );
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .timeline-spine::before {
+    left: 28px;
+  }
+}
+
+/* Era Header Node */
+.era-node {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin: 70px 0 50px;
+}
+
+.era-node:first-child {
+  margin-top: 20px;
+}
+
+.era-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--ink-inverted-bg);
+  color: var(--ink-inverted-text);
+  border: 2px solid var(--accent-gold);
+  border-radius: 30px;
+  padding: 10px 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.era-badge .era-year {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.era-badge .era-theme {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+@media (max-width: 900px) {
+  .era-node {
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+
+/* Timeline Pair: Narrative Story Block + Scrap Card Cluster */
+.timeline-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 70px;
+  z-index: 2;
+}
+
+.timeline-block.reverse {
+  direction: rtl;
+}
+
+.timeline-block.reverse > * {
+  direction: ltr;
+}
+
+@media (max-width: 900px) {
+  .timeline-block,
+  .timeline-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-left: 58px;
+    direction: ltr;
+  }
+}
+
+/* Narrative Story Card */
+.narrative-card {
+  background: var(--paper-bg);
+  border: 1px solid #DDD8CE;
+  border-radius: var(--radius-sm);
+  padding: 36px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.narrative-card .dossier-ref {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.narrative-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink-dark);
+  margin-bottom: 14px;
+}
+
+.narrative-card p {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #33302B;
+  margin-bottom: 16px;
+}
+
+.narrative-card p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   HOMEPAGE TEASER: #dossier-preview
+   ========================================================================== */
+.dossier-preview-section {
+  background: var(--ink-inverted-bg);
+  color: var(--ink-inverted-text);
+  border-top: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--accent-gold);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dossier-preview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .dossier-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.dossier-preview-left .stamp-row {
+  margin-bottom: 20px;
+}
+
+.dossier-preview-left h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.dossier-preview-left h2 em {
+  font-style: italic;
+  color: var(--parchment);
+}
+
+.dossier-preview-left p.lead {
+  font-family: var(--font-editorial);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--ink-inverted-text);
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.dossier-preview-left p.statement {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #B5AFA4;
+  margin-bottom: 30px;
+}
+
+.btn-dossier-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--accent-gold);
+  color: #121212 !important;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn-dossier-cta:hover {
+  background: #DFB76C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+}

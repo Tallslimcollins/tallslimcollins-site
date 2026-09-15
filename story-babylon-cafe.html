@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Babylon Café: Hand-Rolled Pasta, the Herb Room, and Union Ave After Dark — TallSlimCollins</title>
+  <meta name="description" content="1783 Union Rear, 1991–1993. Scratch pasta, exacting coffee, Cyndi Lauper, Tibetan monks, and the hidden Midtown sanctuary that shaped a lifetime of hospitality.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Babylon Café: Hand-Rolled Pasta, the Herb Room, and Union Ave After Dark">
+  <meta property="og:description" content="Tucked behind Union Ave in early-90s Memphis, Babylon Café was an untouchable sanctuary.">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Threadless Confirmed Active Palette */
+      --sage: #517A71;
+      --sage-dark: #38554E;
+      --sage-deep: #243B35;
+      --sage-light: #709990;
+      --parchment: #DFC08C;
+      --parchment-light: #F7EFE1;
+      --parchment-deep: #CFAF79;
+      --clay: #E5CDC9;
+      --clay-tint: #F8EFEF;
+      --ink: #000000;
+      --charcoal: #1F2825;
+      --white: #FFFFFF;
+
+      /* Canvas & Surfaces (Threadless Match) */
+      --bg-body: #DFC08C;          /* Warm golden parchment canvas */
+      --bg-header: #517A71;        /* Sage banner */
+      --bg-card: #FFFFFF;          /* Crisp white editorial surface */
+      --bg-card-hover: #FFFDF9;
+      --text-main: #000000;        /* Bold black typography */
+      --text-muted: #2E3B37;       /* Readable dark slate subtext */
+      --border: rgba(0, 0, 0, 0.12);
+      --border-focus: #517A71;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: var(--sage-dark);
+      color: var(--parchment-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar a {
+      color: var(--parchment);
+      text-decoration: underline;
+      margin-left: 8px;
+      font-weight: 700;
+    }
+
+    /* Navigation - Pure Threadless Sage Banner */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--sage);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-badge-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--parchment-light);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--clay);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--parchment-light);
+    }
+
+    nav a:hover {
+      color: #FFFFFF;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: var(--radius);
+      color: #FFFFFF !important;
+      font-size: 0.84rem !important;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-bar {
+      padding: 24px 0 16px;
+      font-size: 0.82rem;
+      color: var(--sage-deep);
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb-bar a {
+      color: var(--ink);
+    }
+
+    .breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+      opacity: 0.5;
+    }
+
+    /* Main Article Layout */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      padding: 10px 0 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    /* The Memoir Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 50px 48px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 640px) {
+      .story-card {
+        padding: 30px 22px;
+      }
+    }
+
+    .story-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      background: rgba(81, 122, 113, 0.12);
+      border: 1px solid rgba(81, 122, 113, 0.3);
+      color: var(--sage-deep);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 22px;
+    }
+
+    h1.story-headline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    h1.story-headline em {
+      font-style: italic;
+      color: var(--sage-deep);
+      font-weight: 600;
+    }
+
+    .story-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      padding: 14px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 36px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item .bullet {
+      color: var(--sage);
+      font-size: 0.75rem;
+    }
+
+    /* Story Typography */
+    .story-body {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: #26332F;
+    }
+
+    .story-body p {
+      margin-bottom: 24px;
+    }
+
+    .story-body p.drop-cap::first-letter {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 4.8rem;
+      line-height: 0.85;
+      float: left;
+      margin: 8px 16px 0 0;
+      color: var(--sage-deep);
+      font-weight: 700;
+    }
+
+    .pull-quote {
+      border-left: 4px solid var(--sage);
+      background: var(--parchment-light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 26px 30px;
+      margin: 36px 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.55;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage-deep);
+    }
+
+    .author-signoff {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .author-badge-img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+    }
+
+    .author-text h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .author-text p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    /* Right Column: Physical Merch Artifact & Conversion Card */
+    .artifact-sidebar {
+      position: sticky;
+      top: 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .artifact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .artifact-card:hover {
+      border-color: var(--sage);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+    }
+
+    .artifact-header {
+      padding: 12px 20px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .artifact-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--parchment);
+    }
+
+    .artifact-status {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: var(--sage);
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .artifact-stage {
+      background: var(--clay-tint);
+      padding: 24px 20px;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge-bestseller {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--ink);
+      color: #FFFFFF;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.1;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+
+    .artifact-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+      transition: transform 0.3s ease;
+    }
+
+    .artifact-card:hover .artifact-img {
+      transform: scale(1.02);
+    }
+
+    .artifact-details {
+      padding: 24px;
+    }
+
+    .artifact-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .artifact-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .artifact-price {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .artifact-price-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .artifact-specs {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #364440;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .artifact-specs li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .artifact-specs li::before {
+      content: "✓";
+      color: var(--sage);
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .btn-buy-threadless {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--ink);
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-buy-threadless:hover {
+      background: var(--sage-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .guarantee-note {
+      text-align: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    /* The Dispatch Newsletter Card */
+    .dispatch-newsletter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .dispatch-newsletter-card h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .dispatch-newsletter-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .dispatch-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .dispatch-input {
+      padding: 12px 14px;
+      background: #FAFAFA;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: var(--radius);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .dispatch-input:focus {
+      outline: none;
+      border-color: var(--sage);
+      background: #FFFFFF;
+    }
+
+    .btn-subscribe {
+      padding: 12px;
+      background: var(--sage);
+      border: 1px solid var(--sage);
+      color: #FFFFFF;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-subscribe:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+    }
+
+    /* Companion Stories Section */
+    .more-stories-section {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 70px 0 90px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sage-deep);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .companion-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    .companion-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+      border-color: var(--sage);
+    }
+
+    .companion-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .companion-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .companion-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .companion-link {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--sage-deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .companion-link:hover {
+      color: var(--ink);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+      padding: 50px 0 30px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-content a {
+      color: var(--parchment);
+    }
+
+    .footer-content a:hover {
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    ★ Official Threadless Store Drops Active · Wearable Memphis Memoirs & Artifacts
+    <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Shop Threadless Store →</a>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand-mark">
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="TallSlimCollins Tattoo Seal" class="brand-badge-img">
+          <div class="brand-text">
+            <span class="brand-title">TallSlimCollins</span>
+            <span class="brand-subtitle">Stevan Collins Lazich · Memphis, TN</span>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#dispatches">Dispatches</a></li>
+          <li><a href="story-dancing-jimmy.html">Dancing Jimmy</a></li>
+          <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
+            Shop Threadless
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container breadcrumb-bar">
+    <a href="index.html">TallSlimCollins</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="index.html#collections">Memphis in the Dark</a>
+    <span class="breadcrumb-sep">/</span>
+    <span style="color: var(--ink);">Babylon Café (1783 Union Rear)</span>
+  </div>
+
+  <!-- Main Article Layout -->
+  <main class="container">
+    <div class="article-layout">
+      
+      <!-- Left Column: The Story -->
+      <article class="story-card">
+        <div class="story-badge">
+          ★ Field Dispatch #02 · Memphis in the Dark
+        </div>
+        
+        <h1 class="story-headline">
+          Babylon Café:<br><em>Hand-Rolled Pasta, the Herb Room, and Union Ave After Dark</em>
+        </h1>
+
+        <div class="story-meta-bar">
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>1783 Union Rear</span>
+          </div>
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>1991 – 1993</span>
+          </div>
+          <div class="meta-item">
+            <span class="bullet">◆</span>
+            <span>Stevan Collins Lazich</span>
+          </div>
+        </div>
+
+        <div class="story-body">
+          <p class="drop-cap">
+            If you blinked while driving down Union Avenue in the early nineties, you would have missed it completely. Tucked in the gravel alleyway behind 1783 Union was a two-story wooden clapboard sanctuary that smelled like fresh rosemary, hand-cranked pasta, and dark roasted coffee.
+          </p>
+
+          <p>
+            That was Babylon Café. Between 1991 and 1993, I was the café’s all-around “Boy Friday.” I was living independently on my own nickel for the first time, and that little restaurant kept my belly full, my hands moving, and my spirit anchored when the world felt like shifting sand.
+          </p>
+
+          <p>
+            My days were measured in tangible, honest work. I stood at the wooden bench rolling fresh sheets of egg pasta until my forearms burned. I brewed coffee to exacting, uncompromising standards. And I tended the Herb Room—a fragrant, sunlit nook filled with bundles of drying basil, oregano, and lavender that perfumed the entire alleyway before the dinner rush even started.
+          </p>
+
+          <div class="pull-quote">
+            “It was the kind of room where Cyndi Lauper could slip in the back door after soundcheck, Laurie Anderson could sit quietly over an espresso, or a delegation of Tibetan monks in saffron robes could dine at midnight without a single soul staring. It wasn't a trendy scene; it was an untouchable sanctuary.”
+            <cite>— Stevan Collins Lazich · The Dispatch</cite>
+          </div>
+
+          <p>
+            Babylon taught me what hospitality actually means. It’s not starched white tablecloths or stiff, rehearsed corporate scripts. It’s walking into a room where somebody looks you in the eye, hands you something made with care, and gives you permission to take a breath and stay as long as you need.
+          </p>
+
+          <p>
+            The old building at 1783 Union Rear is quiet now, swallowed by the relentless crawl of modern Midtown redevelopment. But anyone who ever sat on that front stoop under the magnolia trees with a bowl of pasta knows: places like Babylon don’t really die. They stay etched in your hands.
+          </p>
+
+          <p>
+            I drew this piece as an archival monument to the two-story house, the green shuttered windows, the roses climbing the siding, and the people who made midnight on Union Avenue feel like home.
+          </p>
+        </div>
+
+        <div class="author-signoff">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="Stevan Collins Lazich Seal" class="author-badge-img">
+          <div class="author-text">
+            <h4>Stevan Collins Lazich (TallSlimCollins)</h4>
+            <p>Artist, craftsman, and chronicler of living Mid-South memory. Operating from Spottswood House, Memphis, TN.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right Column: Merch Artifact Sidebar -->
+      <aside class="artifact-sidebar">
+        
+        <!-- Live Threadless Merch Card -->
+        <div class="artifact-card">
+          <div class="artifact-header">
+            <span class="artifact-label">The Physical Artifact</span>
+            <span class="artifact-status">Live Drop</span>
+          </div>
+
+          <div class="artifact-stage">
+            <div class="badge-bestseller">Best<br>Seller</div>
+            <img src="assets/product-babylon-cafe.png" alt="Babylon Cafe Commemorative Shirt" class="artifact-img">
+          </div>
+
+          <div class="artifact-details">
+            <div class="artifact-name">Babylon Café Heritage Tee</div>
+            
+            <div class="artifact-price-row">
+              <span class="artifact-price">$28.00</span>
+              <span class="artifact-price-sub">Threadless Premium Classic Tee</span>
+            </div>
+
+            <ul class="artifact-specs">
+              <li>1783 Union Rear Architectural Flash Pen & Ink</li>
+              <li>100% Combed Ringspun Heavyweight Cotton</li>
+              <li>Available in Crisp White, Slate & Natural Cream</li>
+              <li>Direct fulfillment via Threadless Artist Shop</li>
+            </ul>
+
+            <!-- DIRECT CONVERSION CTA TO THREADLESS -->
+            <a href="https://tallslimcollins.threadless.com/designs/babylon-after-dark-lost-memphis/everyone/t-shirt/extra-soft?variation=front&color=forest_green" target="_blank" rel="noopener" class="btn-buy-threadless">
+              Claim Babylon Shirt on Threadless →
+            </a>
+
+            <div class="guarantee-note">
+              Threadless 100% happiness guarantee with hassle-free returns.
+            </div>
+          </div>
+        </div>
+
+        <!-- The Dispatch Newsletter Capture -->
+        <div class="dispatch-newsletter-card">
+          <h4>The Dispatch: Unfiltered Memphis</h4>
+          <p>
+            Receive upcoming stories from the Antenna Club, Decadence Manor, and secret collection drop dates.
+          </p>
+          <form class="dispatch-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Dispatch.');">
+            <input type="email" class="dispatch-input" placeholder="Your email address..." required>
+            <button type="submit" class="btn-subscribe">Subscribe to Dispatch</button>
+          </form>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- More Dispatches Grid -->
+  <section class="more-stories-section">
+    <div class="container">
+      <div class="section-eyebrow">The Living Memphis Archive</div>
+      <h2 class="section-title">More Dispatches from Midtown After Dark</h2>
+
+      <div class="stories-grid">
+        <!-- Story 1: Dancing Jimmy -->
+        <div class="companion-card">
+          <div>
+            <span class="companion-tag">Dispatch #01 · Madison & Belvedere</span>
+            <h3>Dancing Jimmy (1985)</h3>
+            <p>
+              Mowing for a Libertyland season pass, empty Stag bottles in the azaleas, and the street-dancing institution of Madison Avenue.
+            </p>
+          </div>
+          <a href="story-dancing-jimmy.html" class="companion-link">
+            Read Jimmy Dispatch →
+          </a>
+        </div>
+
+        <!-- Story 3: Antenna Club -->
+        <div class="companion-card">
+          <div>
+            <span class="companion-tag">Dispatch #03 · 1588 Madison Ave</span>
+            <h3>The Antenna Club</h3>
+            <p>
+              Tuesday night punk rock, sticky beer floors, tin ceilings rattling to Black Flag and local legends. The true crucible of 901 underground culture.
+            </p>
+          </div>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="companion-link">
+            Shop Design Artifact →
+          </a>
+        </div>
+
+        <!-- Story 4: Decadence Manor -->
+        <div class="companion-card">
+          <div>
+            <span class="companion-tag">Dispatch #04 · Madison Ave</span>
+            <h3>Decadence Manor</h3>
+            <p>
+              Southern Gothic grandeur, architectural salvage, front-porch porch lore, and the unvarnished spirit of historic Midtown living.
+            </p>
+          </div>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="companion-link">
+            Shop Design Artifact →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        &copy; 2026 Stevan Collins Lazich · TallSlimCollins &trade; · 901 · Made in Memphis
+      </div>
+      <div>
+        <a href="https://facebook.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Facebook</a>
+        <a href="https://instagram.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Instagram</a>
+        <a href="index.html" style="margin-right: 14px;">Home Portal</a>
+        <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" style="margin-right: 14px;">Home Revival</a>
+        <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Store</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

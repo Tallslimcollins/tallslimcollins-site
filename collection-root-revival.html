@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Root Revival Collection: Southern Gothic Horticulture — TallSlimCollins</title>
+  <meta name="description" content="Southern Gothic horticulture meets traditional tattoo flash. The story of seven sharecropper sisters, Mississippi Delta soil, and wearable botanical artifacts.">
+  
+  <meta property="og:title" content="Root Revival: Southern Gothic Horticulture Meets Traditional Flash">
+  <meta property="og:description" content="The craft was the excuse; the stories were the inheritance. Explore the complete Root Revival collection by Stevan Collins Lazich.">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Threadless Confirmed Active Palette */
+      --sage: #517A71;
+      --sage-dark: #38554E;
+      --sage-deep: #243B35;
+      --sage-light: #709990;
+      --parchment: #DFC08C;
+      --parchment-light: #F7EFE1;
+      --parchment-deep: #CFAF79;
+      --clay: #E5CDC9;
+      --clay-tint: #F8EFEF;
+      --ink: #000000;
+      --charcoal: #1F2825;
+      --white: #FFFFFF;
+
+      /* Canvas & Surfaces (Threadless Match) */
+      --bg-body: #DFC08C;          /* Warm golden parchment canvas */
+      --bg-header: #517A71;        /* Sage header banner */
+      --bg-card: #FFFFFF;          /* Crisp white card surface */
+      --bg-card-hover: #FFFDF9;
+      --text-main: #000000;        /* Bold black typography */
+      --text-muted: #2E3B37;       /* Readable dark slate */
+      --border: rgba(0, 0, 0, 0.12);
+      --border-focus: #517A71;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Announcement Bar */
+    .top-bar {
+      background: var(--sage-dark);
+      color: var(--parchment-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .top-bar a {
+      color: var(--parchment);
+      text-decoration: underline;
+      margin-left: 8px;
+      font-weight: 700;
+    }
+
+    /* Navigation - Threadless Sage Banner */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--sage);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-badge-img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--parchment-light);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--clay);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--parchment-light);
+    }
+
+    nav a:hover {
+      color: #FFFFFF;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: var(--radius);
+      color: #FFFFFF !important;
+      font-size: 0.84rem !important;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-bar {
+      padding: 24px 0 16px;
+      font-size: 0.82rem;
+      color: var(--sage-deep);
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb-bar a {
+      color: var(--ink);
+    }
+
+    .breadcrumb-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+      opacity: 0.5;
+    }
+
+    /* Hero Header */
+    .collection-hero {
+      padding: 50px 0 60px;
+      text-align: center;
+    }
+
+    .collection-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      background: rgba(81, 122, 113, 0.15);
+      border: 1px solid rgba(81, 122, 113, 0.35);
+      color: var(--sage-deep);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+    .collection-hero h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .collection-hero h1 em {
+      font-style: italic;
+      color: var(--sage-deep);
+      font-weight: 600;
+    }
+
+    .collection-tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.82rem;
+      color: var(--sage-deep);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Story & Lore Grid */
+    .story-section {
+      padding: 20px 0 70px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .story-section {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    .story-card-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 44px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 640px) {
+      .story-card-box {
+        padding: 30px 22px;
+      }
+    }
+
+    .story-card-box h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+
+    .story-card-box p {
+      font-size: 1.08rem;
+      line-height: 1.85;
+      color: #26332F;
+      margin-bottom: 22px;
+    }
+
+    .story-card-box p.drop-cap::first-letter {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 4.6rem;
+      line-height: 0.85;
+      float: left;
+      margin: 8px 16px 0 0;
+      color: var(--sage-deep);
+      font-weight: 700;
+    }
+
+    /* Lore Sidebar */
+    .lore-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .manifesto-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .manifesto-box h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .manifesto-box ul {
+      list-style: none;
+      font-size: 0.94rem;
+      color: #364440;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .manifesto-box li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .manifesto-box li::before {
+      content: "✦";
+      color: var(--sage);
+      font-size: 0.9rem;
+      margin-top: 1px;
+    }
+
+    .cta-box {
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      padding: 34px 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .cta-box h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.65rem;
+      color: var(--parchment);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .cta-box p {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+
+    .btn-full-collection {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      background: var(--ink);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-full-collection:hover {
+      background: var(--white);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    /* Artifacts Catalog Grid */
+    .catalog-section {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 70px 0 90px;
+    }
+
+    .catalog-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .catalog-header h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .catalog-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .artifacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .piece-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .piece-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+      border-color: var(--sage);
+    }
+
+    .piece-preview {
+      background: var(--clay-tint);
+      padding: 28px 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .piece-badge-inner {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px 14px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .piece-badge-inner h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .piece-badge-inner span {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage-deep);
+      font-weight: 700;
+    }
+
+    .piece-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .piece-content h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .piece-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .piece-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding-top: 16px;
+    }
+
+    .piece-price {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .btn-piece-buy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--ink);
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      transition: all 0.2s ease;
+    }
+
+    .btn-piece-buy:hover {
+      background: var(--sage-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+      padding: 50px 0 30px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-content a {
+      color: var(--parchment);
+    }
+
+    .footer-content a:hover {
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    ★ Official Threadless Store Drops Active · Wearable Memphis Memoirs & Artifacts
+    <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Shop Threadless Store →</a>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand-mark">
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="TallSlimCollins Tattoo Seal" class="brand-badge-img">
+          <div class="brand-text">
+            <span class="brand-title">TallSlimCollins</span>
+            <span class="brand-subtitle">Stevan Collins Lazich · Memphis, TN</span>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#dispatches">Dispatches</a></li>
+          <li><a href="story-dancing-jimmy.html">Dancing Jimmy</a></li>
+          <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
+            Shop Threadless
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container breadcrumb-bar">
+    <a href="index.html">TallSlimCollins</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="index.html#collections">Collections</a>
+    <span class="breadcrumb-sep">/</span>
+    <span style="color: var(--ink);">Root Revival Lore</span>
+  </div>
+
+  <!-- Collection Hero -->
+  <section class="collection-hero">
+    <div class="container">
+      <span class="collection-eyebrow">★ Featured Collection Lore ★</span>
+      <h1>Root Revival</h1>
+      <p class="collection-tagline">Southern Gothic horticulture meets traditional tattoo flash.</p>
+      <div class="hero-stats">
+        <span>◆ Arkansas Delta & Hill Country Heritage</span>
+        <span>◆ Acanthus, Shears & Southern Flora</span>
+        <span>◆ Available Exclusively on Threadless</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Lore Section -->
+  <main class="container">
+    <section class="story-section">
+      
+      <!-- The Collection Origin Story -->
+      <article class="story-card-box">
+        <h2>The Craft Was the Excuse. The Stories Were the Inheritance.</h2>
+        
+        <p class="drop-cap">
+          My mother's family came from the Arkansas Delta—Luxora, Arkansas was part of the soil. My grandmother was born around 1890. My mother was one of seven sisters. They picked cotton as children. They were sharecroppers who survived through sheer resourcefulness, endurance, and quiet elegance.
+        </p>
+
+        <p>
+          The women in my family—mother, grandmother, aunts, elderly babysitters—taught sewing, quilting, gardening, decorating, and drawing. But the technical lessons were often just the excuse. The craft lessons created an intimate space for family history, community memory, values, and traditions that would have otherwise dissolved into time.
+        </p>
+
+        <p>
+          They knew how to prune a dogwood without bruising the cambium. They knew how to coax morning glories up a wire trellis, make an acanthus leaf feel like royalty, and keep a garden alive in the suffocating heat of a Mid-South August.
+        </p>
+
+        <p>
+          <em>Root Revival</em> is my monument to them. I paired traditional American tattoo flash with 19th-century botanical linework, vintage pruning shears, and resilient Southern flora. Because true revival doesn't come from buying new plastic—it comes from tending your roots with care.
+        </p>
+      </article>
+
+      <!-- Sidebar Manifestos -->
+      <aside class="lore-sidebar">
+        <div class="manifesto-box">
+          <h3>The Garden Commandments</h3>
+          <ul>
+            <li>Thou shalt earn your drama with restraint.</li>
+            <li>Thou shalt cut with care, not cruelty.</li>
+            <li>Thou shalt value grit in the soil as much as grace in the bloom.</li>
+            <li>Thou shalt let your roots run deep.</li>
+          </ul>
+        </div>
+
+        <div class="cta-box">
+          <h4>Wear the Living Botanical</h4>
+          <p>
+            Explore shirts, long sleeves, heavyweight hoodies, and fine art prints from the Root Revival drop.
+          </p>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-full-collection">
+            Shop Root Revival on Threadless →
+          </a>
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <!-- Artifacts Catalog -->
+  <section class="catalog-section">
+    <div class="container">
+      <div class="catalog-header">
+        <h2>Artifacts in This Collection</h2>
+        <p>Illustrated in detailed pen & ink with crosshatching and traditional banner scrollwork.</p>
+      </div>
+
+      <div class="artifacts-grid">
+        
+        <!-- Item 1: Wildly Elegant -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <div class="piece-badge-inner">
+              <h4>Wildly Elegant</h4>
+              <span>Vintage Shears & Morning Glories</span>
+            </div>
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Wildly Elegant</h3>
+              <p>Vintage garden shears wrapped in morning glories and French acanthus scrollwork with classic banner typography.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Blood, Sweat and Dogwoods -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <div class="piece-badge-inner">
+              <h4>Dogwoods</h4>
+              <span>Driftwood & Pink Blossoms</span>
+            </div>
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Blood, Sweat & Dogwoods</h3>
+              <p>Weathered Delta driftwood tangled in pink dogwood blossoms. A testament to surviving the hardest seasons.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Cut With Care, Not Cruelty -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <div class="piece-badge-inner">
+              <h4>Cut With Care</h4>
+              <span>Gloved Hand & Pruning Snips</span>
+            </div>
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Cut With Care</h3>
+              <p>A gloved artisan hand with pruning shears tending a crape myrtle branch. Restraint is the highest form of power.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Root Revival Crest -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <div class="piece-badge-inner">
+              <h4>The Crest</h4>
+              <span>Crossed Trowels & Acanthus</span>
+            </div>
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Root Revival Crest</h3>
+              <p>Crossed hand trowels framed in an ornate acanthus wreath. The anchor emblem of the botanical series.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        &copy; 2026 Stevan Collins Lazich · TallSlimCollins &trade; · 901 · Made in Memphis
+      </div>
+      <div>
+        <a href="https://facebook.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Facebook</a>
+        <a href="https://instagram.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Instagram</a>
+        <a href="index.html" style="margin-right: 14px;">Home Portal</a>
+        <a href="story-dancing-jimmy.html" style="margin-right: 14px;">Dancing Jimmy Dispatch</a>
+        <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Store</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
