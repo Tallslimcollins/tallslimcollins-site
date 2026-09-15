@@ -7,13 +7,15 @@
 
 :root {
   /* Archival Spec Tokens */
-  --paper-bg: #F4F1EA;              /* Unbleached warm stock */
-  --paper-bg-card: #FFFFFF;         /* Crisp archival photo card */
+  --paper-bg: #F5EFE4;              /* Unbleached warm stock */
+  --paper-bg-card: #FAF7F0;         /* Warm ivory archival photo card */
   --ink-dark: #121212;              /* Charcoal black */
   --ink-inverted-bg: #181818;       /* Matte black container */
   --ink-inverted-text: #EAE6DF;     /* Aged cream text */
   --accent-red: #C0392B;            /* Archival stamp red */
   --accent-gold: #C5A059;           /* Monospace labels & hairline rules */
+  --accent-rust: #C3744C;           /* Rich Southern rust */
+  --accent-sand: #DFC08C;           /* Warm golden sand */
   --rule-border: 1px solid #2A2A2A; /* Crisp hairline */
   --rule-hairline: rgba(0, 0, 0, 0.12);
 
@@ -92,10 +94,10 @@
    ARCHIVAL COMPONENT 2: .scrap-card (Physical Artifact Container)
    ========================================================================== */
 .scrap-card {
-  background: #FFFFFF;
+  background: var(--paper-bg-card);
   padding: 12px 12px 18px 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
-  border: 1px solid #E0DCD3;
+  box-shadow: 0 8px 24px rgba(61, 40, 23, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #DDD6C8;
   border-radius: var(--radius-sm);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -205,6 +207,32 @@
   margin: 0 auto;
   padding: 40px 24px 100px;
   position: relative;
+}
+
+@media (min-width: 1240px) {
+  /* Twin rust and sand margin guidelines down the desktop flanks */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 60px;
+    left: -24px;
+    width: 4px;
+    border-left: 1px solid var(--accent-sand);
+    border-right: 1px solid rgba(195, 116, 76, 0.45);
+    pointer-events: none;
+  }
+  .timeline-container::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 60px;
+    right: -24px;
+    width: 4px;
+    border-left: 1px solid rgba(195, 116, 76, 0.45);
+    border-right: 1px solid var(--accent-sand);
+    pointer-events: none;
+  }
 }
 
 .timeline-spine {
@@ -318,11 +346,12 @@
 
 /* Narrative Story Card */
 .narrative-card {
-  background: var(--paper-bg);
-  border: 1px solid #DDD8CE;
+  background: var(--paper-bg-card);
+  border: 1px solid #DCD5C6;
+  border-top: 3px solid rgba(195, 116, 76, 0.55);
   border-radius: var(--radius-sm);
   padding: 36px 32px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 20px rgba(61, 40, 23, 0.06);
   position: relative;
 }
 

@@ -18,13 +18,32 @@
 
   <style>
     body {
-      background-color: var(--paper-bg);
+      background-color: #F3ECE0;
+      background: radial-gradient(ellipse at 50% 18%, #FAF6EE 0%, #F2EADA 55%, #E1D3BA 100%);
+      background-attachment: fixed;
       color: var(--ink-dark);
       font-family: var(--font-body);
       line-height: 1.7;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Faint Archival Tattoo Seal Watermark across Wide Displays */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 780px;
+      height: 780px;
+      background: url('assets/tsc-swallow-wrench-brush.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.024;
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
@@ -153,8 +172,8 @@
 
     /* Hero Dossier Header */
     .dossier-hero {
-      background: var(--paper-bg);
-      border-bottom: 2px solid var(--accent-gold);
+      background: transparent;
+      border-bottom: 2px solid var(--accent-sand);
       padding: 70px 0 60px;
       text-align: center;
       position: relative;
@@ -167,7 +186,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: rgba(197, 160, 89, 0.4);
+      background: rgba(195, 116, 76, 0.45);
     }
 
     .dossier-stamp-wrap {
