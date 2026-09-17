@@ -25,16 +25,16 @@
       --charcoal: #1A211E;
       --white: #FFFFFF;
 
-      /* Archival Canvas & Surfaces (Dossier Black with Light Field Cards) */
-      --bg-body: #141716;          /* Deep rich archival matte black */
+      /* Canvas & Surfaces: Clean Unbleached Archival Paper (NOT Sand) */
+      --bg-body: #FAF7F0;          /* Clean, warm unbleached archival stock */
       --bg-header: #517A71;        /* Deep Sage header banner */
-      --bg-card: #FAF6EE;          /* Warm unbleached archival field card stock */
-      --bg-card-hover: #FFFDF8;    /* Elevated card hover surface */
-      --text-main: #F4F1EA;        /* Unbleached archival ivory / crisp white */
-      --text-muted: #B8B0A2;       /* Aged parchment readable subtext */
-      --border: rgba(255, 255, 255, 0.10); /* Hairline archival rule */
-      --border-card: #DCD3C0;      /* Vintage field document border */
-      --border-focus: #C5A059;
+      --bg-card: #FFFFFF;          /* Crisp white editorial card surface */
+      --bg-card-hover: #FFFDF9;    /* Elevated card hover surface */
+      --text-main: #121212;        /* Bold black typography */
+      --text-muted: #3D3830;       /* Readable dark charcoal subtext */
+      --border: rgba(0, 0, 0, 0.10); /* Hairline paper rule */
+      --border-card: rgba(0, 0, 0, 0.10); /* Crisp card border */
+      --border-focus: #517A71;
       --accent-red: #C0392B;       /* Archival field stamp red */
       --accent-gold: #C5A059;      /* Monospace labels & hairline rules */
       --accent-rust: #C3744C;      /* Southern rust guideline */
@@ -181,8 +181,8 @@
 
     /* Hero Section */
     .hero {
-      padding: 85px 0 75px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 80px 0 70px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       position: relative;
     }
 
@@ -208,7 +208,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: var(--accent-gold);
+      color: var(--sage-deep);
       margin-bottom: 20px;
     }
 
@@ -216,7 +216,7 @@
       content: "";
       width: 24px;
       height: 2px;
-      background: var(--accent-gold);
+      background: var(--sage-deep);
     }
 
     .hero h1 {
@@ -224,13 +224,13 @@
       font-size: clamp(2.8rem, 5.5vw, 4.6rem);
       font-weight: 700;
       line-height: 1.08;
-      color: #FFFFFF;
+      color: #121212;
       margin-bottom: 24px;
     }
 
     .hero h1 em {
       font-style: italic;
-      color: var(--accent-sand);
+      color: var(--sage-dark);
       font-weight: 600;
     }
 
@@ -264,29 +264,28 @@
     }
 
     .btn-primary {
-      background: var(--accent-gold);
-      color: #121212 !important;
-      border: 1px solid var(--accent-gold);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      background: #121212;
+      color: #FFFFFF !important;
+      border: 1px solid #121212;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     }
 
     .btn-primary:hover {
-      background: #DFB76C;
-      border-color: #DFB76C;
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
     }
 
     .btn-outline {
       background: transparent;
-      color: #FFFFFF;
-      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: #121212;
+      border: 1.5px solid #121212;
     }
 
     .btn-outline:hover {
-      border-color: var(--accent-gold);
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--accent-gold);
+      border-color: var(--sage-dark);
+      background: rgba(81, 122, 113, 0.08);
+      color: var(--sage-deep);
       transform: translateY(-2px);
     }
 
@@ -300,7 +299,7 @@
       max-width: 320px;
       width: 100%;
       height: auto;
-      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.5));
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.22));
       animation: softFloat 4s ease-in-out infinite;
     }
 
@@ -313,7 +312,7 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: var(--accent-sand);
+      color: var(--sage-deep);
       margin-top: 14px;
       font-weight: 600;
     }
@@ -326,7 +325,7 @@
     .section-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2.3rem;
-      color: #FFFFFF;
+      color: #121212;
       margin-bottom: 8px;
     }
 
@@ -357,14 +356,14 @@
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s ease;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
 
     .card:hover {
       background: var(--bg-card-hover);
-      border-color: var(--accent-gold);
+      border-color: var(--sage);
       transform: translateY(-3px);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
     }
 
     .card-badge {
@@ -378,8 +377,8 @@
       border-radius: 4px;
     }
 
-    .badge-dark { color: #243B35; background: rgba(81, 122, 113, 0.14); border: 1px solid rgba(81, 122, 113, 0.25); }
-    .badge-root { color: #8F4C20; background: rgba(195, 116, 76, 0.14); border: 1px solid rgba(195, 116, 76, 0.25); }
+    .badge-dark { color: #243B35; background: rgba(81, 122, 113, 0.12); border: 1px solid rgba(81, 122, 113, 0.25); }
+    .badge-root { color: #8F4C20; background: rgba(195, 116, 76, 0.12); border: 1px solid rgba(195, 116, 76, 0.25); }
     .badge-dog { color: #6E4E18; background: rgba(223, 192, 140, 0.30); border: 1px solid rgba(223, 192, 140, 0.45); }
     .badge-shop { color: #7A352D; background: rgba(229, 205, 201, 0.35); border: 1px solid rgba(229, 205, 201, 0.45); }
 
@@ -393,7 +392,7 @@
 
     .card p {
       font-size: 0.92rem;
-      color: #3D3830;
+      color: var(--text-muted);
       margin-bottom: 22px;
       line-height: 1.6;
     }
@@ -408,7 +407,7 @@
     }
 
     .card-link:hover {
-      color: #121212;
+      color: #000000;
     }
 
     .card-link svg {
@@ -422,7 +421,7 @@
     /* Flagship Dispatch: Dancing Jimmy Feature */
     .dispatch-feature {
       padding: 70px 0 90px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .dispatch-card {
@@ -435,7 +434,7 @@
       gap: 44px;
       align-items: center;
       transition: all 0.25s ease;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
 
     @media (max-width: 860px) {
@@ -447,9 +446,8 @@
     }
 
     .dispatch-card:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--accent-gold);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      border-color: var(--sage);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
     }
 
     .dispatch-meta {
@@ -470,7 +468,7 @@
     }
 
     .dispatch-excerpt {
-      color: #3D3830;
+      color: var(--text-muted);
       font-size: 1.02rem;
       line-height: 1.75;
       margin-bottom: 28px;
@@ -487,7 +485,7 @@
       background: #121212;
       color: #FFFFFF !important;
       border: 1px solid #121212;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     }
 
     .dispatch-actions .btn-primary:hover {
@@ -502,27 +500,27 @@
     }
 
     .dispatch-actions .btn-outline:hover {
-      background: rgba(0, 0, 0, 0.06);
-      border-color: #121212;
-      color: #121212;
+      border-color: var(--sage-dark);
+      color: var(--sage-deep);
+      background: rgba(81, 122, 113, 0.08);
     }
 
     /* Visual Artifact Frame */
     .artifact-preview {
-      background: #F0E9DD;
-      border: 1px solid var(--border-card);
+      background: #F8F5EE;
+      border: 1px solid #E5DEC9;
       border-radius: var(--radius);
       padding: 20px;
       position: relative;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 
     .badge-bestseller {
       position: absolute;
       top: 14px;
       left: 14px;
-      background: var(--accent-red);
+      background: #121212;
       color: #FFFFFF;
       border-radius: 50%;
       width: 44px;
@@ -575,15 +573,15 @@
     /* Sister Brand Callout: Home Revival */
     .banner-revival {
       margin: 20px 0 90px;
-      background: linear-gradient(135deg, #FAF6EE 0%, #F3EBDD 100%);
-      border: 1px solid var(--border-card);
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5EFE4 100%);
+      border: 1px solid rgba(0, 0, 0, 0.10);
       border-radius: var(--radius);
       padding: 44px 40px;
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 36px;
       align-items: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     @media (max-width: 768px) {
@@ -600,7 +598,7 @@
     }
 
     .banner-revival p {
-      color: #3D3830;
+      color: var(--text-muted);
       font-size: 0.98rem;
       line-height: 1.65;
     }
@@ -823,7 +821,7 @@
 
       <!-- Signature Studio Centerpiece: For All Your Art & Mechanical Needs -->
       <div style="margin: 40px 0 80px; text-align: center;">
-        <div style="background: var(--bg-card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border-card); box-shadow: 0 10px 32px rgba(0,0,0,0.35);">
+        <div style="background: var(--bg-card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border-card); box-shadow: 0 8px 28px rgba(0,0,0,0.08);">
           <img src="assets/art-mechanical-needs.jpg" alt="For All Your Art & Mechanical Needs" style="width: 100%; height: auto; display: block; border-radius: 6px;">
         </div>
       </div>
