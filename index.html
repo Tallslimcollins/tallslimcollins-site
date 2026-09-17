@@ -25,8 +25,8 @@
       --charcoal: #1A211E;
       --white: #FFFFFF;
 
-      /* Canvas & Surfaces: Clean Unbleached Archival Paper (NOT Sand) */
-      --bg-body: #FAF7F0;          /* Clean, warm unbleached archival stock */
+      /* Canvas & Surfaces: Warm Cream / Sand Paper Canvas */
+      --bg-body: #F4ECE1;          /* Warm unbleached cream / sand archival paper */
       --bg-header: #517A71;        /* Deep Sage header banner */
       --bg-card: #FFFFFF;          /* Crisp white editorial card surface */
       --bg-card-hover: #FFFDF9;    /* Elevated card hover surface */
@@ -40,6 +40,7 @@
       --accent-rust: #C3744C;      /* Southern rust guideline */
       --accent-sand: #DFC08C;      /* Warm golden sand */
       --radius: 6px;
+      --radius-sm: 2px;
     }
 
     * {
@@ -179,68 +180,113 @@
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* Hero Section: The Dossier Black Vault */
     .hero {
-      padding: 80px 0 70px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: #141716;
+      color: #EAE6DF;
+      padding: 76px 0 72px;
+      border-bottom: 2px solid var(--accent-gold);
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(81, 122, 113, 0.12) 0%, transparent 60%);
+      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 48px;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 52px;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 40px;
       }
     }
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--sage-deep);
+    .hero .archive-stamp {
       margin-bottom: 20px;
-    }
-
-    .hero-eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 2px;
-      background: var(--sage-deep);
     }
 
     .hero h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
       font-weight: 700;
-      line-height: 1.08;
-      color: #121212;
-      margin-bottom: 24px;
+      line-height: 1.12;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
     }
 
     .hero h1 em {
       font-style: italic;
-      color: var(--sage-dark);
+      color: var(--accent-sand);
       font-weight: 600;
     }
 
-    .hero-desc {
-      font-size: 1.12rem;
-      color: var(--text-muted);
-      margin-bottom: 36px;
-      line-height: 1.75;
+    .hero-lead-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.55;
+      color: #EAE6DF;
+      margin-bottom: 22px;
+      font-style: italic;
+      border-left: 2px solid var(--accent-gold);
+      padding-left: 16px;
+    }
+
+    .hero-seal-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 22px 0 24px;
+    }
+
+    .hero-seal-img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.45));
+    }
+
+    .hero-seal-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.15;
+    }
+
+    .hero-seal-role {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 3px;
+      font-weight: 700;
+    }
+
+    .hero-statement {
+      font-size: 0.96rem;
+      color: #B5AFA4;
+      margin-bottom: 30px;
+      line-height: 1.7;
       max-width: 620px;
-      font-weight: 450;
+      font-weight: 400;
     }
 
     .hero-actions {
@@ -250,71 +296,154 @@
       align-items: center;
     }
 
-    .btn {
+    .btn-dossier-gold {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       padding: 13px 26px;
-      border-radius: var(--radius);
-      font-size: 0.92rem;
+      background: var(--accent-gold);
+      color: #121212 !important;
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.84rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      cursor: pointer;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-dossier-gold:hover {
+      background: #DFB76C;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+    }
+
+    .btn-dossier-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 22px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #EAE6DF !important;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
       transition: all 0.25s ease;
     }
 
-    .btn-primary {
-      background: #121212;
+    .btn-dossier-dark:hover {
+      background: rgba(197, 160, 89, 0.15);
+      border-color: var(--accent-gold);
       color: #FFFFFF !important;
-      border: 1px solid #121212;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-    }
-
-    .btn-primary:hover {
-      background: var(--sage-dark);
-      border-color: var(--sage-dark);
       transform: translateY(-2px);
     }
 
-    .btn-outline {
-      background: transparent;
-      color: #121212;
-      border: 1.5px solid #121212;
+    /* Transition Bar under Hero into Warm Canvas */
+    .transition-strip {
+      background: #EBE2D3;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 14px 0;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04);
     }
 
-    .btn-outline:hover {
-      border-color: var(--sage-dark);
-      background: rgba(81, 122, 113, 0.08);
-      color: var(--sage-deep);
-      transform: translateY(-2px);
+    .transition-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    /* Hero Swallow Graphic */
-    .hero-mascot-wrap {
+    .transition-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #8F4C20;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .transition-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #3D3830;
+      font-weight: 500;
+    }
+
+    .transition-coords {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.70rem;
+      color: #6E6254;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Studio Mascot Centerpiece */
+    .studio-centerpiece {
+      margin: 30px 0 70px;
       text-align: center;
-      position: relative;
     }
 
-    .hero-mascot-img {
-      max-width: 320px;
+    .centerpiece-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 48px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .centerpiece-box {
+        padding: 30px 20px;
+      }
+    }
+
+    .centerpiece-img {
+      max-width: 220px;
       width: 100%;
       height: auto;
-      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.22));
-      animation: softFloat 4s ease-in-out infinite;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.12));
     }
 
-    @keyframes softFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
+    .centerpiece-box h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #121212;
+      margin-bottom: 6px;
     }
 
-    .mascot-caption {
-      font-size: 0.75rem;
-      text-transform: uppercase;
+    .centerpiece-tag {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--sage);
       letter-spacing: 0.14em;
-      color: var(--sage-deep);
-      margin-top: 14px;
-      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .centerpiece-box p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+      max-width: 540px;
     }
 
     /* Sections General */
@@ -698,7 +827,7 @@
       <nav>
         <ul>
           <li><a href="#collections">Collections</a></li>
-          <li><a href="#dossier-preview">Dossier</a></li>
+          <li><a href="timeline-dossier.html">Dossier</a></li>
           <li><a href="#dispatches">Dispatches</a></li>
           <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival</a></li>
           <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
@@ -710,36 +839,72 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <!-- Hero Section: The Dossier Black Vault -->
+  <section class="hero" id="dossier-hero">
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="hero-eyebrow">The Living Memoir & Cultural Archive</div>
-          <h1>Revive. Preserve.<br><em>Tell the Story.</em></h1>
-          <p class="hero-desc">
-            Some things are worth saving—not because they are old or fashionable, but because they meant something. 
-            A multidisciplinary practice rooted in Midtown porches, salvaged tradecraft, and physical Mid-South history.
+          <div class="stamp-row" style="margin-bottom: 18px;">
+            <span class="archive-stamp">[FIELD DOSSIER // RECORD #SCL-1985-2026]</span>
+          </div>
+          <h1>Four Decades of Physical Craft,<br><em>Night Hours &amp; Living Mid-South Lore</em></h1>
+          <p class="hero-lead-quote">
+            "Some things are worth saving—not because they are old or fashionable, but because they meant something to the people who built this city."
+          </p>
+          <div class="hero-seal-row">
+            <img src="assets/tsc-wrench-brush-rose-badge.png" alt="Stevan Collins Lazich Official Seal" class="hero-seal-img">
+            <div>
+              <div class="hero-seal-name">Stevan Collins Lazich</div>
+              <div class="hero-seal-role">Artist · Conservator · Spottswood House</div>
+            </div>
+          </div>
+          <p class="hero-statement">
+            From the European antique drapery workrooms above Madison &amp; Belvedere in the 1980s, to late-night shifts at Babylon Café and The Antenna Club, through gallery canvas conservation, to the dual practice today: explore the chronological scrapbook of field notes, workrooms, and physical artifacts.
           </p>
           <div class="hero-actions">
-            <a href="#collections" class="btn btn-primary">
-              Explore Collections
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            <a href="timeline-dossier.html" class="btn-dossier-gold">
+              Explore the Full Dossier &amp; Scrapbook →
             </a>
-            <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn btn-outline">
-              Open Threadless Shop
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-dossier-dark">
+              Shop Threadless Drops
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
           </div>
         </div>
 
-        <div class="hero-mascot-wrap">
-          <img src="assets/tsc-swallow-wrench-brush.png" alt="TallSlimCollins Mascot Swallow" class="hero-mascot-img">
-          <div class="mascot-caption">The Swallow & Wrench-Brush · Spottswood House</div>
+        <!-- Right: Aged Scrap Card Preview -->
+        <div class="hero-scrap-wrap" style="display: flex; justify-content: center;">
+          <div class="scrap-card" style="max-width: 380px; width: 100%;">
+            <div class="scrap-meta-strip">
+              <span>[ITEM_ID: SCL-DOSSIER-01]</span>
+              <span class="tag-loc">// 1985–PRESENT</span>
+            </div>
+            <div class="scrap-img-frame">
+              <img src="assets/art-mechanical-needs.jpg" alt="Stevan Collins Lazich - For All Your Art & Mechanical Needs">
+            </div>
+            <div class="scrap-caption">
+              <strong>The Living Archive</strong>
+              <p>"Drapery weights, tin-ceiling rattles, architectural salvage, and wearable Mid-South memoirs across four decades."</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Archival Transition Strip into Warm Paper Canvas -->
+  <div class="transition-strip">
+    <div class="container transition-inner">
+      <div class="transition-left">
+        <span>// ARCHIVAL INDEX</span>
+        <span style="color: rgba(0,0,0,0.3);">·</span>
+        <span class="transition-quote">Revive. Preserve. Tell the Story.</span>
+      </div>
+      <div class="transition-coords">
+        Spottswood House &bull; Memphis, TN &bull; 35.1174&deg; N, 89.9711&deg; W
+      </div>
+    </div>
+  </div>
 
   <!-- Collections Engine (Pillars Style) -->
   <section class="pillars" id="collections">
@@ -803,77 +968,16 @@
         </div>
       </div>
 
-      <!-- Sister Brand Callout: Home Revival -->
-      <div class="banner-revival">
-        <div>
-          <h3>Home Revival by Stevan Collins Lazich</h3>
+      <!-- Studio Mascot Centerpiece: The Swallow & Wrench-Brush -->
+      <div class="studio-centerpiece">
+        <div class="centerpiece-box">
+          <img src="assets/tsc-swallow-wrench-brush.png" alt="TallSlimCollins Swallow & Wrench-Brush" class="centerpiece-img">
+          <h3>Revive. Preserve. Tell the Story.</h3>
+          <div class="centerpiece-tag">Spottswood House · Memphis, Tennessee</div>
           <p>
-            Looking for residential hands-on craft? Stevan's specialized residential service—focused on historic color palettes, gallery wall execution, and room flow transformations—lives at its own dedicated home.
+            A multidisciplinary practice rooted in Midtown porches, salvaged tradecraft, living oral histories, and four decades of physical craft in the Mid-South.
           </p>
         </div>
-        <div style="text-align: right;">
-          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="btn btn-primary">
-            Visit Home Revival
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Signature Studio Centerpiece: For All Your Art & Mechanical Needs -->
-      <div style="margin: 40px 0 80px; text-align: center;">
-        <div style="background: var(--bg-card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border-card); box-shadow: 0 8px 28px rgba(0,0,0,0.08);">
-          <img src="assets/art-mechanical-needs.jpg" alt="For All Your Art & Mechanical Needs" style="width: 100%; height: auto; display: block; border-radius: 6px;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dossier & Timeline Preview Section -->
-  <section class="dossier-preview-section" id="dossier-preview">
-    <div class="container">
-      <div class="dossier-preview-grid">
-        
-        <!-- Left: Artist Portrait & Statement -->
-        <div class="dossier-preview-left">
-          <div class="stamp-row">
-            <span class="archive-stamp">[FIELD DOSSIER // RECORD #SCL-1985-2026]</span>
-          </div>
-          <h2>Four Decades of Physical Craft,<br><em>Night Hours &amp; Living Mid-South Lore</em></h2>
-          <p class="lead">
-            "Some things are worth saving—not because they are old or fashionable, but because they meant something to the people who built this city."
-          </p>
-          <div style="display: flex; align-items: center; gap: 18px; margin: 24px 0 28px;">
-            <img src="assets/tsc-wrench-brush-rose-badge.png" alt="Stevan Collins Lazich Official Seal" style="width: 64px; height: 64px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));">
-            <div>
-              <div style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: #FFFFFF; line-height: 1.2;">Stevan Collins Lazich</div>
-              <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-gold); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px;">Artist · Conservator · Spottswood House</div>
-            </div>
-          </div>
-          <p class="statement">
-            From the European antique drapery workrooms above Madison &amp; Belvedere in the 1980s, to late-night shifts at Babylon Café and The Antenna Club, through gallery canvas conservation, to the dual practice today: explore the chronological scrapbook of field notes, workrooms, and physical artifacts.
-          </p>
-          <a href="timeline-dossier.html" class="btn-dossier-cta">
-            Explore the Full Dossier &amp; Scrapbook →
-          </a>
-        </div>
-
-        <!-- Right: Tilted Scrap Card Preview -->
-        <div class="dossier-preview-right" style="display: flex; justify-content: center;">
-          <div class="scrap-card" style="max-width: 380px; width: 100%;">
-            <div class="scrap-meta-strip">
-              <span>[ITEM_ID: SCL-DOSSIER-01]</span>
-              <span class="tag-loc">// 1985–PRESENT</span>
-            </div>
-            <div class="scrap-img-frame">
-              <img src="assets/art-mechanical-needs.jpg" alt="Stevan Collins Lazich - For All Your Art & Mechanical Needs">
-            </div>
-            <div class="scrap-caption">
-              <strong>The Living Archive</strong>
-              <p>"Drapery weights, tin-ceiling rattles, architectural salvage, and wearable Mid-South memoirs across four decades."</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1012,7 +1116,26 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- Sister Brand Callout: Home Revival -->
+  <section style="padding: 10px 0 80px;">
+    <div class="container">
+      <div class="banner-revival" style="margin: 0;">
+        <div>
+          <h3>Home Revival by Stevan Collins Lazich</h3>
+          <p>
+            Looking for residential hands-on craft? Stevan's specialized residential service—focused on historic color palettes, gallery wall execution, and room flow transformations—lives at its own dedicated home.
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="btn btn-primary">
+            Visit Home Revival
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
