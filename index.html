@@ -25,15 +25,15 @@
       --charcoal: #1A211E;
       --white: #FFFFFF;
 
-      /* Canvas & Surfaces: Warm Cream / Sand Paper Canvas */
-      --bg-body: #F4ECE1;          /* Warm unbleached cream / sand archival paper */
+      /* Canvas & Surfaces: Weighted Cotton Archival Paper Canvas */
+      --bg-body: #F3ECE0;          /* Warm unbleached cotton archival paper */
       --bg-header: #517A71;        /* Deep Sage header banner */
-      --bg-card: #FFFFFF;          /* Crisp white editorial card surface */
+      --bg-card: #FAF7F0;          /* Warm ivory archival cardstock */
       --bg-card-hover: #FFFDF9;    /* Elevated card hover surface */
       --text-main: #121212;        /* Bold black typography */
       --text-muted: #3D3830;       /* Readable dark charcoal subtext */
       --border: rgba(0, 0, 0, 0.10); /* Hairline paper rule */
-      --border-card: rgba(0, 0, 0, 0.10); /* Crisp card border */
+      --border-card: #DDD6C8;      /* Weathered letterpress card border */
       --border-focus: #517A71;
       --accent-red: #C0392B;       /* Archival field stamp red */
       --accent-gold: #C5A059;      /* Monospace labels & hairline rules */
@@ -50,8 +50,8 @@
     }
 
     body {
-      background-color: #F7F5F0;
-      background: radial-gradient(ellipse at 50% 12%, #FAF8F5 0%, #F3EFE8 55%, #E9E4DC 100%);
+      background-color: #F3ECE0;
+      background: radial-gradient(ellipse at 50% 18%, #FAF6EE 0%, #F2EADA 55%, #E1D3BA 100%);
       background-attachment: fixed;
       color: var(--text-main);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -61,18 +61,18 @@
       position: relative;
     }
 
-    /* Faint Archival Seal Watermark across the Light Mist Canvas */
+    /* Fixed Archival Tattoo Seal Watermark behind Cotton Paper */
     body::before {
       content: "";
       position: fixed;
-      top: 60%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 820px;
       height: 820px;
       background: url('assets/tsc-swallow-wrench-brush.png') no-repeat center center;
       background-size: contain;
-      opacity: 0.022;
+      opacity: 0.038;
       pointer-events: none;
       z-index: 0;
     }
@@ -448,13 +448,18 @@
       display: inline-flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 48px;
-      background: #FFFFFF;
-      border: 1px solid rgba(0, 0, 0, 0.10);
+      padding: 44px 52px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+      box-shadow: 
+        0 4px 12px rgba(61, 40, 23, 0.05),
+        0 16px 36px rgba(61, 40, 23, 0.09),
+        0 30px 60px rgba(61, 40, 23, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
       max-width: 680px;
       margin: 0 auto;
+      position: relative;
     }
 
     @media (max-width: 768px) {
@@ -531,19 +536,28 @@
       background: var(--bg-card);
       border: 1px solid var(--border-card);
       border-radius: var(--radius);
-      padding: 30px 26px;
+      padding: 32px 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 
+        0 2px 6px rgba(61, 40, 23, 0.04),
+        0 12px 26px rgba(61, 40, 23, 0.09),
+        0 22px 50px rgba(61, 40, 23, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      position: relative;
     }
 
     .card:hover {
       background: var(--bg-card-hover);
-      border-color: var(--sage);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+      border-color: #BFA46E;
+      transform: translateY(-5px);
+      box-shadow: 
+        0 4px 10px rgba(61, 40, 23, 0.06),
+        0 18px 40px rgba(61, 40, 23, 0.15),
+        0 32px 64px rgba(61, 40, 23, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
     .card-badge {
@@ -607,14 +621,20 @@
     .dispatch-card {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
+      border-top: 3px solid rgba(195, 116, 76, 0.55);
       border-radius: var(--radius);
       padding: 44px;
       display: grid;
       grid-template-columns: 1.3fr 1fr;
       gap: 44px;
       align-items: center;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 
+        0 3px 8px rgba(61, 40, 23, 0.05),
+        0 14px 34px rgba(61, 40, 23, 0.10),
+        0 28px 58px rgba(61, 40, 23, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      position: relative;
     }
 
     @media (max-width: 860px) {
@@ -627,7 +647,13 @@
 
     .dispatch-card:hover {
       border-color: var(--sage);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+      border-top-color: var(--sage);
+      transform: translateY(-4px);
+      box-shadow: 
+        0 6px 14px rgba(61, 40, 23, 0.08),
+        0 22px 48px rgba(61, 40, 23, 0.15),
+        0 38px 74px rgba(61, 40, 23, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
     .dispatch-meta {
@@ -687,13 +713,15 @@
 
     /* Visual Artifact Frame */
     .artifact-preview {
-      background: #F8F5EE;
-      border: 1px solid #E5DEC9;
+      background: #F3EDE1;
+      border: 1px solid #DDD3C1;
       border-radius: var(--radius);
-      padding: 20px;
+      padding: 22px;
       position: relative;
       text-align: center;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      box-shadow: 
+        inset 0 2px 6px rgba(61, 40, 23, 0.06),
+        0 4px 14px rgba(61, 40, 23, 0.08);
     }
 
     .badge-bestseller {
@@ -753,15 +781,19 @@
     /* Sister Brand Callout: Home Revival */
     .banner-revival {
       margin: 20px 0 90px;
-      background: linear-gradient(135deg, #FFFFFF 0%, #F5EFE4 100%);
-      border: 1px solid rgba(0, 0, 0, 0.10);
+      background: linear-gradient(135deg, #FAF7F0 0%, #F2EADA 100%);
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
       padding: 44px 40px;
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 36px;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 
+        0 4px 12px rgba(61, 40, 23, 0.05),
+        0 16px 36px rgba(61, 40, 23, 0.09),
+        0 28px 56px rgba(61, 40, 23, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
     }
 
     @media (max-width: 768px) {
