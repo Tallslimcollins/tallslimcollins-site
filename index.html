@@ -25,14 +25,15 @@
       --charcoal: #1A211E;
       --white: #FFFFFF;
 
-      /* Archival Canvas & Surfaces (Dossier Black System) */
+      /* Archival Canvas & Surfaces (Dossier Black with Light Field Cards) */
       --bg-body: #141716;          /* Deep rich archival matte black */
       --bg-header: #517A71;        /* Deep Sage header banner */
-      --bg-card: #1C2320;          /* Archival card slate surface */
-      --bg-card-hover: #232C28;    /* Elevated card hover surface */
+      --bg-card: #FAF6EE;          /* Warm unbleached archival field card stock */
+      --bg-card-hover: #FFFDF8;    /* Elevated card hover surface */
       --text-main: #F4F1EA;        /* Unbleached archival ivory / crisp white */
       --text-muted: #B8B0A2;       /* Aged parchment readable subtext */
       --border: rgba(255, 255, 255, 0.10); /* Hairline archival rule */
+      --border-card: #DCD3C0;      /* Vintage field document border */
       --border-focus: #C5A059;
       --accent-red: #C0392B;       /* Archival field stamp red */
       --accent-gold: #C5A059;      /* Monospace labels & hairline rules */
@@ -349,21 +350,21 @@
 
     .card {
       background: var(--bg-card);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
       padding: 30px 26px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s ease;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
     .card:hover {
       background: var(--bg-card-hover);
       border-color: var(--accent-gold);
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.40);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
     }
 
     .card-badge {
@@ -377,22 +378,22 @@
       border-radius: 4px;
     }
 
-    .badge-dark { color: var(--accent-sand); background: rgba(223, 192, 140, 0.12); border: 1px solid rgba(223, 192, 140, 0.25); }
-    .badge-root { color: #7EB3A7; background: rgba(112, 153, 144, 0.15); border: 1px solid rgba(112, 153, 144, 0.25); }
-    .badge-dog { color: var(--clay); background: rgba(229, 205, 201, 0.15); border: 1px solid rgba(229, 205, 201, 0.25); }
-    .badge-shop { color: var(--accent-rust); background: rgba(195, 116, 76, 0.15); border: 1px solid rgba(195, 116, 76, 0.25); }
+    .badge-dark { color: #243B35; background: rgba(81, 122, 113, 0.14); border: 1px solid rgba(81, 122, 113, 0.25); }
+    .badge-root { color: #8F4C20; background: rgba(195, 116, 76, 0.14); border: 1px solid rgba(195, 116, 76, 0.25); }
+    .badge-dog { color: #6E4E18; background: rgba(223, 192, 140, 0.30); border: 1px solid rgba(223, 192, 140, 0.45); }
+    .badge-shop { color: #7A352D; background: rgba(229, 205, 201, 0.35); border: 1px solid rgba(229, 205, 201, 0.45); }
 
     .card h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.65rem;
-      color: #FFFFFF;
+      color: #121212;
       margin-bottom: 12px;
       line-height: 1.2;
     }
 
     .card p {
       font-size: 0.92rem;
-      color: var(--text-muted);
+      color: #3D3830;
       margin-bottom: 22px;
       line-height: 1.6;
     }
@@ -403,11 +404,11 @@
       gap: 6px;
       font-size: 0.86rem;
       font-weight: 700;
-      color: var(--accent-gold);
+      color: var(--sage-deep);
     }
 
     .card-link:hover {
-      color: #FFFFFF;
+      color: #121212;
     }
 
     .card-link svg {
@@ -426,7 +427,7 @@
 
     .dispatch-card {
       background: var(--bg-card);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
       padding: 44px;
       display: grid;
@@ -434,7 +435,7 @@
       gap: 44px;
       align-items: center;
       transition: all 0.25s ease;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     @media (max-width: 860px) {
@@ -446,13 +447,14 @@
     }
 
     .dispatch-card:hover {
+      background: var(--bg-card-hover);
       border-color: var(--accent-gold);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
     }
 
     .dispatch-meta {
       font-size: 0.78rem;
-      color: var(--accent-gold);
+      color: #8C6A28;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-weight: 700;
@@ -462,13 +464,13 @@
     .dispatch-left h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(2rem, 3.2vw, 2.7rem);
-      color: #FFFFFF;
+      color: #121212;
       line-height: 1.15;
       margin-bottom: 18px;
     }
 
     .dispatch-excerpt {
-      color: var(--text-muted);
+      color: #3D3830;
       font-size: 1.02rem;
       line-height: 1.75;
       margin-bottom: 28px;
@@ -481,15 +483,39 @@
       align-items: center;
     }
 
+    .dispatch-actions .btn-primary {
+      background: #121212;
+      color: #FFFFFF !important;
+      border: 1px solid #121212;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .dispatch-actions .btn-primary:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
+    }
+
+    .dispatch-actions .btn-outline {
+      background: transparent;
+      color: #121212;
+      border: 1.5px solid #121212;
+    }
+
+    .dispatch-actions .btn-outline:hover {
+      background: rgba(0, 0, 0, 0.06);
+      border-color: #121212;
+      color: #121212;
+    }
+
     /* Visual Artifact Frame */
     .artifact-preview {
-      background: #161C19;
-      border: 1px solid var(--border);
+      background: #F0E9DD;
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
       padding: 20px;
       position: relative;
       text-align: center;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
     .badge-bestseller {
@@ -509,7 +535,7 @@
       text-transform: uppercase;
       line-height: 1.1;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
     .artifact-img {
@@ -523,7 +549,7 @@
     .artifact-price {
       font-size: 0.90rem;
       font-weight: 700;
-      color: var(--accent-sand);
+      color: #121212;
       margin-bottom: 12px;
     }
 
@@ -549,15 +575,15 @@
     /* Sister Brand Callout: Home Revival */
     .banner-revival {
       margin: 20px 0 90px;
-      background: linear-gradient(135deg, #1C2421 0%, #161D1A 100%);
-      border: 1px solid rgba(197, 160, 89, 0.30);
+      background: linear-gradient(135deg, #FAF6EE 0%, #F3EBDD 100%);
+      border: 1px solid var(--border-card);
       border-radius: var(--radius);
       padding: 44px 40px;
       display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 36px;
       align-items: center;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
     }
 
     @media (max-width: 768px) {
@@ -569,14 +595,25 @@
     .banner-revival h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2.1rem;
-      color: #FFFFFF;
+      color: #121212;
       margin-bottom: 10px;
     }
 
     .banner-revival p {
-      color: var(--text-muted);
+      color: #3D3830;
       font-size: 0.98rem;
       line-height: 1.65;
+    }
+
+    .banner-revival .btn-primary {
+      background: #121212;
+      color: #FFFFFF !important;
+      border: 1px solid #121212;
+    }
+
+    .banner-revival .btn-primary:hover {
+      background: var(--sage-dark);
+      border-color: var(--sage-dark);
     }
 
     /* Footer - Dark Sage Tone */
@@ -786,7 +823,7 @@
 
       <!-- Signature Studio Centerpiece: For All Your Art & Mechanical Needs -->
       <div style="margin: 40px 0 80px; text-align: center;">
-        <div style="background: var(--bg-card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 8px 28px rgba(0,0,0,0.08);">
+        <div style="background: var(--bg-card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border-card); box-shadow: 0 10px 32px rgba(0,0,0,0.35);">
           <img src="assets/art-mechanical-needs.jpg" alt="For All Your Art & Mechanical Needs" style="width: 100%; height: auto; display: block; border-radius: 6px;">
         </div>
       </div>
