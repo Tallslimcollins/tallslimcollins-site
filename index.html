@@ -50,12 +50,31 @@
     }
 
     body {
-      background-color: var(--bg-body);
+      background-color: #F7F5F0;
+      background: radial-gradient(ellipse at 50% 12%, #FAF8F5 0%, #F3EFE8 55%, #E9E4DC 100%);
+      background-attachment: fixed;
       color: var(--text-main);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Faint Archival Seal Watermark across the Light Mist Canvas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 820px;
+      height: 820px;
+      background: url('assets/tsc-swallow-wrench-brush.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.022;
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
@@ -343,12 +362,44 @@
       transform: translateY(-2px);
     }
 
-    /* Transition Bar under Hero into Warm Canvas */
+    /* Transition Bar under Hero into Light Mist Canvas */
     .transition-strip {
-      background: #EBE2D3;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: linear-gradient(90deg, #EAE5DB 0%, #F5F1E8 50%, #EAE5DB 100%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
       padding: 14px 0;
-      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04);
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 1240px) {
+      .container {
+        position: relative;
+      }
+      .pillars .container::before,
+      .dispatch-feature .container::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: -20px;
+        width: 4px;
+        border-left: 1px solid var(--accent-sand);
+        border-right: 1px solid rgba(195, 116, 76, 0.35);
+        pointer-events: none;
+      }
+      .pillars .container::after,
+      .dispatch-feature .container::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        right: -20px;
+        width: 4px;
+        border-left: 1px solid rgba(195, 116, 76, 0.35);
+        border-right: 1px solid var(--accent-sand);
+        pointer-events: none;
+      }
     }
 
     .transition-inner {
