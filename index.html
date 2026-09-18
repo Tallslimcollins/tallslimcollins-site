@@ -814,14 +814,139 @@
       color: var(--accent-sand);
     }
 
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 24px;
+    /* Genesis Collection: Memphis Neighborhoods */
+    .neighborhoods-section {
+      background: var(--paper-bg-card, #FAF7F0);
+      border-top: 1px solid rgba(0, 0, 0, 0.10);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+      padding: 90px 0;
+    }
+
+    .neighborhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .neighborhood-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .neighborhood-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      border-color: var(--sage);
+    }
+
+    .neighborhood-badge {
+      display: inline-block;
+      font-family: var(--font-mono, monospace);
+      font-size: 0.70rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-rust);
+      background: rgba(195, 116, 76, 0.08);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+
+    .neighborhood-card h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--ink-dark);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .neighborhood-motto {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--sage-dark);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .neighborhood-card p {
+      font-size: 0.90rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .neighborhood-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.07);
+      padding-top: 16px;
       display: flex;
       justify-content: space-between;
-      font-size: 0.8rem;
-      color: rgba(244, 241, 234, 0.50);
+      align-items: center;
+    }
+
+    .neighborhood-count {
       font-family: var(--font-mono, monospace);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .btn-neighborhood-buy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--ink-dark);
+      color: #FFFFFF;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      transition: all 0.2s ease;
+    }
+
+    .btn-neighborhood-buy:hover {
+      background: var(--sage);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .neighborhood-banner-cta {
+      margin-top: 48px;
+      background: var(--sage-deep);
+      color: #FFFFFF;
+      padding: 36px 32px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .neighborhood-banner-cta h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      color: var(--accent-sand);
+      margin-bottom: 10px;
+    }
+
+    .neighborhood-banner-cta p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 620px;
+      margin: 0 auto 22px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -1282,6 +1407,112 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENESIS COLLECTION: MEMPHIS NEIGHBORHOOD LORE -->
+  <section class="neighborhoods-section" id="neighborhoods">
+    <div class="container">
+      <div class="section-header">
+        <div class="archive-stamp" style="margin-bottom: 12px;">[THE GENESIS COLLECTION // FOUNDATIONAL ARCHIVE]</div>
+        <h2 class="section-title">Memphis Neighborhoods: The Living Lore of 901</h2>
+        <p class="section-subtitle">The very first collection created under the TallSlimCollins moniker. Unvarnished love letters to the idiosyncratic enclaves, front porches, streetcars, and stubborn character of Memphis, Tennessee.</p>
+      </div>
+
+      <div class="neighborhoods-grid">
+        <!-- Neighborhood 1: Frayser -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">North Memphis · 38127</span>
+            <h3>Frayser</h3>
+            <span class="neighborhood-motto">“No Pretense. No Apologies.”</span>
+            <p>Blue-collar grit, heavy industry, working hands, and an unshakeable refusal to put on airs for anyone. 121 artifacts across tees, heavyweight hoodies, canvas totes, and home pillows.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">121 Items · From $5.95</span>
+            <a href="https://tallslimcollins.threadless.com/designs/frayser-memphis-no-pretense-no-apologies" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Frayser →</a>
+          </div>
+        </div>
+
+        <!-- Neighborhood 2: Orange Mound -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">Historic South · 38114</span>
+            <h3>Orange Mound</h3>
+            <span class="neighborhood-motto">“Built By Us, For Us.”</span>
+            <p>Not just a neighborhood—a monumental legacy. America’s first community built by African Americans for African Americans. Deep shotgun home traditions and generational resilience.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">109 Items · From $5.95</span>
+            <a href="https://tallslimcollins.threadless.com/designs/orange-mound-memphis-not-a-neighborhood-a-legacy" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Orange Mound →</a>
+          </div>
+        </div>
+
+        <!-- Neighborhood 3: Cooper-Young -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">Midtown Enclave · 38104</span>
+            <h3>Cooper-Young</h3>
+            <span class="neighborhood-motto">“Craftsman &amp; The Gayborhood”</span>
+            <p>Trestle bridges, Craftsman bungalows, front porch stoops, LGBTQ+ sanctuaries, and the late-night bohemian heartbeat of Midtown Memphis.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">188 Items · From $5.95</span>
+            <a href="https://tallslimcollins.threadless.com/designs/cooper-young-craftsman" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Cooper-Young →</a>
+          </div>
+        </div>
+
+        <!-- Neighborhood 4: Central Gardens -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">Historic Landmark · 38104</span>
+            <h3>Central Gardens</h3>
+            <span class="neighborhood-motto">“Voted Best. Again.”</span>
+            <p>Century-old oak canopies, historic brick alleyways, turn-of-the-century architectural revivals, and timeless Midtown permanence.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">89 Items · From $6.00</span>
+            <a href="https://tallslimcollins.threadless.com/designs/central-gardens-memphis-voted-best-again" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Central Gardens →</a>
+          </div>
+        </div>
+
+        <!-- Neighborhood 5: Victorian Village -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">Downtown Fringe · 38105</span>
+            <h3>Victorian Village</h3>
+            <span class="neighborhood-motto">“Haunted By Property Taxes.”</span>
+            <p>Gilded-age Italianate and Gothic mansions, cast-iron spiked fences, lingering neighborhood ghosts, and dry Memphis architectural humor.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">41 Items · From $6.00</span>
+            <a href="https://tallslimcollins.threadless.com/designs/victorian-village-memphis-haunted-by-property-taxes" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Victorian Village →</a>
+          </div>
+        </div>
+
+        <!-- Neighborhood 6: Overton Park & Zoo -->
+        <div class="neighborhood-card">
+          <div>
+            <span class="neighborhood-badge">Midtown Green · 38112</span>
+            <h3>Overton Park &amp; Zoo</h3>
+            <span class="neighborhood-motto">“Lantern Festival Trio”</span>
+            <p>Old-growth hardwood forest, century-old pavilion walks, stone gates, and the beloved cultural heartbeat of Midtown family life.</p>
+          </div>
+          <div class="neighborhood-footer">
+            <span class="neighborhood-count">109 Items · From $5.95</span>
+            <a href="https://tallslimcollins.threadless.com/designs/memphis-zoo-overton-park" target="_blank" rel="noopener" class="btn-neighborhood-buy">Shop Overton Park →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Master Collection CTA Banner -->
+      <div class="neighborhood-banner-cta">
+        <h4>Explore the Complete 901 Neighborhood Roster</h4>
+        <p>Featuring Whitehaven, Midtown Flash, South Memphis, Aretha's Lucy Ave, and the Memphis Tigers Vintage Banner across nearly 900 wearable artifacts and home goods.</p>
+        <a href="https://tallslimcollins.threadless.com/collections/memphis-neighborhoods-flash-art-series" target="_blank" rel="noopener" class="btn btn-primary" style="background: var(--parchment); color: var(--ink-dark); font-weight: 700;">
+          Browse All 895 Neighborhood Artifacts on Threadless →
+        </a>
       </div>
     </div>
   </section>
