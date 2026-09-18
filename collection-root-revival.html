@@ -408,6 +408,126 @@
       transform: translateY(-2px);
     }
 
+    /* Formats Showcase Section */
+    .formats-showcase-section {
+      background: var(--parchment-light);
+      border-top: 2px solid rgba(0, 0, 0, 0.10);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.10);
+      padding: 60px 0 70px;
+    }
+
+    .formats-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .formats-header h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 8px 0;
+    }
+
+    .formats-header p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .format-card {
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    .format-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      border-color: var(--sage);
+    }
+
+    .format-img-box {
+      background: var(--clay-tint);
+      border-radius: 6px;
+      padding: 16px 12px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 14px;
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .format-img-box img {
+      max-height: 160px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+    }
+
+    .format-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--sage-dark);
+      color: #FFFFFF;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 7px;
+      border-radius: 3px;
+    }
+
+    .format-card h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .format-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .format-link {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      padding-top: 10px;
+    }
+
+    .format-link:hover {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
     /* Artifacts Catalog Grid */
     .catalog-section {
       border-top: 1px solid rgba(0, 0, 0, 0.12);
@@ -702,12 +822,81 @@
     </section>
   </main>
 
+  <!-- Merch Formats Showcase: Living Studio Artifacts -->
+  <section class="formats-showcase-section">
+    <div class="container">
+      <div class="formats-header">
+        <span class="collection-eyebrow">★ Beyond The T-Shirt ★</span>
+        <h2>The Living Artifact Suite</h2>
+        <p>Every piece in the Root Revival series is available across heavyweight apparel, natural cotton market totes, spiral field sketchbooks, and archival fine art prints fulfilled by Threadless.</p>
+      </div>
+
+      <div class="formats-grid">
+        <!-- Format 1: Two-Sided Garment -->
+        <div class="format-card">
+          <div class="format-img-box">
+            <img src="assets/root-revival/root-revival-tee-shade-queen-two-sided.png" alt="Two-Sided Garment with Pocket Crest and Full Back Shade Queen Print">
+            <span class="format-badge">Two-Sided Garment</span>
+          </div>
+          <h4>Pocket Crest &amp; Back Print</h4>
+          <p>Front-chest Root Revival series mark anchored by the full botanical illustration across the back.</p>
+          <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-shade-queen" target="_blank" rel="noopener" class="format-link">Explore Shade Queen Tee →</a>
+        </div>
+
+        <!-- Format 2: Natural Studio Apparel -->
+        <div class="format-card">
+          <div class="format-img-box">
+            <img src="assets/root-revival/root-revival-tee-mind-your-own-moss-model.png" alt="Mind Your Own Moss Tee on Model">
+            <span class="format-badge">Studio Apparel</span>
+          </div>
+          <h4>Heavyweight Natural Tees</h4>
+          <p>Classic relaxed-cut cotton tees in warm parchment, sage, and natural cream tones.</p>
+          <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-mind-your-own-moss" target="_blank" rel="noopener" class="format-link">Explore Moss Tee →</a>
+        </div>
+
+        <!-- Format 3: Heavy Cotton Canvas Totes -->
+        <div class="format-card">
+          <div class="format-img-box">
+            <img src="assets/root-revival/root-revival-tote-wildly-elegant.png" alt="Heavy Cotton Canvas Market Tote">
+            <span class="format-badge">Canvas Totes</span>
+          </div>
+          <h4>Market &amp; Garden Totes</h4>
+          <p>Heavyweight cotton canvas bags built for nursery plant hauls, farmers markets, and antique hunts.</p>
+          <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-wildly-elegant" target="_blank" rel="noopener" class="format-link">Explore Wildly Elegant Tote →</a>
+        </div>
+
+        <!-- Format 4: Field Journals -->
+        <div class="format-card">
+          <div class="format-img-box">
+            <img src="assets/root-revival/root-revival-journal-mind-your-own-moss.png" alt="Spiral Field Notebook and Journal">
+            <span class="format-badge">Field Journals</span>
+          </div>
+          <h4>Spiral Notebooks &amp; Journals</h4>
+          <p>Hardcover and spiral sketchbooks designed for job site measurements, garden notes, and field drawings.</p>
+          <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-mind-your-own-moss" target="_blank" rel="noopener" class="format-link">Explore Field Journal →</a>
+        </div>
+
+        <!-- Format 5: Archival Art Prints -->
+        <div class="format-card">
+          <div class="format-img-box">
+            <img src="assets/root-revival/root-revival-print-wildly-elegant.png" alt="Archival Fine Art Print">
+            <span class="format-badge">Art Prints</span>
+          </div>
+          <h4>Archival Fine Art Prints</h4>
+          <p>Warm parchment gallery prints framed with hand-drawn French acanthus and vintage horticultural craft.</p>
+          <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-wildly-elegant" target="_blank" rel="noopener" class="format-link">Explore Art Prints →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Artifacts Catalog -->
   <section class="catalog-section">
     <div class="container">
       <div class="catalog-header">
-        <h2>Artifacts in This Collection</h2>
-        <p>Illustrated in detailed pen & ink with crosshatching and traditional banner scrollwork.</p>
+        <span class="collection-eyebrow" style="margin-bottom:8px; display:inline-block;">★ The Pen &amp; Ink Flash Suite ★</span>
+        <h2>Illustrated Artifacts in This Series</h2>
+        <p>Illustrated in hand-drawn botanical pen &amp; ink with crosshatching, French acanthus, and vintage banner typography. Available across apparel, canvas bags, journals, and art prints.</p>
       </div>
 
       <div class="artifacts-grid">
@@ -719,12 +908,13 @@
           </div>
           <div class="piece-content">
             <div>
-              <h3>Root Revival Crest</h3>
-              <p>Crossed antique gardening trowels framed in ornate hand-drawn French acanthus scrollwork. The anchor emblem of the botanical series.</p>
+              <span style="font-size:0.72rem; font-weight:700; color:var(--sage-dark); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">★ Signature Series Pocket Mark</span>
+              <h3>Root Revival Master Crest</h3>
+              <p>Hand-drawn crossed antique trowels framed in French acanthus scrollwork. Featured as the signature front-left chest pocket mark on select two-sided drops (including Shade Queen).</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
-              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Front Pocket Crest</span>
+              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Browse Drop →</a>
             </div>
           </div>
         </div>
@@ -740,7 +930,7 @@
               <p>Gnarled dogwood boughs and delicate pink blossoms springing from weathered Delta driftwood. A testament to surviving the hardest seasons.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-blood-sweat-and-dogwoods" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -757,7 +947,7 @@
               <p>An artisan gloved hand with vintage steel pruning shears tending a crape myrtle limb. Restraint and stewardship as the highest discipline of craft.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-cut-with-care-not-cruelty" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -774,7 +964,7 @@
               <p>Vintage garden shears wrapped in climbing morning glory vines and French acanthus scrollwork with classic banner typography.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-wildly-elegant" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -791,7 +981,7 @@
               <p>Deep Southern Magnolia grandiflora blossom in full bloom, flanked by traditional flash banners honoring relentless roots and quiet grace.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-grit-in-the-soil-grace-in-the-bloom" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -808,7 +998,7 @@
               <p>Lush forest ferns, velvet moss mounds, and curling fiddleheads wrapped in classical ribbon scrollwork. Midtown courtyard shade sanctuary.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-mind-your-own-moss" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -821,12 +1011,13 @@
           </div>
           <div class="piece-content">
             <div>
+              <span style="font-size:0.72rem; font-weight:700; color:var(--sage-dark); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">★ Two-Sided Garment: Pocket Crest + Back Art</span>
               <h3>Shade Queen</h3>
-              <p>Dramatic caladium and elephant ear foliage crowned with ornate acanthus flourishes. Celebrating the flora that thrives in deep porch shade.</p>
+              <p>Dramatic caladium and elephant ear foliage crowned with ornate acanthus flourishes. Available as a two-sided tee with front-chest pocket crest.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
-              <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-shade-queen" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
+              <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-shade-queen" target="_blank" rel="noopener" class="btn-piece-buy">Shop on Threadless →</a>
             </div>
           </div>
         </div>
@@ -842,7 +1033,7 @@
               <p>Deep-rooted Southern botanical endurance. Flourishing and unbroken under the suffocating ninety-five degree Mid-South August sun.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700;">Apparel &amp; Goods</span>
               <a href="https://tallslimcollins.threadless.com/designs/tallslimcollins-root-revival-series-unmoved-by-the-heat" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
             </div>
           </div>
@@ -855,12 +1046,13 @@
           </div>
           <div class="piece-content">
             <div>
+              <span style="font-size:0.72rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">★ Studio Archive Artwork</span>
               <h3>Night Bloom</h3>
               <p>Evening-opening moonflowers and jasmine unfurling in the cool midnight air of a Midtown Memphis courtyard after the asphalt cools.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
-              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">Studio Lore</span>
+              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Browse Drop →</a>
             </div>
           </div>
         </div>
@@ -872,12 +1064,13 @@
           </div>
           <div class="piece-content">
             <div>
+              <span style="font-size:0.72rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:4px;">★ Studio Archive Artwork</span>
               <h3>Bloom &amp; Prune</h3>
               <p>The timeless discipline of intentional cutting and patient flowering. Balance, craftsmanship, and reverence for living growth.</p>
             </div>
             <div class="piece-footer">
-              <span class="piece-price">$28.00</span>
-              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+              <span class="piece-price" style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">Studio Lore</span>
+              <a href="https://tallslimcollins.threadless.com/collections/root-revival-series-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Browse Drop →</a>
             </div>
           </div>
         </div>
