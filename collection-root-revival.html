@@ -463,6 +463,26 @@
       padding: 28px 20px;
       text-align: center;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+    }
+
+    .piece-artwork-img {
+      max-height: 230px;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.07));
+    }
+
+    .piece-card:hover .piece-artwork-img {
+      transform: scale(1.05);
     }
 
     .piece-badge-inner {
@@ -692,18 +712,15 @@
 
       <div class="artifacts-grid">
         
-        <!-- Item 1: Wildly Elegant -->
+        <!-- Item 1: Root Revival Crest -->
         <div class="piece-card">
           <div class="piece-preview">
-            <div class="piece-badge-inner">
-              <h4>Wildly Elegant</h4>
-              <span>Vintage Shears & Morning Glories</span>
-            </div>
+            <img src="assets/root-revival/root-revival-crest.png" alt="Root Revival Master Crest - Crossed Trowels and Acanthus" class="piece-artwork-img">
           </div>
           <div class="piece-content">
             <div>
-              <h3>Wildly Elegant</h3>
-              <p>Vintage garden shears wrapped in morning glories and French acanthus scrollwork with classic banner typography.</p>
+              <h3>Root Revival Crest</h3>
+              <p>Crossed antique gardening trowels framed in ornate hand-drawn French acanthus scrollwork. The anchor emblem of the botanical series.</p>
             </div>
             <div class="piece-footer">
               <span class="piece-price">$28.00</span>
@@ -715,15 +732,12 @@
         <!-- Item 2: Blood, Sweat and Dogwoods -->
         <div class="piece-card">
           <div class="piece-preview">
-            <div class="piece-badge-inner">
-              <h4>Dogwoods</h4>
-              <span>Driftwood & Pink Blossoms</span>
-            </div>
+            <img src="assets/root-revival/blood-sweat-dogwoods.png" alt="Blood, Sweat and Dogwoods Botanical Tattoo Flash" class="piece-artwork-img">
           </div>
           <div class="piece-content">
             <div>
-              <h3>Blood, Sweat & Dogwoods</h3>
-              <p>Weathered Delta driftwood tangled in pink dogwood blossoms. A testament to surviving the hardest seasons.</p>
+              <h3>Blood, Sweat &amp; Dogwoods</h3>
+              <p>Gnarled dogwood boughs and delicate pink blossoms springing from weathered Delta driftwood. A testament to surviving the hardest seasons.</p>
             </div>
             <div class="piece-footer">
               <span class="piece-price">$28.00</span>
@@ -735,15 +749,12 @@
         <!-- Item 3: Cut With Care, Not Cruelty -->
         <div class="piece-card">
           <div class="piece-preview">
-            <div class="piece-badge-inner">
-              <h4>Cut With Care</h4>
-              <span>Gloved Hand & Pruning Snips</span>
-            </div>
+            <img src="assets/root-revival/cut-with-care.png" alt="Cut With Care, Not Cruelty - Gloved Hand and Pruning Shears" class="piece-artwork-img">
           </div>
           <div class="piece-content">
             <div>
               <h3>Cut With Care</h3>
-              <p>A gloved artisan hand with pruning shears tending a crape myrtle branch. Restraint is the highest form of power.</p>
+              <p>An artisan gloved hand with vintage steel pruning shears tending a crape myrtle limb. Restraint and stewardship as the highest discipline of craft.</p>
             </div>
             <div class="piece-footer">
               <span class="piece-price">$28.00</span>
@@ -752,18 +763,117 @@
           </div>
         </div>
 
-        <!-- Item 4: Root Revival Crest -->
+        <!-- Item 4: Wildly Elegant -->
         <div class="piece-card">
           <div class="piece-preview">
-            <div class="piece-badge-inner">
-              <h4>The Crest</h4>
-              <span>Crossed Trowels & Acanthus</span>
-            </div>
+            <img src="assets/root-revival/wildly-elegant.png" alt="Wildly Elegant - Vintage Shears and Morning Glories" class="piece-artwork-img">
           </div>
           <div class="piece-content">
             <div>
-              <h3>Root Revival Crest</h3>
-              <p>Crossed hand trowels framed in an ornate acanthus wreath. The anchor emblem of the botanical series.</p>
+              <h3>Wildly Elegant</h3>
+              <p>Vintage garden shears wrapped in climbing morning glory vines and French acanthus scrollwork with classic banner typography.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5: Grit in the Soil · Grace in the Bloom -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/grit-in-the-soil.png" alt="Grit in the Soil, Grace in the Bloom - Magnolia Grandiflora" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Grit in the Soil</h3>
+              <p>Deep Southern Magnolia grandiflora blossom in full bloom, flanked by traditional flash banners honoring relentless roots and quiet grace.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Mind Your Own Moss -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/mind-your-own-moss.png" alt="Mind Your Own Moss - Southern Ferns and Velvet Moss" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Mind Your Own Moss</h3>
+              <p>Lush forest ferns, velvet moss mounds, and curling fiddleheads wrapped in classical ribbon scrollwork. Midtown courtyard shade sanctuary.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7: Shade Queen -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/shade-queen.png" alt="Shade Queen - Caladium and Elephant Ear Foliage" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Shade Queen</h3>
+              <p>Dramatic caladium and elephant ear foliage crowned with ornate acanthus flourishes. Celebrating the flora that thrives in deep porch shade.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Unmoved by the Heat -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/unmoved-by-the-heat.png" alt="Unmoved by the Heat - Delta Summer Resilience" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Unmoved by the Heat</h3>
+              <p>Deep-rooted Southern botanical endurance. Flourishing and unbroken under the suffocating ninety-five degree Mid-South August sun.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9: Night Bloom -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/night-bloom.png" alt="Night Bloom - Moonflowers and Evening Jasmine" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Night Bloom</h3>
+              <p>Evening-opening moonflowers and jasmine unfurling in the cool midnight air of a Midtown Memphis courtyard after the asphalt cools.</p>
+            </div>
+            <div class="piece-footer">
+              <span class="piece-price">$28.00</span>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-piece-buy">Buy on Threadless →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10: Bloom & Prune -->
+        <div class="piece-card">
+          <div class="piece-preview">
+            <img src="assets/root-revival/bloom-prune.png" alt="Bloom and Prune - Balanced Seasonal Horticulture" class="piece-artwork-img">
+          </div>
+          <div class="piece-content">
+            <div>
+              <h3>Bloom &amp; Prune</h3>
+              <p>The timeless discipline of intentional cutting and patient flowering. Balance, craftsmanship, and reverence for living growth.</p>
             </div>
             <div class="piece-footer">
               <span class="piece-price">$28.00</span>
@@ -785,6 +895,7 @@
       <div>
         <a href="https://facebook.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Facebook</a>
         <a href="https://instagram.com/tallslimcollins" target="_blank" rel="noopener" style="margin-right: 14px;">Instagram</a>
+        <a href="https://www.pinterest.com/tallslimcollins/" target="_blank" rel="noopener" style="margin-right: 14px;">Pinterest Visual Archive ↗</a>
         <a href="index.html" style="margin-right: 14px;">Home Portal</a>
         <a href="story-dancing-jimmy.html" style="margin-right: 14px;">Dancing Jimmy Dispatch</a>
         <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Store</a>
