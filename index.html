@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,20 +25,20 @@
       --charcoal: #1A211E;
       --white: #FFFFFF;
 
-      /* Canvas & Surfaces: Weighted Cotton Archival Paper Canvas */
-      --bg-body: #F3ECE0;          /* Warm unbleached cotton archival paper */
-      --bg-header: #517A71;        /* Deep Sage header banner */
-      --bg-card: #FAF7F0;          /* Warm ivory archival cardstock */
-      --bg-card-hover: #FFFDF9;    /* Elevated card hover surface */
-      --text-main: #121212;        /* Bold black typography */
-      --text-muted: #3D3830;       /* Readable dark charcoal subtext */
-      --border: rgba(0, 0, 0, 0.10); /* Hairline paper rule */
-      --border-card: #DDD6C8;      /* Weathered letterpress card border */
+      /* Canvas & Surfaces */
+      --bg-body: #F3ECE0;
+      --bg-header: #517A71;
+      --bg-card: #FAF7F0;
+      --bg-card-hover: #FFFDF9;
+      --text-main: #121212;
+      --text-muted: #3D3830;
+      --border: rgba(0, 0, 0, 0.10);
+      --border-card: #DDD6C8;
       --border-focus: #517A71;
-      --accent-red: #C0392B;       /* Archival field stamp red */
-      --accent-gold: #C5A059;      /* Monospace labels & hairline rules */
-      --accent-rust: #C3744C;      /* Southern rust guideline */
-      --accent-sand: #DFC08C;      /* Warm golden sand */
+      --accent-red: #C0392B;
+      --accent-gold: #C5A059;
+      --accent-rust: #C3744C;
+      --accent-sand: #DFC08C;
       --radius: 6px;
       --radius-sm: 2px;
     }
@@ -61,7 +61,6 @@
       position: relative;
     }
 
-    /* Fixed Archival Tattoo Seal Watermark behind Cotton Paper */
     body::before {
       content: "";
       position: fixed;
@@ -89,7 +88,7 @@
       padding: 0 24px;
     }
 
-    /* Top Announcement Bar - Dark Sage */
+    /* Top Announcement Bar */
     .top-bar {
       background: var(--sage-dark);
       color: var(--parchment-light);
@@ -108,7 +107,7 @@
       font-weight: 700;
     }
 
-    /* Navigation - Pure Threadless Sage Banner */
+    /* Navigation */
     header {
       position: sticky;
       top: 0;
@@ -164,12 +163,12 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 24px;
+      gap: 20px;
       align-items: center;
     }
 
     nav a {
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       color: var(--parchment-light);
@@ -212,10 +211,7 @@
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: radial-gradient(circle at 80% 20%, rgba(81, 122, 113, 0.12) 0%, transparent 60%);
       pointer-events: none;
     }
@@ -234,10 +230,6 @@
         grid-template-columns: 1fr;
         gap: 40px;
       }
-    }
-
-    .hero .archive-stamp {
-      margin-bottom: 20px;
     }
 
     .hero h1 {
@@ -362,7 +354,7 @@
       transform: translateY(-2px);
     }
 
-    /* Transition Bar under Hero into Light Mist Canvas */
+    /* Transition Bar */
     .transition-strip {
       background: linear-gradient(90deg, #EAE5DB 0%, #F5F1E8 50%, #EAE5DB 100%);
       border-bottom: 1px solid rgba(0, 0, 0, 0.07);
@@ -370,36 +362,6 @@
       box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
       position: relative;
       z-index: 2;
-    }
-
-    @media (min-width: 1240px) {
-      .container {
-        position: relative;
-      }
-      .pillars .container::before,
-      .dispatch-feature .container::before {
-        content: "";
-        position: absolute;
-        top: 20px;
-        bottom: 20px;
-        left: -20px;
-        width: 4px;
-        border-left: 1px solid var(--accent-sand);
-        border-right: 1px solid rgba(195, 116, 76, 0.35);
-        pointer-events: none;
-      }
-      .pillars .container::after,
-      .dispatch-feature .container::after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        bottom: 20px;
-        right: -20px;
-        width: 4px;
-        border-left: 1px solid rgba(195, 116, 76, 0.35);
-        border-right: 1px solid var(--accent-sand);
-        pointer-events: none;
-      }
     }
 
     .transition-inner {
@@ -438,70 +400,6 @@
       text-transform: uppercase;
     }
 
-    /* Studio Mascot Centerpiece */
-    .studio-centerpiece {
-      margin: 30px 0 70px;
-      text-align: center;
-    }
-
-    .centerpiece-box {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 44px 52px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius);
-      box-shadow: 
-        0 4px 12px rgba(61, 40, 23, 0.05),
-        0 16px 36px rgba(61, 40, 23, 0.09),
-        0 30px 60px rgba(61, 40, 23, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
-      max-width: 680px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    @media (max-width: 768px) {
-      .centerpiece-box {
-        padding: 30px 20px;
-      }
-    }
-
-    .centerpiece-img {
-      max-width: 220px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.12));
-    }
-
-    .centerpiece-box h3 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: #121212;
-      margin-bottom: 6px;
-    }
-
-    .centerpiece-tag {
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: var(--sage);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .centerpiece-box p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      margin: 0;
-      max-width: 540px;
-    }
-
     /* Sections General */
     .section-header {
       margin-bottom: 40px;
@@ -520,82 +418,76 @@
       max-width: 640px;
     }
 
-    /* Pillars / Portals Grid */
+    /* The Five Worlds Portals Grid */
     .pillars {
-      padding: 80px 0;
+      padding: 80px 0 60px;
       position: relative;
     }
 
     .grid-pillars {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
     }
 
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
       border-radius: var(--radius);
-      padding: 32px 28px;
+      padding: 28px 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 
-        0 2px 6px rgba(61, 40, 23, 0.04),
-        0 12px 26px rgba(61, 40, 23, 0.09),
-        0 22px 50px rgba(61, 40, 23, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      box-shadow: 0 2px 6px rgba(61, 40, 23, 0.04), 0 12px 26px rgba(61, 40, 23, 0.09);
       position: relative;
     }
 
     .card:hover {
       background: var(--bg-card-hover);
       border-color: #BFA46E;
-      transform: translateY(-5px);
-      box-shadow: 
-        0 4px 10px rgba(61, 40, 23, 0.06),
-        0 18px 40px rgba(61, 40, 23, 0.15),
-        0 32px 64px rgba(61, 40, 23, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(61, 40, 23, 0.14);
     }
 
     .card-badge {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-weight: 700;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: inline-block;
-      padding: 4px 8px;
+      padding: 3px 8px;
       border-radius: 4px;
+      font-family: var(--font-mono, monospace);
     }
 
     .badge-dark { color: #243B35; background: rgba(81, 122, 113, 0.12); border: 1px solid rgba(81, 122, 113, 0.25); }
     .badge-root { color: #8F4C20; background: rgba(195, 116, 76, 0.12); border: 1px solid rgba(195, 116, 76, 0.25); }
-    .badge-dog { color: #6E4E18; background: rgba(223, 192, 140, 0.30); border: 1px solid rgba(223, 192, 140, 0.45); }
+    .badge-dog  { color: #6E4E18; background: rgba(223, 192, 140, 0.30); border: 1px solid rgba(223, 192, 140, 0.45); }
     .badge-shop { color: #7A352D; background: rgba(229, 205, 201, 0.35); border: 1px solid rgba(229, 205, 201, 0.45); }
+    .badge-gold { color: #8C6A28; background: rgba(197, 160, 89, 0.18); border: 1px solid rgba(197, 160, 89, 0.35); }
 
     .card h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.65rem;
+      font-size: 1.45rem;
       color: #121212;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.2;
     }
 
     .card p {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 22px;
-      line-height: 1.6;
+      margin-bottom: 18px;
+      line-height: 1.55;
     }
 
     .card-link {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       font-weight: 700;
       color: var(--sage-deep);
     }
@@ -604,15 +496,60 @@
       color: #000000;
     }
 
-    .card-link svg {
-      transition: transform 0.2s ease;
+    /* Studio Mascot Centerpiece */
+    .studio-centerpiece {
+      margin: 40px 0 30px;
+      text-align: center;
     }
 
-    .card:hover .card-link svg {
-      transform: translateX(4px);
+    .centerpiece-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 38px 46px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(61, 40, 23, 0.06), 0 16px 36px rgba(61, 40, 23, 0.08);
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
     }
 
-    /* Flagship Dispatch: Dancing Jimmy Feature */
+    .centerpiece-img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.12));
+    }
+
+    .centerpiece-box h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #121212;
+      margin-bottom: 6px;
+    }
+
+    .centerpiece-tag {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--sage);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .centerpiece-box p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 520px;
+    }
+
+    /* Featured Dispatches Section */
     .dispatch-feature {
       padding: 70px 0 90px;
       border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -623,67 +560,61 @@
       border: 1px solid var(--border-card);
       border-top: 3px solid rgba(195, 116, 76, 0.55);
       border-radius: var(--radius);
-      padding: 44px;
+      padding: 40px;
       display: grid;
       grid-template-columns: 1.3fr 1fr;
-      gap: 44px;
+      gap: 40px;
       align-items: center;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 
-        0 3px 8px rgba(61, 40, 23, 0.05),
-        0 14px 34px rgba(61, 40, 23, 0.10),
-        0 28px 58px rgba(61, 40, 23, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(61, 40, 23, 0.05), 0 14px 34px rgba(61, 40, 23, 0.10);
+      margin-bottom: 36px;
       position: relative;
     }
 
     @media (max-width: 860px) {
       .dispatch-card {
         grid-template-columns: 1fr;
-        padding: 30px 24px;
-        gap: 32px;
+        padding: 28px 20px;
+        gap: 28px;
       }
     }
 
     .dispatch-card:hover {
       border-color: var(--sage);
       border-top-color: var(--sage);
-      transform: translateY(-4px);
-      box-shadow: 
-        0 6px 14px rgba(61, 40, 23, 0.08),
-        0 22px 48px rgba(61, 40, 23, 0.15),
-        0 38px 74px rgba(61, 40, 23, 0.09),
-        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(61, 40, 23, 0.08), 0 20px 44px rgba(61, 40, 23, 0.14);
     }
 
     .dispatch-meta {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: #8C6A28;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      font-family: var(--font-mono, monospace);
     }
 
     .dispatch-left h3 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
       color: #121212;
       line-height: 1.15;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .dispatch-excerpt {
       color: var(--text-muted);
-      font-size: 1.02rem;
-      line-height: 1.75;
-      margin-bottom: 28px;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
     }
 
     .dispatch-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
     }
 
@@ -691,7 +622,10 @@
       background: #121212;
       color: #FFFFFF !important;
       border: 1px solid #121212;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      padding: 10px 20px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
     }
 
     .dispatch-actions .btn-primary:hover {
@@ -703,6 +637,10 @@
       background: transparent;
       color: #121212;
       border: 1.5px solid #121212;
+      padding: 9px 18px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
     }
 
     .dispatch-actions .btn-outline:hover {
@@ -711,37 +649,33 @@
       background: rgba(81, 122, 113, 0.08);
     }
 
-    /* Visual Artifact Frame */
     .artifact-preview {
       background: #F3EDE1;
       border: 1px solid #DDD3C1;
       border-radius: var(--radius);
-      padding: 22px;
+      padding: 20px;
       position: relative;
       text-align: center;
-      box-shadow: 
-        inset 0 2px 6px rgba(61, 40, 23, 0.06),
-        0 4px 14px rgba(61, 40, 23, 0.08);
+      box-shadow: inset 0 2px 6px rgba(61, 40, 23, 0.06);
     }
 
     .badge-bestseller {
       position: absolute;
-      top: 14px;
-      left: 14px;
+      top: 12px;
+      left: 12px;
       background: #121212;
       color: #FFFFFF;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       font-weight: 800;
       text-transform: uppercase;
       line-height: 1.1;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
 
     .artifact-img {
@@ -749,23 +683,24 @@
       height: auto;
       display: block;
       border-radius: 4px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .artifact-price {
-      font-size: 0.90rem;
+      font-size: 0.86rem;
       font-weight: 700;
       color: #121212;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      font-family: var(--font-mono, monospace);
     }
 
     .btn-buy-threadless {
       display: block;
       width: 100%;
-      padding: 10px 16px;
+      padding: 10px 14px;
       background: var(--sage);
       color: #FFFFFF;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 700;
       border-radius: var(--radius);
       letter-spacing: 0.04em;
@@ -784,16 +719,12 @@
       background: linear-gradient(135deg, #FAF7F0 0%, #F2EADA 100%);
       border: 1px solid var(--border-card);
       border-radius: var(--radius);
-      padding: 44px 40px;
+      padding: 40px 36px;
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 36px;
+      gap: 32px;
       align-items: center;
-      box-shadow: 
-        0 4px 12px rgba(61, 40, 23, 0.05),
-        0 16px 36px rgba(61, 40, 23, 0.09),
-        0 28px 56px rgba(61, 40, 23, 0.05),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(61, 40, 23, 0.05), 0 16px 36px rgba(61, 40, 23, 0.09);
     }
 
     @media (max-width: 768px) {
@@ -811,7 +742,7 @@
 
     .banner-revival p {
       color: var(--text-muted);
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       line-height: 1.65;
     }
 
@@ -819,6 +750,9 @@
       background: #121212;
       color: #FFFFFF !important;
       border: 1px solid #121212;
+      padding: 12px 24px;
+      font-weight: 700;
+      border-radius: 4px;
     }
 
     .banner-revival .btn-primary:hover {
@@ -826,7 +760,7 @@
       border-color: var(--sage-dark);
     }
 
-    /* Footer - Dark Sage Tone */
+    /* Footer */
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.10);
       padding: 60px 0 40px;
@@ -854,6 +788,7 @@
       letter-spacing: 0.12em;
       color: var(--accent-gold);
       margin-bottom: 16px;
+      font-family: var(--font-mono, monospace);
     }
 
     .footer-col p {
@@ -886,33 +821,37 @@
       justify-content: space-between;
       font-size: 0.8rem;
       color: rgba(244, 241, 234, 0.50);
+      font-family: var(--font-mono, monospace);
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar in Official Threadless Sage -->
+  <!-- Top Announcement Bar -->
   <div class="top-bar">
-    ★ Official Threadless Store Drops Active · Wearable Memphis Memoirs & Artifacts
+    ★ Official Threadless Store Drops Active · Wearable Memphis Memoirs &amp; Living Artifacts
     <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Shop Threadless Store →</a>
   </div>
 
-  <!-- Navigation -->
+  <!-- Navigation: The Five Content Worlds -->
   <header>
     <div class="container nav-inner">
       <div class="brand-mark">
-        <img src="assets/tsc-wrench-brush-rose-badge.png" alt="TallSlimCollins Wrench-Brush Tattoo Seal" class="brand-badge-img">
-        <div class="brand-text">
-          <span class="brand-title">TallSlimCollins</span>
-          <span class="brand-subtitle">Stevan Collins Lazich · Memphis, TN</span>
-        </div>
+        <a href="index.html" style="display: flex; align-items: center; gap: 14px;">
+          <img src="assets/tsc-wrench-brush-rose-badge.png" alt="TallSlimCollins Wrench-Brush Tattoo Seal" class="brand-badge-img">
+          <div class="brand-text">
+            <span class="brand-title">TallSlimCollins</span>
+            <span class="brand-subtitle">Stevan Collins Lazich · Memphis, TN</span>
+          </div>
+        </a>
       </div>
       <nav>
         <ul>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="timeline-dossier.html">Dossier</a></li>
           <li><a href="#dispatches">Dispatches</a></li>
-          <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival</a></li>
+          <li><a href="#works">The Work</a></li>
+          <li><a href="#objects">The Objects</a></li>
+          <li><a href="timeline-dossier.html">The Archive</a></li>
+          <li><a href="#notebook">The Notebook</a></li>
           <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
             Shop Threadless
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -928,25 +867,25 @@
       <div class="hero-grid">
         <div>
           <div class="stamp-row" style="margin-bottom: 18px;">
-            <span class="archive-stamp">[FIELD DOSSIER // RECORD #SCL-1985-2026]</span>
+            <span class="archive-stamp">[FIELD DOSSIER // RECORD #SCL-1984-2026]</span>
           </div>
           <h1>Four Decades of Physical Craft,<br><em>Night Hours &amp; Living Mid-South Lore</em></h1>
           <p class="hero-lead-quote">
-            "Some things are worth saving—not because they are old or fashionable, but because they meant something to the people who built this city."
+            "TallSlimCollins is not a merch brand that tells stories. It is a creative archive and cultural world that happens to make things. The things you hold are artifacts from that world."
           </p>
           <div class="hero-seal-row">
             <img src="assets/tsc-wrench-brush-rose-badge.png" alt="Stevan Collins Lazich Official Seal" class="hero-seal-img">
             <div>
               <div class="hero-seal-name">Stevan Collins Lazich</div>
-              <div class="hero-seal-role">Artist · Conservator · Spottswood House</div>
+              <div class="hero-seal-role">Artist · Craftsman · Spottswood House</div>
             </div>
           </div>
           <p class="hero-statement">
-            From the European antique drapery workrooms above Madison &amp; Belvedere in the 1980s, to late-night shifts at Babylon Café and The Antenna Club, through gallery canvas conservation, to the dual practice today: explore the chronological scrapbook of field notes, workrooms, and physical artifacts.
+            From the European antique drapery workrooms above Madison &amp; Belvedere in the 1980s, to late-night shifts at Babylon Café and The Antenna Club, through gallery canvas conservation, to the dual practice today: enter the living archive of field notes, workrooms, and physical artifacts.
           </p>
           <div class="hero-actions">
             <a href="timeline-dossier.html" class="btn-dossier-gold">
-              Explore the Full Dossier &amp; Scrapbook →
+              Explore the Full Dossier Timeline →
             </a>
             <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-dossier-dark">
               Shop Threadless Drops
@@ -960,7 +899,7 @@
           <div class="scrap-card" style="max-width: 380px; width: 100%;">
             <div class="scrap-meta-strip">
               <span>[ITEM_ID: SCL-DOSSIER-01]</span>
-              <span class="tag-loc">// 1985–PRESENT</span>
+              <span class="tag-loc">// 1984–PRESENT</span>
             </div>
             <div class="scrap-img-frame">
               <img src="assets/art-mechanical-needs.jpg" alt="Stevan Collins Lazich - For All Your Art & Mechanical Needs">
@@ -975,7 +914,7 @@
     </div>
   </section>
 
-  <!-- Archival Transition Strip into Warm Paper Canvas -->
+  <!-- Transition Bar -->
   <div class="transition-strip">
     <div class="container transition-inner">
       <div class="transition-left">
@@ -989,69 +928,82 @@
     </div>
   </div>
 
-  <!-- Collections Engine (Pillars Style) -->
-  <section class="pillars" id="collections">
+  <!-- THE FIVE CONTENT WORLDS PORTALS -->
+  <section class="pillars" id="worlds">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">The Collections</h2>
-        <p class="section-subtitle">Every body of work is built around a distinct chapter of oral history, Mid-South architecture, or tradesperson craft.</p>
+        <h2 class="section-title">The Five Content Worlds</h2>
+        <p class="section-subtitle">Every story, garment, building, and thought belongs to one of five interconnected territories.</p>
       </div>
 
       <div class="grid-pillars">
-        <!-- Card 1: Memphis in the Dark -->
+        <!-- World 1: Field Dispatches -->
         <div class="card">
           <div>
-            <span class="card-badge badge-dark">Collection #01</span>
-            <h3>Memphis in the Dark</h3>
-            <p>Lost Midtown sanctuaries, late-night characters, neon hum, and the legends who owned the streets after midnight.</p>
+            <span class="card-badge badge-dark">World #01</span>
+            <h3>Field Dispatches</h3>
+            <p>What happened. Memphis places, characters, jobs, late nights, buildings, and oral history that refused to be forgotten.</p>
           </div>
-          <a href="story-dancing-jimmy.html" class="card-link">
-            Read Jimmy Dispatch
+          <a href="#dispatches" class="card-link">
+            Explore Dispatches
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- Card 2: Root Revival -->
+        <!-- World 2: The Work -->
         <div class="card">
           <div>
-            <span class="card-badge badge-root">Collection #02</span>
-            <h3>Root Revival</h3>
-            <p>Seven sharecropper sisters in the Arkansas Delta. Cast-iron skillets, cotton dust, heirloom okra, and stubborn grit.</p>
+            <span class="card-badge badge-root">World #02</span>
+            <h3>The Work</h3>
+            <p>What Stevan made. The architectural works, fine drywall, French antique restoration, bluestone masonry, and spatial curation.</p>
           </div>
-          <a href="collection-root-revival.html" class="card-link">
-            Explore Collection
+          <a href="#works" class="card-link">
+            View Architectural Works
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- Card 3: Shop Dog Society -->
+        <!-- World 3: The Objects -->
         <div class="card">
           <div>
-            <span class="card-badge badge-dog">Collection #03</span>
-            <h3>Shop Dog Society</h3>
-            <p>Dedicated to the loyal supervisors snoozing in the sawdust beneath workbenches and keeping watch over honest work.</p>
+            <span class="card-badge badge-dog">World #03</span>
+            <h3>The Objects</h3>
+            <p>What came out of the world. Wearable artifacts, Shop Dog Society bandannas, and trade flash tees fulfilled via Threadless.</p>
           </div>
-          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="card-link">
-            Browse Shop Dogs
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <a href="#objects" class="card-link">
+            Browse Artifacts
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- Card 4: Threadless Archive Shop -->
+        <!-- World 4: The Archive -->
         <div class="card">
           <div>
-            <span class="card-badge badge-shop">Official Store</span>
-            <h3>The Archive Shop</h3>
-            <p>Wearable artifacts, heavyweight tees, embroidered caps, and art prints fulfilled directly through Threadless.</p>
+            <span class="card-badge badge-gold">World #04</span>
+            <h3>The Archive</h3>
+            <p>What remains. Four decades of photographic evidence, press receipts, flyers, and the chronological timeline dossier.</p>
           </div>
-          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="card-link">
-            Visit tallslimcollins.shop
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <a href="timeline-dossier.html" class="card-link">
+            Enter Full Dossier
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- World 5: The Notebook -->
+        <div class="card">
+          <div>
+            <span class="card-badge badge-shop">World #05</span>
+            <h3>The Notebook</h3>
+            <p>What Stevan thinks. Direct craftsman observations on design, scale, unvarnished timber, and Mid-South character.</p>
+          </div>
+          <a href="#notebook" class="card-link">
+            Read Field Notes
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Studio Mascot Centerpiece: The Swallow & Wrench-Brush -->
+      <!-- Studio Mascot Centerpiece -->
       <div class="studio-centerpiece">
         <div class="centerpiece-box">
           <img src="assets/tsc-swallow-wrench-brush.png" alt="TallSlimCollins Swallow & Wrench-Brush" class="centerpiece-img">
@@ -1065,16 +1017,17 @@
     </div>
   </section>
 
-  <!-- Featured Dispatches Section -->
+  <!-- WORLD 1: FIELD DISPATCHES -->
   <section class="dispatch-feature" id="dispatches">
     <div class="container">
       <div class="section-header">
+        <div class="archive-stamp" style="margin-bottom: 12px;">[CONTENT WORLD 01 // ORAL HISTORY]</div>
         <h2 class="section-title">Field Dispatches from Lost Memphis</h2>
         <p class="section-subtitle">The shirt is the physical artifact. The oral history is the living soul.</p>
       </div>
 
       <!-- Dispatch 01: Dancing Jimmy -->
-      <div class="dispatch-card" style="margin-bottom: 40px;">
+      <div class="dispatch-card">
         <div class="dispatch-left">
           <div class="dispatch-meta">Field Dispatch #01 · Madison & Belvedere · Summer 1985</div>
           <h3>Dancing Jimmy: Stag, Streetlights, and Midtown After Dark</h3>
@@ -1105,7 +1058,7 @@
       </div>
 
       <!-- Dispatch 02: Babylon Cafe -->
-      <div class="dispatch-card" style="margin-bottom: 40px;">
+      <div class="dispatch-card">
         <div class="dispatch-left">
           <div class="dispatch-meta">Field Dispatch #02 · 1783 Union Rear · 1991–1993</div>
           <h3>Babylon Café: Hand-Rolled Pasta, the Herb Room, and Union Ave After Dark</h3>
@@ -1117,7 +1070,7 @@
               Read Babylon Story
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://tallslimcollins.threadless.com/designs/babylon-after-dark-lost-memphis/everyone/t-shirt/extra-soft?variation=front&color=forest_green" target="_blank" rel="noopener" class="btn-outline">
+            <a href="https://tallslimcollins.threadless.com/designs/babylon-after-dark-lost-memphis/everyone/t-shirt/extra-soft?variation=front&color=forest_green" target="_blank" rel="noopener" class="btn btn-outline">
               Buy Tee on Threadless ($28) →
             </a>
           </div>
@@ -1136,7 +1089,7 @@
       </div>
 
       <!-- Dispatch 03: The Antenna Club -->
-      <div class="dispatch-card" style="margin-bottom: 40px;">
+      <div class="dispatch-card">
         <div class="dispatch-left">
           <div class="dispatch-meta">Field Dispatch #03 · 1588 Madison Ave · 1981–1995</div>
           <h3>The Antenna Club: Tin Ceilings, Sticky Floors, and 1588 Madison After Dark</h3>
@@ -1170,7 +1123,7 @@
       </div>
 
       <!-- Dispatch 04: Decadence Manor -->
-      <div class="dispatch-card">
+      <div class="dispatch-card" style="margin-bottom: 0;">
         <div class="dispatch-left">
           <div class="dispatch-meta">Field Dispatch #04 · Madison Avenue · Midtown Bohemian Era</div>
           <h3>Decadence Manor: Porch Lounging, Architectural Salvage, and Madison Ave After Dark</h3>
@@ -1202,6 +1155,196 @@
     </div>
   </section>
 
+  <!-- WORLD 2: THE WORK (THE ARCHITECTURAL WORKS OF STEVAN COLLINS LAZICH) -->
+  <section class="works-section" id="works">
+    <div class="container">
+      <div class="archive-stamp archive-stamp-gold" style="margin-bottom: 12px;">[CONTENT WORLD 02 // PHYSICAL CRAFT]</div>
+      <h2 class="section-title" style="color: #FFFFFF;">The Work: The Architectural Works of Stevan Collins Lazich</h2>
+      <p class="section-subtitle" style="color: #B8B2A6;">
+        Before a room can tell a story, it has to be true. Physical fixes, color translations, and spatial salvage across Midtown Memphis.
+      </p>
+
+      <div class="works-grid">
+        <!-- Work 01: 759 S Willett -->
+        <div class="works-card">
+          <div>
+            <div class="works-meta">// MIDTOWN MEMPHIS · 10-YEAR RESIDENCY</div>
+            <h4>759 S. Willett Carriage House &amp; Grounds</h4>
+            <p>
+              The incubation lab where Home Revival took root. Outdoor landscape illumination, reclaimed brick patio masonry, large-scale waterfast botanical textiles, and washable dupioni silk drapery sourcing.
+            </p>
+          </div>
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="works-link">
+            Explore Project at Home Revival →
+          </a>
+        </div>
+
+        <!-- Work 02: 1773 Evelyn Studio Shed -->
+        <div class="works-card">
+          <div>
+            <div class="works-meta">// MIDTOWN MEMPHIS · COUSIN WAYLON'S PROPERTY</div>
+            <h4>1773 Evelyn Rear Studio Shed Conversion</h4>
+            <p>
+              Complete structural transformation of a historic 2-story outbuilding into a creative design atelier: natural Pennsylvania bluestone courtyard patio, upstairs insulation &amp; precision drywall, downstairs insulation &amp; vertical beadboard wainscoting.
+            </p>
+          </div>
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="works-link">
+            Explore Project at Home Revival →
+          </a>
+        </div>
+
+        <!-- Work 03: Southwind Gallery Dr -->
+        <div class="works-card">
+          <div>
+            <div class="works-meta">// MEMPHIS · 3-MONTH FULL TRANSFORMATION</div>
+            <h4>Southwind 7-Room Transformation</h4>
+            <p>
+              Architectural color translation: kitchen cabinets refreshed in Sherwin-Williams Black Fox with Repose Gray wall transitions, custom iron French doors in the garden den, and artisan seahorse fabric curation.
+            </p>
+          </div>
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="works-link">
+            Explore Project at Home Revival →
+          </a>
+        </div>
+
+        <!-- Work 04: Antique Planters Rust Treatment -->
+        <div class="works-card">
+          <div>
+            <div class="works-meta">// SERVICE GALLERY · MIDTOWN ESTATE</div>
+            <h4>Antique Iron Planters Rust Neutralization</h4>
+            <p>
+              Neutralizing aggressive internal corrosion on historic cast-iron planters to halt rust run-off on landmark concrete walkways for a premier Memphis interior designer. Industrial sealing with historic preservation integrity.
+            </p>
+          </div>
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="works-link">
+            Explore Project at Home Revival →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD 3: THE OBJECTS -->
+  <section class="pillars" id="objects" style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header">
+        <div class="archive-stamp archive-stamp-sage" style="margin-bottom: 12px;">[CONTENT WORLD 03 // LIVING ARTIFACTS]</div>
+        <h2 class="section-title">The Objects: Artifacts from a Lived World</h2>
+        <p class="section-subtitle">No product exists in a vacuum. Every garment, bandana, and art print is a wearable memoir fulfilled via Threadless.</p>
+      </div>
+
+      <div class="grid-pillars">
+        <!-- Object 1: Dancing Jimmy -->
+        <div class="card">
+          <div>
+            <span class="card-badge badge-dark">Artifact #01</span>
+            <h3>Dancing Jimmy Tee</h3>
+            <p>Heavyweight cotton print honoring the midtown legend shirtless under radiating sodium-vapor lamps on Madison Avenue.</p>
+          </div>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="card-link">
+            Claim on Threadless ($28)
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <!-- Object 2: Shop Dog Society -->
+        <div class="card">
+          <div>
+            <span class="card-badge badge-dog">Artifact #02</span>
+            <h3>Shop Dog Society</h3>
+            <p>Dedicated to the faithful studio supervisors snoozing in sawdust beneath workbenches and keeping watch over honest work.</p>
+          </div>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="card-link">
+            Claim Bandannas &amp; Prints
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <!-- Object 3: Root Revival -->
+        <div class="card">
+          <div>
+            <span class="card-badge badge-root">Artifact #03</span>
+            <h3>Root Revival Delta Series</h3>
+            <p>Seven sharecropper sisters in the Arkansas Delta. Cast-iron skillets, cotton dust, heirloom okra, and stubborn resilience.</p>
+          </div>
+          <a href="collection-root-revival.html" class="card-link">
+            Explore Collection
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Object 4: Spottswood Swallows -->
+        <div class="card">
+          <div>
+            <span class="card-badge badge-shop">Artifact #04</span>
+            <h3>Spottswood Swallows Flash</h3>
+            <p>Traditional American tattoo trade flash reimagined: swallows carrying tape measures and heavy extension cords.</p>
+          </div>
+          <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="card-link">
+            Visit Threadless Shop
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD 5: THE NOTEBOOK -->
+  <section class="notebook-section" id="notebook">
+    <div class="container">
+      <div class="archive-stamp" style="margin-bottom: 12px;">[CONTENT WORLD 05 // FIELD NOTES]</div>
+      <h2 class="section-title">The Notebook: Observations on Craft, Scale &amp; Honest Things</h2>
+      <p class="section-subtitle">Unfiltered notes from four decades of workrooms, night hours, and salvage heaps.</p>
+
+      <div class="notebook-grid">
+        <!-- Note 01: Scale -->
+        <div class="notebook-card">
+          <div class="notebook-card-header">
+            <span class="notebook-stamp">NOTE #01</span>
+            <span class="notebook-topic">// SCALE &amp; HONESTY</span>
+          </div>
+          <h4>The Architecture of Weight</h4>
+          <div class="notebook-quote">
+            "If a timber frame isn't plumb, you feel it in your bones. If fabric isn't weighted properly, it falls lifeless."
+          </div>
+          <p>
+            Scale isn't about making things big—it's about whether an object has enough physical presence to hold a room without shouting. Most modern design overlooks weight. When something is built honest, you don't have to explain it.
+          </p>
+        </div>
+
+        <!-- Note 02: Patina -->
+        <div class="notebook-card">
+          <div class="notebook-card-header">
+            <span class="notebook-stamp">NOTE #02</span>
+            <span class="notebook-topic">// PATINA VS. DISTRESS</span>
+          </div>
+          <h4>You Cannot Fake Time</h4>
+          <div class="notebook-quote">
+            "Factory distressing is a corporate lie. Real patina is thirty years of morning sunlight and coat sleeves."
+          </div>
+          <p>
+            Real patina is thirty years of sunlight hitting an armoire door, coat sleeves rubbing against the arm of a Directoire chair, and copper oxidizing in Southern humidity. You can't manufacture character in an afternoon.
+          </p>
+        </div>
+
+        <!-- Note 03: Homes -->
+        <div class="notebook-card">
+          <div class="notebook-card-header">
+            <span class="notebook-stamp">NOTE #03</span>
+            <span class="notebook-topic">// HOMES THAT WORK</span>
+          </div>
+          <h4>Revive, Don't Replace</h4>
+          <div class="notebook-quote">
+            "You don't need a new house. You need better light, fewer distractions, and meaningful things."
+          </div>
+          <p>
+            People usually don't call because they need a picture hung. They call because life changed. Someone moved out. Someone passed away. They bought an old house and got overwhelmed. My job isn't just fixing a room—it's helping people fall back in love with where they live.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Sister Brand Callout: Home Revival -->
   <section style="padding: 10px 0 80px;">
     <div class="container">
@@ -1209,7 +1352,7 @@
         <div>
           <h3>Home Revival by Stevan Collins Lazich</h3>
           <p>
-            Looking for residential hands-on craft? Stevan's specialized residential service—focused on historic color palettes, gallery wall execution, and room flow transformations—lives at its own dedicated home.
+            Looking for residential hands-on craft? Stevan's specialized residential service—focused on historic color palettes, drywall restoration, and room flow transformations—lives at its own dedicated home.
           </p>
         </div>
         <div style="text-align: right;">
@@ -1234,12 +1377,14 @@
           </p>
         </div>
         <div class="footer-col">
-          <h5>Ecosystem</h5>
+          <h5>The Five Worlds</h5>
           <ul>
+            <li><a href="#dispatches">Field Dispatches</a></li>
+            <li><a href="#works">The Work (Architectural)</a></li>
+            <li><a href="#objects">The Objects (Artifacts)</a></li>
+            <li><a href="timeline-dossier.html">The Archive (Dossier)</a></li>
+            <li><a href="#notebook">The Notebook</a></li>
             <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival by SCL</a></li>
-            <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Fulfillment Shop</a></li>
-            <li><a href="story-dancing-jimmy.html">Dancing Jimmy Lore</a></li>
-            <li><a href="collection-root-revival.html">Root Revival Origin</a></li>
           </ul>
         </div>
         <div class="footer-col">

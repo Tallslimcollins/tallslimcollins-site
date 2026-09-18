@@ -484,3 +484,184 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
 }
+
+/* ==========================================================================
+   ARCHIVAL COMPONENT 4: .notebook-section (Craftsman Field Notebook)
+   ========================================================================== */
+.notebook-section {
+  padding: 80px 0 90px;
+  background: radial-gradient(ellipse at 50% 10%, #FAF6EE 0%, #F3ECE0 70%, #E9DFC9 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.notebook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.notebook-card {
+  background: radial-gradient(circle at center, #FCFAF6 30%, #F7F1E3 80%, #EDE3CE 100%);
+  border: 1px solid #D9CDAF;
+  border-top: 4px solid var(--accent-gold);
+  border-radius: var(--radius-sm);
+  padding: 30px 26px;
+  box-shadow: 0 4px 16px rgba(61, 40, 23, 0.07), inset 0 0 12px rgba(184, 134, 76, 0.12);
+  transition: all 0.28s ease;
+  position: relative;
+}
+
+.notebook-card:nth-child(odd) {
+  transform: rotate(-0.8deg);
+}
+
+.notebook-card:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+.notebook-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 12px 28px rgba(61, 40, 23, 0.14);
+  border-color: #C5A059;
+}
+
+.notebook-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 8px;
+}
+
+.notebook-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.notebook-topic {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #8C6A28;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.notebook-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.notebook-card p {
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  color: #38342D;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.notebook-card p:last-child {
+  margin-bottom: 0;
+}
+
+.notebook-quote {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #121212;
+  border-left: 2px solid var(--accent-red);
+  padding-left: 12px;
+  margin: 12px 0;
+}
+
+/* ==========================================================================
+   ARCHIVAL COMPONENT 5: .works-section (The Architectural Works)
+   ========================================================================== */
+.works-section {
+  padding: 85px 0 95px;
+  background: #141816;
+  color: #EAE6DF;
+  border-top: 2px solid var(--accent-gold);
+  border-bottom: 2px solid var(--accent-gold);
+  position: relative;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.works-card {
+  background: #1B211E;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.28s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.works-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 14px 34px rgba(197, 160, 89, 0.2);
+  background: #202723;
+}
+
+.works-meta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.works-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.works-card p {
+  font-family: var(--font-body);
+  font-size: 0.90rem;
+  color: #B8B2A6;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.works-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+.works-link:hover {
+  color: #FFFFFF;
+}

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stevan Collins Lazich — Archival Dossier & Timeline | TallSlimCollins</title>
-  <meta name="description" content="Field notes, workrooms, night hours, and physical craft across four decades in the Mid-South. The biographical timeline of Stevan Collins Lazich.">
+  <meta name="description" content="Field notes, workrooms, night hours, and physical craft across four decades in the Mid-South. The living biographical timeline of Stevan Collins Lazich.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Stevan Collins Lazich — Archival Dossier & Timeline">
@@ -30,7 +30,6 @@
       position: relative;
     }
 
-    /* Faint Archival Tattoo Seal Watermark across Wide Displays */
     body::before {
       content: "";
       position: fixed;
@@ -41,7 +40,7 @@
       height: 780px;
       background: url('assets/tsc-swallow-wrench-brush.png') no-repeat center center;
       background-size: contain;
-      opacity: 0.024;
+      opacity: 0.025;
       pointer-events: none;
       z-index: 0;
     }
@@ -58,7 +57,7 @@
       padding: 0 24px;
     }
 
-    /* Global Announcement Bar */
+    /* Top Bar */
     .top-bar {
       background: var(--sage-dark);
       color: var(--parchment-light);
@@ -77,7 +76,7 @@
       font-weight: 700;
     }
 
-    /* Global Navigation */
+    /* Global Header */
     header {
       position: sticky;
       top: 0;
@@ -133,7 +132,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 24px;
+      gap: 22px;
       align-items: center;
       margin: 0;
       padding: 0;
@@ -157,7 +156,7 @@
       padding: 8px 18px;
       background: var(--ink-dark);
       border: 1px solid var(--ink-dark);
-      border-radius: var(--radius-sm);
+      border-radius: 4px;
       color: #FFFFFF !important;
       font-size: 0.84rem !important;
       font-weight: 700;
@@ -170,74 +169,99 @@
       transform: translateY(-1px);
     }
 
-    /* Hero Dossier Header */
+    /* Hero */
     .dossier-hero {
-      background: transparent;
-      border-bottom: 2px solid var(--accent-sand);
-      padding: 70px 0 60px;
-      text-align: center;
+      background: #121614;
+      color: #EAE6DF;
+      padding: 76px 0 68px;
+      border-bottom: 2px solid var(--accent-gold);
       position: relative;
+      overflow: hidden;
+      text-align: center;
     }
 
-    .dossier-hero::after {
+    .dossier-hero::before {
       content: "";
       position: absolute;
-      bottom: -6px;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: rgba(195, 116, 76, 0.45);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 50% 30%, rgba(81, 122, 113, 0.15) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .dossier-stamp-wrap {
-      margin-bottom: 24px;
+    .dossier-hero .dossier-stamp-wrap {
+      margin-bottom: 20px;
     }
 
     .dossier-hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
       font-weight: 700;
-      color: var(--ink-dark);
+      color: #FFFFFF;
       line-height: 1.15;
-      letter-spacing: -0.02em;
       margin-bottom: 16px;
+      letter-spacing: -0.01em;
     }
 
     .dossier-hero p.sub {
       font-family: var(--font-editorial);
-      font-size: clamp(1.15rem, 2vw, 1.4rem);
-      color: #5A5348;
-      max-width: 780px;
+      font-size: 1.25rem;
+      color: #D6D0C5;
+      max-width: 740px;
       margin: 0 auto 28px;
-      line-height: 1.6;
       font-style: italic;
+      line-height: 1.55;
     }
 
     .dossier-meta-tags {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 16px;
       font-family: var(--font-mono);
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       color: var(--accent-gold);
-      text-transform: uppercase;
       letter-spacing: 0.12em;
+      text-transform: uppercase;
       font-weight: 700;
     }
 
-    .dossier-meta-tags span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .timeline-quick-nav {
+      background: #1C2421;
+      border-top: 1px solid rgba(197, 160, 89, 0.3);
+      padding: 14px 0;
+      text-align: center;
+    }
+
+    .timeline-quick-nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .timeline-quick-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--parchment);
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .timeline-quick-nav a:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
     }
 
     /* Footer */
     footer {
-      border-top: 2px solid var(--accent-gold);
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       padding: 60px 0 40px;
-      background: var(--ink-inverted-bg);
-      color: var(--ink-inverted-text);
+      background: #0E1311;
+      color: #FFFFFF;
     }
 
     .footer-grid {
@@ -321,9 +345,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html#collections">Collections</a></li>
-          <li><a href="index.html#dispatches">Dispatches</a></li>
-          <li><a href="timeline-dossier.html" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">Dossier Timeline</a></li>
+          <li><a href="index.html#dispatches">Field Dispatches</a></li>
+          <li><a href="index.html#works">The Work</a></li>
+          <li><a href="index.html#objects">The Objects</a></li>
+          <li><a href="timeline-dossier.html" style="color: #FFFFFF; font-weight: 700; text-decoration: underline;">The Archive</a></li>
+          <li><a href="index.html#notebook">The Notebook</a></li>
           <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
             Shop Threadless
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -349,12 +375,24 @@
       </p>
 
       <div class="dossier-meta-tags">
-        <span>◆ ARCHIVE RECORD #SCL-1985-2026</span>
+        <span>◆ ARCHIVE RECORD #SCL-1984-2026</span>
         <span>◆ OPERATING: SPOTTSWOOD HOUSE, 901</span>
-        <span>◆ MEDIUM: TRADE CRAFT &amp; LIVING LORE</span>
+        <span>◆ VERIFIED FIELD EVIDENCE &amp; ORAL LORE</span>
       </div>
     </div>
   </section>
+
+  <!-- Timeline Quick Jump Bar -->
+  <div class="timeline-quick-nav">
+    <div class="container">
+      <ul>
+        <li><a href="#era-1">1980s–1990s: Drapery &amp; Antiquities</a></li>
+        <li><a href="#era-2">1990s–2010s: Subculture &amp; Vinyl</a></li>
+        <li><a href="#era-3">2010s–2020s: Conservation &amp; Studio</a></li>
+        <li><a href="#era-4">Present: Spottswood &amp; The Dual Practice</a></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- The Timeline Spine -->
   <main class="timeline-container">
@@ -363,45 +401,76 @@
       <!-- ===================================================================
            ERA 1: 1980s–1990s
            =================================================================== -->
-      <div class="era-node">
+      <div class="era-node" id="era-1">
         <div class="era-badge">
           <span class="era-year">1980s – 1990s</span>
           <span class="era-theme">Drapery Workrooms, Scale &amp; French Antiquities</span>
         </div>
       </div>
 
+      <!-- ENTRY 01A: 583 S. McLean & 1707 Madison -->
       <div class="timeline-block">
-        <!-- Left: Narrative -->
         <article class="narrative-card">
           <div class="dossier-ref">
-            <span>FILE ENTRY #01</span>
+            <span>FILE ENTRY #01A</span>
             <span>//</span>
-            <span>MADISON &amp; BELVEDERE</span>
+            <span>583 S. MCLEAN &amp; 1707 MADISON</span>
           </div>
-          <h3>The Workroom Apprentice &amp; The Architecture of Scale</h3>
+          <h3>The Antique Shop Sink &amp; The Architecture of Scale</h3>
           <p>
-            Living above my mother’s antique store at the corner of Madison &amp; Belvedere in the heart of Midtown Memphis, education didn't happen in air-conditioned lecture halls. It happened on workroom cutting tables, surrounded by heavy bolts of French silk damask, cast brass fittings, and aged walnut patina.
+            In 1984, in the fourth grade, my family moved to Memphis to renovate <strong>583 S. McLean</strong>. By 1985, home was literally the interior of an antique store at <strong>1707 Madison Avenue</strong>. Education didn't happen in air-conditioned classrooms—it happened on workroom cutting tables, surrounded by heavy bolts of French silk damask, cast brass fittings, and aged walnut patina.
           </p>
           <p>
-            Working in European drapery and antique restoration taught me what most modern design overlooks: <em>weight, structural proportion, and honesty</em>. If a timber frame wasn't plumb, you felt it. If fabric wasn't weighted correctly, it fell lifeless. That tactile standard permanently anchored my visual vocabulary.
+            When you're a fifth-grader taking nightly baths in a stainless commercial kitchen sink between 18th-century French armoires, you develop an intimate, unromantic relationship with physical objects. You learn what most modern designers never touch: <em>weight, structural proportion, and honesty</em>. If a timber frame wasn't plumb, you felt it. If drapery fabric wasn't weighted, it fell lifeless.
           </p>
           <p>
-            Between shifts, Midtown streetlife was raw and unscripted. Mowing the corner park across from the shop for $35 to earn a Libertyland season pass meant pulling empty Stag bottles from azalea shrubs and hosing down neighborhood legends like Dancing Jimmy under the streetlights.
+            Midtown streetlife was raw and unscripted. Mowing the corner park across from the shop for $35 to earn a Libertyland season pass meant pulling empty Stag bottles from azalea shrubs and hosing down neighborhood legends like Dancing Jimmy under radiating streetlights.
           </p>
         </article>
 
-        <!-- Right: Scrap Card -->
         <div class="scrap-card">
           <div class="scrap-meta-strip">
-            <span>[ITEM_ID: SCL-ARC-8590]</span>
-            <span class="tag-loc">// LOC: MADISON &amp; BELVEDERE</span>
+            <span>[ITEM_ID: SCL-ARC-8485]</span>
+            <span class="tag-loc">// 1707 MADISON &amp; BELVEDERE</span>
           </div>
           <div class="scrap-img-frame">
             <img src="assets/art-mechanical-needs.jpg" alt="For All Your Art and Mechanical Needs - Workroom Centerpiece">
           </div>
           <div class="scrap-caption">
             <strong>For All Your Art &amp; Mechanical Needs</strong>
-            <p>Archival workroom motto: "Built with timber, steel, and unvarnished honesty." Madison Ave heritage.</p>
+            <p>"Built with timber, steel, and unvarnished honesty." Madison Ave workroom roots.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY 01B: Cottland, Otherlands & Sun Studio -->
+      <div class="timeline-block reverse">
+        <article class="narrative-card">
+          <div class="dossier-ref">
+            <span>FILE ENTRY #01B</span>
+            <span>//</span>
+            <span>COOPER-YOUNG &amp; SUN STUDIO</span>
+          </div>
+          <h3>Cottland Bedding, Otherlands Buildout &amp; Sun Studio (1992–1997)</h3>
+          <p>
+            In 1992, I began at <strong>Cottland Bedding Company</strong>, learning retail craft, futons, and exotic gifts. In 1994, we stripped plaster, framed partitions, and renovated the adjoining space to open <strong>Otherlands Coffee Bar</strong> in Cooper-Young. It became an institution: precision barista standards, sensory cleanliness, and gift buying.
+          </p>
+          <p>
+            During those Midtown years, I worked the front door at <strong>Automatic Slim’s</strong> for Karen Carrier—checking IDs for legends like Link Wray—and spent the sweltering summer of 1997 working seasonal hours at <strong>Sun Studio</strong>, right when Parliament-Funkadelic tore through the University of Memphis. It cemented the intersection of historic preservation, live performance, and physical space.
+          </p>
+        </article>
+
+        <div class="scrap-card">
+          <div class="scrap-meta-strip">
+            <span>[ITEM_ID: SCL-ARC-9297]</span>
+            <span class="tag-loc">// 641 S. COOPER &amp; UNION AVE</span>
+          </div>
+          <div class="scrap-img-frame">
+            <img src="assets/dancing-jimmy-harmonica.png" alt="Midtown Street Blues Archive">
+          </div>
+          <div class="scrap-caption">
+            <strong>Midtown Street Watch</strong>
+            <p>From coffee bar sawdust and Sun Studio tape decks to midnight door shifts at Automatic Slim's.</p>
           </div>
         </div>
       </div>
@@ -410,45 +479,105 @@
       <!-- ===================================================================
            ERA 2: 1990s–2010s
            =================================================================== -->
-      <div class="era-node">
+      <div class="era-node" id="era-2">
         <div class="era-badge">
           <span class="era-year">1990s – 2010s</span>
-          <span class="era-theme">Subculture, DJ Decks &amp; Midtown Nightlife</span>
+          <span class="era-theme">Subculture, VIP Hosting &amp; Midnight Vinyl</span>
         </div>
       </div>
 
-      <div class="timeline-block reverse">
-        <!-- Left: Narrative -->
+      <!-- ENTRY 02A: Babylon Cafe & The Antenna Club -->
+      <div class="timeline-block">
         <article class="narrative-card">
           <div class="dossier-ref">
-            <span>FILE ENTRY #02</span>
+            <span>FILE ENTRY #02A</span>
             <span>//</span>
-            <span>UNION REAR &amp; 1588 MADISON</span>
+            <span>1783 UNION REAR &amp; 1588 MADISON</span>
           </div>
-          <h3>Sanctuaries of Lost Memphis: Babylon, Antenna &amp; Midnight Vinyl</h3>
+          <h3>Babylon Café &amp; The Antenna Club: Midnight In Midnight Memphis</h3>
           <p>
-            Between 1991 and 1993, I operated as the all-around "Boy Friday" at Babylon Café, tucked into the gravel alleyway behind 1783 Union Rear. Hand-rolling pasta on long wooden boards, simmering scratch marinara, and grinding espresso in the Herb Room while Cyndi Lauper, Laurie Anderson, or delegations of Tibetan monks in saffron robes slipped in through the back door at midnight.
+            Between 1991 and 1993, I operated as the all-around "Boy Friday" at <strong>Babylon Café</strong>, tucked into the gravel alleyway behind 1783 Union Rear. Hand-rolling pasta on long wooden boards, simmering scratch marinara, and grinding espresso in the Herb Room while Cyndi Lauper, Laurie Anderson, or delegations of Tibetan monks in saffron robes slipped in through the back door at midnight.
           </p>
           <p>
-            Down the street at 1588 Madison Avenue, The Antenna Club was where underground Memphis kept its teeth. Narrow as a bowling alley, with tin ceiling tiles rattling from bass amps and sneakers sticking to the linoleum floor. Black Flag, Sonic Youth, The Replacements, and Alex Chilton tore through that stage without velvet ropes or corporate sponsor banners.
-          </p>
-          <p>
-            Running Serato turntables and DJ decks through late-night warehouse sets and Midtown rooms cemented an obsession with tempo, typography, and underground flyer culture that still drives every apparel artifact produced today.
+            Down the street at 1588 Madison Avenue, <strong>The Antenna Club</strong> was where underground Memphis kept its teeth. Narrow as a bowling alley, with tin ceiling tiles rattling from bass amps and sneakers sticking to the linoleum floor. Black Flag, Sonic Youth, The Replacements, and Alex Chilton tore through that stage without velvet ropes.
           </p>
         </article>
 
-        <!-- Right: Scrap Card -->
         <div class="scrap-card">
           <div class="scrap-meta-strip">
             <span>[ITEM_ID: SCL-ARC-9195]</span>
-            <span class="tag-loc">// LOC: 1783 UNION &amp; 1588 MADISON</span>
+            <span class="tag-loc">// 1783 UNION &amp; 1588 MADISON</span>
+          </div>
+          <div class="scrap-img-frame">
+            <img src="assets/product-babylon-cafe.png" alt="Babylon Cafe Heritage Dispatch Artwork">
+          </div>
+          <div class="scrap-caption">
+            <strong>Babylon After Dark</strong>
+            <p>Sanctuary in the alley: Hand-cranked pasta, midnight espresso, and saffron robes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY 02B: The Imagine Piano & The B-52s Touring Hospitality -->
+      <div class="timeline-block reverse">
+        <article class="narrative-card">
+          <div class="dossier-ref">
+            <span>FILE ENTRY #02B</span>
+            <span>//</span>
+            <span>IRVING PLAZA &amp; COURTHOUSE STEPS</span>
+          </div>
+          <h3>The Imagine Piano, The B-52s &amp; Touring Hospitality</h3>
+          <p>
+            Parallel to restoring French antiques and oil paintings at <strong>Brice Antiques (1997–2007)</strong>, a life in high-level touring hospitality emerged. In 2007, I stood on the Crittenden County courthouse steps in West Memphis—where the West Memphis Three were wrongfully convicted—accompanying <strong>Dianne Price</strong> performing on <strong>John Lennon’s original <em>Imagine</em> piano</strong>. Owned by George Michael and organized by his assistant Caroline True, the piano traveled across America to tragedy locations, heading next to Virginia Tech.
+          </p>
+          <p>
+            Beginning February 4, 2002 at Irving Plaza in NYC (their 25th anniversary), I began a 17-year touring and VIP hosting relationship with <strong>The B-52s</strong>, from Manhattan to Tunica’s Bluesville. That work expanded into more than fifteen years of discreet artist hospitality, touring wardrobe coordination, and green room production for major artists, festivals, and music legends.
+          </p>
+        </article>
+
+        <div class="scrap-card">
+          <div class="scrap-meta-strip">
+            <span>[ITEM_ID: SCL-ARC-0207]</span>
+            <span class="tag-loc">// CRITTENDEN COUNTY &amp; NYC</span>
           </div>
           <div class="scrap-img-frame">
             <img src="assets/dancing-jimmy-streetlights.png" alt="Dancing Jimmy under Streetlights Memphis Lore">
           </div>
           <div class="scrap-caption">
-            <strong>Dancing Jimmy &amp; The Mid-South Night Watch</strong>
-            <p>Archival proof print: Shirtless with a boombox under radiating sodium-vapor lamps. Living oral history.</p>
+            <strong>The Courthouse Steps &amp; The Road</strong>
+            <p>Lennon's Steinway upright on Arkansas limestone, Irving Plaza night decks, and discreet VIP care.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY 02C: DJ Steve Anne & Monday Rehab -->
+      <div class="timeline-block">
+        <article class="narrative-card">
+          <div class="dossier-ref">
+            <span>FILE ENTRY #02C</span>
+            <span>//</span>
+            <span>THE BEAUTY SHOP &amp; COOPER-YOUNG</span>
+          </div>
+          <h3>DJ Steve Anne: Monday Night Rehab &amp; The Decks</h3>
+          <p>
+            Following Brice Antiques, Halloween 2007 launched the full-time moniker <strong>DJ Steve Anne</strong>. Anchored by the legendary Monday night <strong>"Rehab"</strong> retro residency at The Beauty Shop (co-DJed with Piper Dandy, daughter of Jim Dandy), I was spinning up to eight gigs a week across Dish (Tea Dance, White Trash Wednesdays), Mollie Fontaine Lounge, and EP’s on Beale.
+          </p>
+          <p>
+            Documented by <em>Memphis Magazine</em> (“The Transformers”) and spinning four consecutive years for the Friends for Life Halloween benefits at Bridges (<em>"Shipwrecked"</em> and <em>"Under the Big Top"</em>), the DJ decks were about timing, room tempo, and high-contrast typography flyers that still inspire every Threadless drop today.
+          </p>
+        </article>
+
+        <div class="scrap-card">
+          <div class="scrap-meta-strip">
+            <span>[ITEM_ID: SCL-ARC-0713]</span>
+            <span class="tag-loc">// 968 S. COOPER &amp; BRIDGES</span>
+          </div>
+          <div class="scrap-img-frame">
+            <img src="assets/dancing-jimmy-duo.png" alt="DJ Steve Anne Nightlife Archive">
+          </div>
+          <div class="scrap-caption">
+            <strong>Rehab Mondays: The Beauty Shop</strong>
+            <p>From retro vinyl under hair dryers to four years of Friends for Life benefit stages.</p>
           </div>
         </div>
       </div>
@@ -457,82 +586,112 @@
       <!-- ===================================================================
            ERA 3: 2010s–2020s
            =================================================================== -->
-      <div class="era-node">
+      <div class="era-node" id="era-3">
         <div class="era-badge">
           <span class="era-year">2010s – 2020s</span>
           <span class="era-theme">Conservation, Fine Art &amp; Studio Practice</span>
         </div>
       </div>
 
-      <div class="timeline-block">
-        <!-- Left: Narrative -->
+      <!-- ENTRY 03A: Bar DKDC & Daisy Glaze -->
+      <div class="timeline-block reverse">
         <article class="narrative-card">
           <div class="dossier-ref">
-            <span>FILE ENTRY #03</span>
+            <span>FILE ENTRY #03A</span>
             <span>//</span>
-            <span>OVERTON PARK &amp; COOPER-YOUNG</span>
+            <span>BAR DKDC &amp; THE ARCADE</span>
           </div>
-          <h3>Salvaging the Southern Gothic: Murals, Canvas &amp; Decadence</h3>
+          <h3>Bar DKDC, 10 Years of Live Music &amp; Daisy Glaze Film Production</h3>
           <p>
-            As historic Midtown faced waves of developer demolition and beige drywall renovations, my studio practice shifted into deliberate preservation. Decadence Manor on Madison Avenue stood as a living monument: grandfather clock faces leaning against porch railings, motorcycle frames resting among magnolia blossoms, and artists lounging on velvet daybeds until sunrise.
+            For nearly a decade, I ran <strong>Bar DKDC</strong> and The Beauty Shop—booking live music six nights a week, operating sound and lights, solo bartending 100-capacity crowds open to close, and earning a 2016 <em>Thrillist</em> feature for "Best Bartenders in Memphis."
           </p>
           <p>
-            This decade became an era of intense canvas production, custom architectural mural work, and screenprint experimentation. Capturing architectural salvage before the bulldozers arrived, and translating oral lore—the Sharecropper Sisters of the Arkansas Delta, the Cooper-Young Craftsman bungalows, the Overton Park Lanterns—into physical artifacts that couldn't be erased.
+            In 2022, my spatial eye and grip skills carried into cinema: serving as <strong>Production Designer</strong> for the Daisy Glaze music video <em>"Ghost of Elvis Presley"</em> (directed by Michele Civetta, DP Robert Opperman, produced by Sonic Boom). Transforming historic Memphis landmarks like The Arcade Restaurant and Molly Fontaine Lounge, we captured the haunting cinematic essence of the city on 35mm film.
           </p>
         </article>
 
-        <!-- Right: Scrap Card -->
         <div class="scrap-card">
           <div class="scrap-meta-strip">
-            <span>[ITEM_ID: SCL-ARC-1222]</span>
-            <span class="tag-loc">// LOC: MADISON AVE GOTHIC</span>
+            <span>[ITEM_ID: SCL-ARC-1322]</span>
+            <span class="tag-loc">// 964 S. COOPER &amp; S. MAIN</span>
           </div>
           <div class="scrap-img-frame">
             <img src="assets/product-decadence-manor.png" alt="Decadence Manor Architectural Salvage Lore">
           </div>
           <div class="scrap-caption">
-            <strong>Decadence Manor: The Porch Sanctuary</strong>
-            <p>Documenting the open-air theater of Southern bohemian life, grand clocks, and magnolia blooms.</p>
+            <strong>Production Design &amp; Night Hours</strong>
+            <p>Cinematic framing at the Arcade Restaurant and 10 years of nightly music booking.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY 03B: Rubber Stamp Basement & Decadence Manor -->
+      <div class="timeline-block">
+        <article class="narrative-card">
+          <div class="dossier-ref">
+            <span>FILE ENTRY #03B</span>
+            <span>//</span>
+            <span>MADISON &amp; DANNY THOMAS</span>
+          </div>
+          <h3>The Rubber Stamp Basement Studio &amp; Decadence Manor Salvage</h3>
+          <p>
+            While downtown Memphis was renovating the historic <strong>Advance Rubber Stamp Building</strong> on Madison &amp; Danny Thomas, I established my creative atelier in its deep brick basement. In that subterranean workshop, surrounded by historic printing presses, I began painting large-scale botanical textile wall art and experimenting with waterfast inks on raw canvas.
+          </p>
+          <p>
+            Up the street, <strong>Decadence Manor</strong> stood as Midtown’s monument to Southern bohemian freedom: grandfather clock faces leaning against weathered porch railings, motorcycle frames resting among magnolia blossoms, and artists lounging on velvet daybeds until sunrise. Rescuing architectural salvage before developer bulldozers arrived became a core preservation mission.
+          </p>
+        </article>
+
+        <div class="scrap-card">
+          <div class="scrap-meta-strip">
+            <span>[ITEM_ID: SCL-ARC-1220]</span>
+            <span class="tag-loc">// MADISON AVE GOTHIC</span>
+          </div>
+          <div class="scrap-img-frame">
+            <img src="assets/swallow-measure-transparent.png" alt="Trade Flash Swallow Symbolism">
+          </div>
+          <div class="scrap-caption">
+            <strong>The Subterranean Studio</strong>
+            <p>Printing presses, raw stretched linen, and grandfather clocks among the magnolias.</p>
           </div>
         </div>
       </div>
 
 
       <!-- ===================================================================
-           ERA 4: PRESENT
+           ERA 4: PRESENT DAY
            =================================================================== -->
-      <div class="era-node">
+      <div class="era-node" id="era-4">
         <div class="era-badge" style="border-color: var(--accent-red);">
           <span class="era-year" style="color: var(--accent-red);">Present Day</span>
           <span class="era-theme">Spottswood House &amp; The Dual Practice</span>
         </div>
       </div>
 
+      <!-- ENTRY 04A: The Dual Practice -->
       <div class="timeline-block reverse">
-        <!-- Left: Narrative -->
         <article class="narrative-card" style="border-left: 4px solid var(--accent-red);">
           <div class="dossier-ref" style="color: var(--accent-red);">
-            <span>FILE ENTRY #04</span>
+            <span>FILE ENTRY #04A</span>
             <span>//</span>
             <span>SPOTTSWOOD CORRIDOR, 901</span>
           </div>
           <h3>The Dual Practice: Home Revival &amp; TallSlimCollins</h3>
           <p>
-            Today, operating out of Spottswood House in Memphis, the work is channeled through two complementary disciplines:
+            Today, operating out of <strong>Spottswood House</strong> in Memphis, the work is channeled through two complementary disciplines that honor the firewall between service and storytelling:
           </p>
           <p>
-            <strong>Home Revival by Stevan Collins Lazich:</strong> A high-touch residential transformation service specializing in historic color palette development, architectural carpentry salvage, and museum-grade gallery wall curation. Hands-on, unpretentious, and dedicated to restoring soul to historic homes.
+            <strong>Home Revival by Stevan Collins Lazich (<a href="https://stevancollinslazich.com" target="_blank" rel="noopener" style="text-decoration: underline; color: var(--accent-red); font-weight: 700;">stevancollinslazich.com</a>):</strong> A high-touch residential transformation service specializing in architectural color palette translation, drywall repair, fine finishing, custom lighting, and room flow revivals. Grounded, practical, and 100% clean of moniker or tattoo lore (*"Revive. Don't Replace."*).
           </p>
           <p>
-            <strong>TallSlimCollins:</strong> A cultural archive and wearable design house. Every shirt, print, and cap is fulfilled via Threadless as a tangible Mid-South memoir—from the Shop Dog Society honoring working shop hounds to field dispatches of lost Midtown sanctuaries.
+            <strong>TallSlimCollins (<a href="index.html" style="text-decoration: underline; color: var(--accent-gold); font-weight: 700;">tallslimcollins.com</a>):</strong> The creative umbrella, storytelling archive, traditional trade flash series, and wearable design atelier. Here, every garment, print, and dispatch is an authentic artifact from four decades of living Mid-South lore.
           </p>
         </article>
 
-        <!-- Right: Scrap Card -->
         <div class="scrap-card">
           <div class="scrap-meta-strip">
             <span>[ITEM_ID: SCL-ARC-2026]</span>
-            <span class="tag-loc">// LOC: SPOTTSWOOD HOUSE</span>
+            <span class="tag-loc">// SPOTTSWOOD HOUSE</span>
           </div>
           <div class="scrap-img-frame">
             <img src="assets/tsc-swallow-wrench-brush.png" alt="TallSlimCollins Mascot Swallow and Tools">
@@ -540,6 +699,38 @@
           <div class="scrap-caption">
             <strong>The Swallow &amp; Wrench-Brush Seal</strong>
             <p>Official trade insignia. For all your art &amp; mechanical needs. Handcrafted in Memphis, TN.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTRY 04B: The Honest-Work Mythology -->
+      <div class="timeline-block">
+        <article class="narrative-card">
+          <div class="dossier-ref">
+            <span>FILE ENTRY #04B</span>
+            <span>//</span>
+            <span>THE ATELIER LAB</span>
+          </div>
+          <h3>The Honest-Work Mythology: Shop Dogs, Swallows &amp; Artifacts</h3>
+          <p>
+            Merchandise in the TallSlimCollins world never exists in a vacuum. A shirt isn't a logo slapped on cotton—it's a physical relic from a real night, a lost room, or an oral tradition.
+          </p>
+          <p>
+            From the <strong>Shop Dog Society</strong> honoring the faithful companions snoozing in workbench sawdust, to the <strong>Spottswood Swallows</strong> carrying tape measures and extension cords, to upcoming <strong>NAVETS</strong> capsule releases: each piece is an invitation to step into a complete cultural world.
+          </p>
+        </article>
+
+        <div class="scrap-card">
+          <div class="scrap-meta-strip">
+            <span>[ITEM_ID: SCL-ARC-2027]</span>
+            <span class="tag-loc">// THREADLESS ATELIER</span>
+          </div>
+          <div class="scrap-img-frame">
+            <img src="assets/tsc-wrench-brush-banner-clean.png" alt="Wrench Brush Banner Trade Mark">
+          </div>
+          <div class="scrap-caption">
+            <strong>Living Mid-South Memoirs</strong>
+            <p>Story ➔ Design ➔ Artifact. Real history, wearable craftsmanship.</p>
           </div>
         </div>
       </div>
@@ -559,14 +750,14 @@
           </p>
         </div>
         <div class="footer-col">
-          <h5>The Ecosystem</h5>
+          <h5>The Five Worlds</h5>
           <ul>
+            <li><a href="index.html#dispatches">Field Dispatches</a></li>
+            <li><a href="index.html#works">The Work (Architectural)</a></li>
+            <li><a href="index.html#objects">The Objects (Artifacts)</a></li>
+            <li><a href="timeline-dossier.html">The Archive (Dossier)</a></li>
+            <li><a href="index.html#notebook">The Notebook</a></li>
             <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival by SCL</a></li>
-            <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Fulfillment Shop</a></li>
-            <li><a href="story-dancing-jimmy.html">Dancing Jimmy Lore</a></li>
-            <li><a href="story-babylon-cafe.html">Babylon Café Dispatch</a></li>
-            <li><a href="story-antenna-club.html">The Antenna Club Lore</a></li>
-            <li><a href="story-decadence-manor.html">Decadence Manor Lore</a></li>
           </ul>
         </div>
         <div class="footer-col">
