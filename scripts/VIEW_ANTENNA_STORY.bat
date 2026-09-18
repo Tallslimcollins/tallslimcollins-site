@@ -1,0 +1,3 @@
+@echo off
+echo Opening The Antenna Club Memoir in default browser...
+start "" "C:\Users\talls\.gemini\antigravity\scratch\tallslimcollins\story-antenna-club.html"

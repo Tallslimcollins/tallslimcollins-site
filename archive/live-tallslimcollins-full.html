@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TallSlimCollins | Stevan Collins Lazich — Memphis, TN</title>
+  <meta name="description" content="Artist · Craftsman · Storyteller · Revivalist. The living Memphis memoir, traditional flash art, and wearable artifacts of Stevan Collins Lazich.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --threadless-sage: #537972;
+      --threadless-sage-dark: #3e5e58;
+      --threadless-sage-light: #e5ecea;
+      --cream: #F5F1E8;
+      --cream-dark: #EAE3D5;
+      --brown: #3D2817;
+      --brown-light: #5A3F2A;
+      --gold: #C19A6B;
+      --gold-light: #D9B88F;
+      --terracotta: #C8623B;
+      --rose-gold: #B76E79;
+      --rose-dark: #96535D;
+      --white: #FFFFFF;
+      --radius: 4px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--brown);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Ambient texture */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(61, 40, 23, 0.02) 2px,
+        rgba(61, 40, 23, 0.02) 4px
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Decorative Corners */
+    .corner {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 3px solid var(--gold);
+      pointer-events: none;
+    }
+
+    .corner.top-left { top: -3px; left: -3px; border-right: none; border-bottom: none; }
+    .corner.top-right { top: -3px; right: -3px; border-left: none; border-bottom: none; }
+    .corner.bottom-left { bottom: -3px; left: -3px; border-right: none; border-top: none; }
+    .corner.bottom-right { bottom: -3px; right: -3px; border-left: none; border-top: none; }
+
+    /* Top Announcement Ribbon */
+    .top-ribbon {
+      background: var(--threadless-sage);
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--brown);
+    }
+
+    .top-ribbon a {
+      color: var(--gold-light);
+      text-decoration: underline;
+      margin-left: 8px;
+    }
+
+    /* Header & Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 3px solid var(--brown);
+      box-shadow: 0 4px 20px rgba(61, 40, 23, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+
+    .brand-logo-wrap a {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-badge-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 6px rgba(61, 40, 23, 0.15));
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: var(--brown);
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+
+    .brand-subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.74rem;
+      color: var(--threadless-sage);
+      font-style: italic;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--brown);
+      border: 2px solid var(--brown);
+      color: var(--cream) !important;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(61, 40, 23, 0.15);
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 60px 0 60px;
+      border-bottom: 3px solid var(--brown);
+      background: radial-gradient(circle at 50% 30%, rgba(83, 121, 114, 0.22) 0%, rgba(245, 241, 232, 0) 70%);
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-swallow-wrap {
+      max-width: 240px;
+      margin: 0 auto 20px;
+      filter: drop-shadow(0 14px 28px rgba(61, 40, 23, 0.22));
+      animation: gentleFloat 6s ease-in-out infinite;
+    }
+
+    .hero-swallow-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .hero-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 16px;
+      background: var(--brown);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--brown);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      color: var(--terracotta);
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.15rem;
+      color: #55473a;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--brown);
+      color: var(--cream);
+      border: 3px solid var(--brown);
+      box-shadow: 0 6px 18px rgba(61, 40, 23, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--brown);
+      border: 3px solid var(--brown);
+      box-shadow: 0 4px 14px rgba(61, 40, 23, 0.08);
+    }
+
+    .btn-outline:hover {
+      background: var(--cream-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Section Headings */
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      color: #665749;
+      font-size: 1.05rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       SECTION 1: COLLECTIONS ENGINE
+       ========================================================================== */
+    .collections-section {
+      padding: 80px 0;
+      border-bottom: 3px solid var(--brown);
+      background: var(--white);
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .collection-card {
+      background: var(--cream);
+      border: 3px solid var(--brown);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 18px rgba(61, 40, 23, 0.08);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(61, 40, 23, 0.16);
+      border-color: var(--gold);
+    }
+
+    .collection-banner {
+      background: linear-gradient(135deg, var(--threadless-sage) 0%, var(--threadless-sage-dark) 100%);
+      padding: 24px;
+      text-align: center;
+      border-bottom: 3px solid var(--brown);
+      color: var(--cream);
+    }
+
+    .collection-banner.dark-theme {
+      background: #0d110f;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .collection-badge-tag {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .collection-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: var(--white);
+    }
+
+    .collection-body {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .collection-tagline {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      color: var(--terracotta);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .collection-summary {
+      font-size: 0.92rem;
+      color: #4a3c30;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .collection-featured-pieces {
+      list-style: none;
+      font-size: 0.82rem;
+      color: #665749;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-top: 1px solid rgba(61, 40, 23, 0.12);
+      padding-top: 14px;
+    }
+
+    .collection-featured-pieces li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .collection-featured-pieces li::before {
+      content: "◆";
+      color: var(--gold);
+      font-size: 0.7rem;
+    }
+
+    .collection-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-col-story {
+      flex: 1;
+      padding: 10px 14px;
+      background: var(--white);
+      border: 2px solid var(--brown);
+      color: var(--brown);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .btn-col-story:hover {
+      background: var(--cream-dark);
+    }
+
+    .btn-col-shop {
+      flex: 1;
+      padding: 10px 14px;
+      background: var(--brown);
+      border: 2px solid var(--brown);
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .btn-col-shop:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    /* ==========================================================================
+       SECTION 2: FLAGSHIP DISPATCH (Story-to-Merch)
+       ========================================================================== */
+    .dispatch-section {
+      padding: 80px 0;
+      border-bottom: 3px solid var(--brown);
+      background: var(--cream);
+    }
+
+    .flagship-card {
+      background: var(--white);
+      border: 4px solid var(--brown);
+      box-shadow: 
+        0 0 0 6px var(--threadless-sage-light),
+        0 0 0 9px var(--brown),
+        0 20px 40px rgba(61, 40, 23, 0.12);
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+      padding: 44px 40px;
+      position: relative;
+    }
+
+    @media (max-width: 960px) {
+      .flagship-card {
+        grid-template-columns: 1fr;
+        padding: 30px 24px;
+        gap: 32px;
+      }
+    }
+
+    .flagship-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flagship-meta {
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+
+    .flagship-left h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .flagship-excerpt {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #3b2e23;
+      margin-bottom: 24px;
+    }
+
+    .flagship-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    /* Right Mockup Artifact in Flagship */
+    .flagship-right {
+      background: var(--cream);
+      border: 3px solid var(--brown);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .artifact-header-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brown);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .mockup-frame {
+      background: #0d110f;
+      border: 2px solid var(--gold);
+      padding: 24px 16px;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .mockup-frame h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--cream);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .mockup-frame span {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .btn-buy-flagship {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      background: var(--brown);
+      color: var(--cream);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 2px solid var(--brown);
+      transition: all 0.25s ease;
+    }
+
+    .btn-buy-flagship:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    /* ==========================================================================
+       SECTION 3: SISTER BRAND & DISPATCH
+       ========================================================================== */
+    .revival-banner-wrap {
+      padding: 60px 0;
+      background: var(--white);
+      border-bottom: 3px solid var(--brown);
+    }
+
+    .revival-banner {
+      background: var(--threadless-sage-light);
+      border: 3px solid var(--brown);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      align-items: center;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .revival-banner {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+      }
+    }
+
+    .revival-banner h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .revival-banner p {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.95rem;
+      color: #4a3e35;
+      line-height: 1.6;
+    }
+
+    .dispatch-box-wrap {
+      padding: 60px 0 80px;
+      background: var(--cream-dark);
+    }
+
+    .dispatch-box {
+      background: var(--brown);
+      color: var(--cream);
+      border: 3px solid var(--brown);
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .dispatch-box {
+        grid-template-columns: 1fr;
+        padding: 30px 24px;
+      }
+    }
+
+    .dispatch-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+
+    .dispatch-box p {
+      font-size: 0.92rem;
+      color: var(--cream-dark);
+      line-height: 1.6;
+    }
+
+    .dispatch-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .dispatch-form {
+        flex-direction: column;
+      }
+    }
+
+    .dispatch-input {
+      flex: 1;
+      padding: 14px 16px;
+      background: var(--white);
+      border: 2px solid var(--gold);
+      color: var(--brown);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 3px solid var(--brown);
+      padding: 60px 0 40px;
+      background: var(--brown);
+      color: var(--cream);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    .footer-col p {
+      font-size: 0.88rem;
+      color: var(--cream-dark);
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      font-size: 0.88rem;
+      color: var(--cream-dark);
+    }
+
+    .footer-col a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(245, 241, 232, 0.15);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #9d8c7c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Ribbon -->
+  <div class="top-ribbon">
+    ★ Official Threadless Artist Shop Drops Live · Free Shipping on Eligible Orders 
+    <a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Shop Now →</a>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand-logo-wrap">
+        <a href="index.html">
+          <img src="assets/tsc-badge-transparent.png" alt="Tall Slim Collins Circular Stamp" class="brand-badge-img">
+          <div class="brand-text-block">
+            <span class="brand-title">TallSlimCollins</span>
+            <span class="brand-subtitle">The Evangelist · Memphis, TN</span>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#dispatches">Dispatches</a></li>
+          <li><a href="https://stevancollinslazich.com" target="_blank" rel="noopener">Home Revival</a></li>
+          <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
+            Shop Threadless
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-swallow-wrap">
+        <img src="assets/tsc-swallow-wrench-brush.png" alt="TallSlimCollins Swallow Mascot Carrying Wrench-Paintbrush" class="hero-swallow-img">
+      </div>
+      <div class="hero-badge-tag">
+        ★ The Living Memphis Memoir & Cultural Archive ★
+      </div>
+      <h1>Revive. Preserve.<br><em>Tell the Story.</em></h1>
+      <p class="hero-desc">
+        Some things are worth saving—not because they are old or fashionable, but because they meant something. 
+        Wearable artifacts, historic midtown lore, and original craft from Stevan Collins Lazich.
+      </p>
+      <div class="hero-actions">
+        <a href="#collections" class="btn btn-primary">
+          Explore Collections
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn btn-outline">
+          Open Threadless Store
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1: THE COLLECTIONS ENGINE
+       ========================================================================== -->
+  <section class="collections-section" id="collections">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">The Official Collections</div>
+        <h2 class="section-title">Bodies of Work & Their Stories</h2>
+        <p class="section-subtitle">Every collection is built around a distinct chapter of Mid-South culture, oral history, or tradesperson craft.</p>
+      </div>
+
+      <div class="collections-grid">
+
+        <!-- Collection 1: Memphis in the Dark -->
+        <div class="collection-card">
+          <div class="corner top-left"></div>
+          <div class="corner top-right"></div>
+          <div class="corner bottom-left"></div>
+          <div class="corner bottom-right"></div>
+
+          <div class="collection-banner dark-theme">
+            <div class="collection-badge-tag">Collection #01</div>
+            <h3>Memphis in the Dark</h3>
+          </div>
+          <div class="collection-body">
+            <div>
+              <div class="collection-tagline">Lost Midtown Venues & Nocturnal Legends</div>
+              <p class="collection-summary">
+                A monument to the sanctuaries that defined Memphis after midnight—from the Antenna Club to Babylon and Dancing Jimmy.
+              </p>
+              <ul class="collection-featured-pieces">
+                <li>Dancing Jimmy: Stag & Streetlights</li>
+                <li>Babylon After Dark (Union Ave)</li>
+                <li>The Antenna Club (1588 Madison Ave)</li>
+                <li>901 After Dark: SIVAD Forever</li>
+              </ul>
+            </div>
+            <div class="collection-actions">
+              <a href="story-dancing-jimmy.html" class="btn-col-story">Read Dispatch</a>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-col-shop">Shop Collection →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 2: Root Revival -->
+        <div class="collection-card">
+          <div class="corner top-left"></div>
+          <div class="corner top-right"></div>
+          <div class="corner bottom-left"></div>
+          <div class="corner bottom-right"></div>
+
+          <div class="collection-banner">
+            <div class="collection-badge-tag">Collection #02</div>
+            <h3>Root Revival</h3>
+          </div>
+          <div class="collection-body">
+            <div>
+              <div class="collection-tagline">Southern Gothic Horticulture Meets Flash</div>
+              <p class="collection-summary">
+                Inspired by the six sharecropper sisters and one brother in Stevan's family who passed down endurance through soil, morning glories, and shears.
+              </p>
+              <ul class="collection-featured-pieces">
+                <li>Wildly Elegant (Shears & Acanthus)</li>
+                <li>Blood, Sweat & Dogwoods</li>
+                <li>Cut With Care, Not Cruelty</li>
+                <li>Root Revival Crest</li>
+              </ul>
+            </div>
+            <div class="collection-actions">
+              <a href="collection-root-revival.html" class="btn-col-story">Read Story</a>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-col-shop">Shop Collection →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 3: Shop Dog Society -->
+        <div class="collection-card">
+          <div class="corner top-left"></div>
+          <div class="corner top-right"></div>
+          <div class="corner bottom-left"></div>
+          <div class="corner bottom-right"></div>
+
+          <div class="collection-banner" style="background: linear-gradient(135deg, #C19A6B 0%, #a27c50 100%);">
+            <div class="collection-badge-tag" style="color: var(--brown);">Collection #03</div>
+            <h3 style="color: var(--brown);">Shop Dog Society</h3>
+          </div>
+          <div class="collection-body">
+            <div>
+              <div class="collection-tagline">Good Dogs. Honest Work.</div>
+              <p class="collection-summary">
+                Dedicated to the real workshop supervisors who snooze in the sawdust beneath workbenches and keep watch over honest trades.
+              </p>
+              <ul class="collection-featured-pieces">
+                <li>Night Shift QC (Tabby Cat CEO)</li>
+                <li>Shop Dog Foreman (Boxer)</li>
+                <li>The Apprentice (Boston Terrier)</li>
+                <li>Workbench Sleeping Dog Bandanas</li>
+              </ul>
+            </div>
+            <div class="collection-actions">
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-col-story">Explore Lore</a>
+              <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-col-shop">Shop Collection →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: FLAGSHIP DISPATCH (STORY-TO-MERCH)
+       ========================================================================== -->
+  <section class="dispatch-section" id="dispatches">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Field Dispatch #01</div>
+        <h2 class="section-title">Dispatches from Lost Memphis</h2>
+        <p class="section-subtitle">The shirt is the punchline. The memory is the whole house.</p>
+      </div>
+
+      <div class="flagship-card">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="flagship-left">
+          <div>
+            <div class="flagship-meta">
+              ★ Madison & Belvedere · Summer 1985
+            </div>
+            <h3>Dancing Jimmy: Stag, Streetlights, and Midtown After Dark</h3>
+            <p class="flagship-excerpt">
+              "Living above my mom’s antique store at Madison & Belvedere, I got hired to mow the corner park across the street for $35—the exact price of a Libertyland season pass. First week on the job, I learned what I really signed up for: extracting empty Stag bottles from the azaleas, and once a week, pulling Dancing Jimmy out of the shrubs and hosing the vomit and sweat off him. Midtown life was rich..."
+            </p>
+          </div>
+          <div class="flagship-actions">
+            <a href="story-dancing-jimmy.html" class="btn btn-primary">
+              Read Full Story & Lore
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn btn-outline">
+              Buy Tee on Threadless ($28) →
+            </a>
+          </div>
+        </div>
+
+        <div class="flagship-right">
+          <div class="artifact-header-tag">
+            Physical Artifact · Drop #01
+          </div>
+          <div class="mockup-frame">
+            <div style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px;">
+              Memphis in the Dark
+            </div>
+            <h4>Dancing Jimmy</h4>
+            <div style="color: var(--gold); margin: 10px 0;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <span>Stag & Streetlights · 1985</span>
+          </div>
+          <div>
+            <div style="font-size: 0.9rem; font-weight: 700; color: var(--brown); margin-bottom: 12px;">
+              Threadless Heavyweight Tee · <strong>$28.00</strong>
+            </div>
+            <a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="btn-buy-flagship" style="width: 100%;">
+              Claim Shirt on Threadless →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: HOME REVIVAL SISTER BRAND
+       ========================================================================== -->
+  <section class="revival-banner-wrap">
+    <div class="container">
+      <div class="revival-banner">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div>
+          <h3>Home Revival by Stevan Collins Lazich</h3>
+          <p>
+            Looking for hands-on residential craft? Stevan's interior transformation service—specializing in historic paint color strategy, gallery art installation, and room revival—lives at its own dedicated home.
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" class="btn btn-primary">
+            Visit stevancollinslazich.com →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: THE DISPATCH EMAIL CAPTURE
+       ========================================================================== -->
+  <section class="dispatch-box-wrap">
+    <div class="container">
+      <div class="dispatch-box">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div>
+          <h3>Join The Dispatch</h3>
+          <p>
+            Direct dispatches from the Memphis underground. Stories you can't get anywhere else, secret collection drop notifications, and zero spam.
+          </p>
+        </div>
+        <form class="dispatch-form" onsubmit="event.preventDefault(); alert('Welcome to The Dispatch. First drop coming soon.');">
+          <input type="email" class="dispatch-input" placeholder="Your email address..." required>
+          <button type="submit" class="btn" style="background: var(--gold); color: var(--brown); font-weight: 800; border: 2px solid var(--gold); white-space: nowrap;">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Spottswood House</h5>
+          <p>
+            Operating out of the historic Spottswood corridor in Memphis, Tennessee.<br>
+            <em>"From Duck Hill with taste. The glitter-cowboy patron saint of decisive taste."</em>
+          </p>
+          <div style="margin-top: 14px; font-size: 0.84rem; display: flex; gap: 14px;">
+            <a href="https://facebook.com/tallslimcollins" target="_blank" rel="noopener">Facebook</a>
+            <span>•</span>
+            <a href="https://instagram.com/tallslimcollins" target="_blank" rel="noopener">Instagram</a>
+            <span>•</span>
+            <a href="https://tiktok.com/@tallslimcollins" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Collections & Lore</h5>
+          <ul>
+            <li><a href="#collections">Memphis in the Dark</a></li>
+            <li><a href="collection-root-revival.html">Root Revival Collection</a></li>
+            <li><a href="#collections">Shop Dog Society</a></li>
+            <li><a href="story-dancing-jimmy.html">Dancing Jimmy Dispatch</a></li>
+            <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener">Threadless Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <p>
+            Stevan Collins Lazich<br>
+            Design: <a href="mailto:tallslimcollinsdesign@gmail.com" style="color: var(--gold-light);">tallslimcollinsdesign@gmail.com</a><br>
+            Studio: <a href="mailto:tallslimcollins@gmail.com" style="color: var(--gold-light);">tallslimcollins@gmail.com</a><br>
+            Home Revival: <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" style="color: var(--gold-light);">stevancollinslazich.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stevan Collins Lazich. All rights reserved.</div>
+        <div>TallSlimCollins &trade; · 901 · Made in Memphis</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

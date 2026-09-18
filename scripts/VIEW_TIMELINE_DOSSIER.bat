@@ -1,0 +1,3 @@
+@echo off
+echo Opening Archival Dossier and Timeline in default browser...
+start "" "C:\Users\talls\.gemini\antigravity\scratch\tallslimcollins\timeline-dossier.html"

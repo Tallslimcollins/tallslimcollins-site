@@ -1,0 +1,3 @@
+@echo off
+echo Opening Decadence Manor Memoir in default browser...
+start "" "C:\Users\talls\.gemini\antigravity\scratch\tallslimcollins\story-decadence-manor.html"
