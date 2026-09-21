@@ -1,0 +1,7 @@
+# Local notes & scratch files
+THREADLESS_TERMINATION_EMAIL.txt
+*.tmp.*
+*.bak
+
+# Master high-res print files (archived on F: vault)
+assets/masters/

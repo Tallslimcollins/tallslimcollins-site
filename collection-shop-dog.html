@@ -30,12 +30,12 @@
       --white: #FFFFFF;
       --wood-amber: #B37D4E;
 
-      --bg-body: #DFC08C;
-      --bg-header: #243B35;
+      --bg-body: #FAF8F5;
+      --bg-header: #0E100F;
       --bg-card: #FFFFFF;
       --bg-card-hover: #FFFDF9;
-      --text-main: #000000;
-      --text-muted: #2E3B37;
+      --text-main: #121212;
+      --text-muted: #3D3830;
       --border: rgba(0, 0, 0, 0.12);
       --border-focus: #517A71;
       --radius: 8px;
@@ -49,15 +49,35 @@
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-body);
+      background-color: #FAF8F5;
+      background: radial-gradient(ellipse at 50% 18%, #FAF8F5 0%, #F5EFE6 55%, #EFE7D8 100%);
+      background-attachment: fixed;
       color: var(--text-main);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 720px;
+      height: 720px;
+      background: url('assets/trade-flash/swallow-flash-artboard-15.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+      transition: all 0.2s ease;
     }
 
     .container {
@@ -68,13 +88,14 @@
 
     /* Top Announcement Bar */
     .top-bar {
-      background: var(--ink);
-      color: var(--parchment);
-      padding: 10px 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
+      background: #161817;
+      color: #D6CCA9;
+      font-size: 0.78rem;
+      font-weight: 600;
       text-align: center;
+      padding: 8px 16px;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,21 +104,26 @@
     }
 
     .top-bar a {
-      color: #FFFFFF;
+      color: #E6392F;
       text-decoration: underline;
-      font-weight: 600;
+      margin-left: 8px;
+      font-weight: 700;
+    }
+
+    .top-bar a:hover {
+      color: #FF5A4E;
     }
 
     /* Header */
     header {
-      background: var(--bg-header);
+      background: #0E100F;
       color: #FFFFFF;
-      border-bottom: 2px solid var(--parchment-deep);
+      border-bottom: 2px solid #C5A059;
       padding: 18px 0;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
 
     .nav-inner {
@@ -116,7 +142,7 @@
       width: 44px;
       height: 44px;
       object-fit: contain;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
     }
 
     .brand-title {
@@ -124,7 +150,7 @@
       font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: 0.02em;
-      color: var(--parchment);
+      color: #C5A059;
       display: block;
       line-height: 1.1;
     }
@@ -133,7 +159,8 @@
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
+      color: #D6CCA9;
+      font-weight: 600;
     }
 
     nav ul {
@@ -144,34 +171,44 @@
     }
 
     nav a {
-      font-size: 0.86rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #D6CCA9;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
       transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: var(--parchment);
+      color: #FFFFFF;
+      border-bottom-color: #C0392B;
     }
 
     .nav-cta {
-      background: var(--parchment);
-      color: var(--ink) !important;
-      padding: 7px 14px;
-      border-radius: var(--radius);
-      font-weight: 700 !important;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.2s ease;
+      padding: 8px 18px;
+      background: #C0392B;
+      border: 1px solid #A93226;
+      border-radius: var(--radius);
+      color: #FFFFFF !important;
+      font-size: 0.84rem !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
     }
 
     .nav-cta:hover {
-      background: #FFFFFF;
+      background: #A93226;
+      border-color: #922B21;
       transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(192, 57, 43, 0.45);
+      border-bottom-color: #922B21 !important;
     }
 
     /* Breadcrumbs */
@@ -194,10 +231,10 @@
 
     /* Collection Hero */
     .collection-hero {
-      background: linear-gradient(180deg, var(--sage-deep) 0%, #1A2C27 100%);
-      color: #FFFFFF;
+      background: linear-gradient(180deg, #FBF8F2 0%, #F5EFE3 100%);
+      color: #121212;
       padding: 70px 0 55px;
-      border-bottom: 3px solid var(--parchment);
+      border-bottom: 2px solid #D8C8A8;
       text-align: center;
       position: relative;
     }
@@ -207,7 +244,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      color: var(--parchment);
+      color: #8C6A28;
       margin-bottom: 12px;
       display: inline-block;
     }
@@ -218,13 +255,13 @@
       font-weight: 700;
       line-height: 1.1;
       margin-bottom: 14px;
-      color: #FFFFFF;
+      color: #121212;
     }
 
     .collection-tagline {
       font-size: clamp(1.05rem, 2vw, 1.3rem);
       font-style: italic;
-      color: var(--parchment-light);
+      color: #3D3830;
       max-width: 760px;
       margin: 0 auto 24px;
       line-height: 1.5;
@@ -238,7 +275,7 @@
       font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 0.04em;
-      color: rgba(255, 255, 255, 0.85);
+      color: #4A3E31;
     }
 
     /* Lore / Story Layout */
@@ -376,10 +413,11 @@
     }
 
     .piece-image-wrap {
-      background: #EFEFEF;
+      background: radial-gradient(circle at center, #FFFFFF 0%, #F5F1E8 100%);
       position: relative;
-      padding-top: 100%;
+      padding-top: 96%;
       overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
 
     .piece-image-wrap img {
@@ -575,11 +613,11 @@
       <nav>
         <ul>
           <li><a href="index.html#dispatches">Dispatches</a></li>
+          <li><a href="index.html#works">The Work</a></li>
           <li><a href="index.html#objects">The Objects</a></li>
-          <li><a href="index.html#neighborhoods">Neighborhoods</a></li>
-          <li><a href="collection-root-revival.html">Root Revival</a></li>
-          <li><a href="https://tallslimcollins.threadless.com/collections/shop-dog-society-by-tallslimcollins" target="_blank" rel="noopener" class="nav-cta">
-            Shop Dog Society
+          <li><a href="timeline-dossier.html">The Archive</a></li>
+          <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
+            Shop Threadless
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
           </a></li>
         </ul>
@@ -603,9 +641,9 @@
       <h1>Shop Dog Society</h1>
       <p class="collection-tagline">Dedicated to the faithful studio supervisors snoozing in sawdust beneath workbenches and keeping watch over honest work.</p>
       <div class="hero-stats">
-        <span>◆ 5 Signature Design Artifacts</span>
+        <span>◆ 6 Signature Design Artifacts</span>
         <span>◆ 299+ Synced Physical Products</span>
-        <span>◆ Wearable Bandannas, Heavy Tees &amp; Canvas Totes</span>
+        <span>◆ Wearable Bandanas, Heavy Tees &amp; Canvas Totes</span>
       </div>
     </div>
   </section>
@@ -627,7 +665,7 @@
         </p>
 
         <p>
-          This collection pairs traditional tattoo trade flash—bold line weights, heraldic ribbon banners, crossed tools, and classic American ink—with the genuine hierarchy of workshop life: from the grizzled Foreman who commands the floor, to the vigilant Security sentry at the roll-up door, to the sawdust-caked Workbench sleeper, to the enthusiastic Apprentice carrying scrap rags.
+          This collection pairs traditional tattoo trade flash—bold line weights, heraldic ribbon banners, crossed tools, and classic American ink—with the genuine hierarchy of workshop life: from the watchful night-shift Supervisor and grizzled Foreman who commands the floor, to the vigilant Security sentry at the roll-up door, the sawdust-caked Workbench sleeper, the enthusiastic Apprentice, and the studio painter hound.
         </p>
 
         <p>
@@ -641,11 +679,12 @@
           <h3>The Studio Roster</h3>
           <p>Each design represents an authentic station in the workshop hierarchy:</p>
           <ul>
-            <li><span>The Foreman</span> <strong>Boxer Heritage · 86 Items</strong></li>
-            <li><span>Security Sentry</span> <strong>Watch Sentry · 76 Items</strong></li>
-            <li><span>Workbench Sleeper</span> <strong>Sawdust Haven · 70 Items</strong></li>
-            <li><span>The Apprentice</span> <strong>Trade Learner · 66 Items</strong></li>
-            <li><span>Official Bandana</span> <strong>Wearable Artifact · $25</strong></li>
+            <li><span>The Supervisor</span> <strong>Doberman Heritage · Overseer</strong></li>
+            <li><span>The Foreman</span> <strong>Boxer / Bulldog · Floor Boss</strong></li>
+            <li><span>Security Sentry</span> <strong>Pit Bull Heritage · Studio Watch</strong></li>
+            <li><span>The Apprentice</span> <strong>French Bulldog · Trade Learner</strong></li>
+            <li><span>Workbench Sleeper</span> <strong>Sawdust Haven · Joinery Standard</strong></li>
+            <li><span>Studio Painter</span> <strong>Wearable Bandana · Scarf &amp; Gear</strong></li>
           </ul>
         </div>
 
@@ -677,20 +716,39 @@
     <!-- Artifact Roster Section -->
     <div class="roster-header">
       <h2>The Physical Artifact Suite</h2>
-      <p>Explore the five signature designs below, complete with direct access to Threadless apparel, home goods, and pet accessories.</p>
+      <p>Explore the six signature designs and authentic workshop character roles below, complete with direct access to Threadless apparel, home goods, and pet accessories.</p>
     </div>
 
     <div class="roster-grid">
 
-      <!-- Artifact 1: Foreman -->
+      <!-- Artifact 1: Supervisor -->
       <div class="artifact-piece-card">
         <div class="piece-image-wrap">
           <span class="piece-badge-overlay">Artifact #01</span>
-          <img src="https://cdn-images.threadless.com/~tms/tallslimcollins/products/4143618/shirt-1781953551-fed070c6f61272f6cea615d4b7c40d40.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJpZl8iLCBbeyJ0IjogImV4cHIiLCAidiI6IFsiaGFzX2FscGhhIiwgbnVsbCwgbnVsbF19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0MzYxOC9zaGlydC0xNzgxOTUzNTUxLWZlZDA3MGM2ZjYxMjcyZjZjZWE2MTVkNGI3YzQwZDQwLnBuZyIsIFtbInRyaW0iLCBbdHJ1ZSwgZmFsc2VdLCB7fV0sIFsicmVzaXplIiwgWzQxMS40Mjg1NzE0Mjg1NzE0LCA1NDguNTcxNDI4NTcxNDI4Nl0sIHsibWF4X3NjYWxlIjogMi4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzUxNC4yODU3MTQyODU3MTQyLCA2ODUuNzE0Mjg1NzE0Mjg1N10sIHsiYmFja2dyb3VuZCI6ICJmZmU1OTkifV1dXX0sIHsidCI6ICJjb21wIiwgInYiOiBbInRocmVhZGxlc3MtbWVkaWEvYXJ0aXN0X3Nob3BzL3Nob3BzL3RhbGxzbGltY29sbGlucy9wcm9kdWN0cy80MTQzNjE4L3NoaXJ0LTE3ODE5NTM1NTEtZmVkMDcwYzZmNjEyNzJmNmNlYTYxNWQ0YjdjNDBkNDAucG5nIiwgW1sicmVzaXplIiwgWzUxNC4yODU3MTQyODU3MTQyLCA2ODUuNzE0Mjg1NzE0Mjg1N10sIHsibWF4X3NjYWxlIjogMi4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzUxNC4yODU3MTQyODU3MTQyLCA2ODUuNzE0Mjg1NzE0Mjg1N10sIHsiYmFja2dyb3VuZCI6ICJmZmYifV1dXX1dLCB7fV0sIFsicmVzaXplIiwgWzEyMThdLCB7fV0sIFsib3ZlcmxheSIsIFsidGhyZWFkbGVzcy1tZWRpYS9hcnRpc3Rfc2hvcHMvb3ZlcmxheXMvMTU5Y2Y0ZDQwYThiOTY2YWJiOTEwY2QxYjZjNDYwMWMvZnJvbnQtMTQ3MzI3NTc1Ny0yNGQ5ZjgzZjU3MTZjOTJkODQ3MGZmMzIxYWViMjRiNS5wbmciXSwgeyJ5IjogMTg4LCAieCI6IDM5MSwgImJhY2tncm91bmQiOiAiZmZlNTk5In1dLCBbImVuY29kZSIsIFsiLnBuZyJdLCB7ImRwaSI6IDMwMH1dXX0=" alt="Shop Dog Society Foreman Shirt" loading="lazy">
+          <img src="assets/shop-dog/shop-dog-supervisor.png" alt="Shop Dog Society Supervisor Doberman Artwork" loading="lazy">
         </div>
         <div class="piece-content">
           <div>
-            <span class="piece-role">The Official Foreman · Boxer Heritage</span>
+            <span class="piece-role">The Nocturnal Overseer · Doberman Heritage</span>
+            <h3>Shop Dog Supervisor</h3>
+            <p>The watchful night-shift protector and studio steward. Framed by traditional tattoo roses, Spottswood swallows, stars, and crescent moon, the Supervisor ensures discipline, poise, and perfection across every workbench before dawn.</p>
+          </div>
+          <div class="piece-footer">
+            <span class="piece-price">Heavy Hoodies, Tees &amp; Prints</span>
+            <a href="https://tallslimcollins.threadless.com/collections/shop-dog-society-by-tallslimcollins" target="_blank" rel="noopener" class="btn-piece-buy">Shop Supervisor →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artifact 2: Foreman -->
+      <div class="artifact-piece-card">
+        <div class="piece-image-wrap">
+          <span class="piece-badge-overlay">Artifact #02</span>
+          <img src="assets/shop-dog/shop-dog-foreman.png" alt="Shop Dog Society Foreman Artwork" loading="lazy">
+        </div>
+        <div class="piece-content">
+          <div>
+            <span class="piece-role">The Official Foreman · Bulldog / Boxer Heritage</span>
             <h3>Shop Dog Foreman</h3>
             <p>The unquestioned boss of the workshop floor. He doesn’t need to bark to be understood. He oversees cuts, approves joinery, and demands mandatory ear scratches before any delivery is dispatched.</p>
           </div>
@@ -701,17 +759,17 @@
         </div>
       </div>
 
-      <!-- Artifact 2: Security -->
+      <!-- Artifact 3: Security -->
       <div class="artifact-piece-card">
         <div class="piece-image-wrap">
-          <span class="piece-badge-overlay">Artifact #02</span>
-          <img src="https://cdn-images.threadless.com/~tms/tallslimcollins/products/4144052/original-1782107570-d688ce6f663d5228217bb1556724f4a4.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJpZl8iLCBbeyJ0IjogImV4cHIiLCAidiI6IFsiaGFzX2FscGhhIiwgbnVsbCwgbnVsbF19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0NDA1Mi9vcmlnaW5hbC0xNzgyMTA3NTcwLWQ2ODhjZTZmNjYzZDUyMjgyMTdiYjE1NTY3MjRmNGE0LnBuZyIsIFtbInRyaW0iLCBbdHJ1ZSwgZmFsc2VdLCB7fV0sIFsicmVzaXplIiwgWzc1MC40MDAwMDAwMDAwMDAxLCA5OTAuNDAwMDAwMDAwMDAwMV0sIHsibWF4X3NjYWxlIjogMi4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzkzOC4wLCAxMjM4LjBdLCB7ImJhY2tncm91bmQiOiAiZmZlNTk5In1dXV19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0NDA1Mi9vcmlnaW5hbC0xNzgyMTA3NTcwLWQ2ODhjZTZmNjYzZDUyMjgyMTdiYjE1NTY3MjRmNGE0LnBuZyIsIFtbInJlc2l6ZSIsIFs5MzguMCwgMTIzOC4wXSwgeyJtYXhfc2NhbGUiOiAyLjAsICJzdHlsZSI6ICJjcm9wIn1dLCBbImNhbnZhc19jZW50ZXJlZCIsIFs5MzguMCwgMTIzOC4wXSwgeyJiYWNrZ3JvdW5kIjogImZmZiJ9XV1dfV0sIHt9XSwgWyJyZXNpemUiLCBbMTE2MV0sIHt9XSwgWyJvdmVybGF5IiwgWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9vdmVybGF5cy80YTMyOWVhMDk0YjViNTQ3YzY1OWEyZDM0MGM4NGRjMS9mcm9udC0xNjg0MjcyMjg5LTllMmRmYjkwYTA3ZDI5NGZjNDc3Y2ZmMTU5N2VlOWNlLnBuZyJdLCB7InkiOiAyMjQsICJ4IjogNDA1LCAiYmFja2dyb3VuZCI6ICJmZmU1OTkifV0sIFsiZW5jb2RlIiwgWyIucG5nIl0sIHsiZHBpIjogMzAwfV1dfQ==" alt="Shop Dog Society Security Shirt" loading="lazy">
+          <span class="piece-badge-overlay">Artifact #03</span>
+          <img src="assets/shop-dog/shop-dog-security.png" alt="Shop Dog Society Security Pit Bull Artwork" loading="lazy">
         </div>
         <div class="piece-content">
           <div>
-            <span class="piece-role">Front Porch Sentry · Studio Watch</span>
+            <span class="piece-role">Front Porch Sentry · Pit Bull Heritage</span>
             <h3>Shop Dog Security</h3>
-            <p>Stationed right at the roll-up door or front stoop. Alert to every mail carrier, stray squirrel, and lumber truck. Keeps the studio perimeter secure and honest.</p>
+            <p>Stationed right at the roll-up door or front stoop. Alert to every mail carrier, stray squirrel, and lumber truck. Keeps the studio perimeter secure, loyal, and fiercely honest.</p>
           </div>
           <div class="piece-footer">
             <span class="piece-price">76 Products · From $6.00</span>
@@ -720,36 +778,17 @@
         </div>
       </div>
 
-      <!-- Artifact 3: Workbench -->
-      <div class="artifact-piece-card">
-        <div class="piece-image-wrap">
-          <span class="piece-badge-overlay">Artifact #03</span>
-          <img src="https://cdn-images.threadless.com/~tms/tallslimcollins/products/4145250/shirt-1782238307-ed75eda4c97d273f1380c236bf5c951f.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJpZl8iLCBbeyJ0IjogImV4cHIiLCAidiI6IFsiaGFzX2FscGhhIiwgbnVsbCwgbnVsbF19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0NTI1MC9zaGlydC0xNzgyMjM4MzA3LWVkNzVlZGE0Yzk3ZDI3M2YxMzgwYzIzNmJmNWM5NTFmLnBuZyIsIFtbInRyaW0iLCBbdHJ1ZSwgZmFsc2VdLCB7fV0sIFsicmVzaXplIiwgWzQxMS40Mjg1NzE0Mjg1NzE0LCA0MTEuNDI4NTcxNDI4NTcxNF0sIHsibWF4X3NjYWxlIjogMi4wfV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzUxNC4yODU3MTQyODU3MTQyLCA1MTQuMjg1NzE0Mjg1NzE0Ml0sIHsiYmFja2dyb3VuZCI6ICIxNDMyNGUifV1dXX0sIHsidCI6ICJjb21wIiwgInYiOiBbInRocmVhZGxlc3MtbWVkaWEvYXJ0aXN0X3Nob3BzL3Nob3BzL3RhbGxzbGltY29sbGlucy9wcm9kdWN0cy80MTQ1MjUwL3NoaXJ0LTE3ODIyMzgzMDctZWQ3NWVkYTRjOTdkMjczZjEzODBjMjM2YmY1Yzk1MWYucG5nIiwgW1sicmVzaXplIiwgWzUxNC4yODU3MTQyODU3MTQyLCA1MTQuMjg1NzE0Mjg1NzE0Ml0sIHsiYmFja2dyb3VuZCI6ICJmZmYifV1dXX1dLCB7fV0sIFsicmVzaXplIiwgWzE2MjNdLCB7fV0sIFsib3ZlcmxheSIsIFsidGhyZWFkbGVzcy1tZWRpYS9hcnRpc3Rfc2hvcHMvb3ZlcmxheXMvNTlmOWViNjA4M2I1NTc2YTc3YWM2ZTU1M2FiMDQyOGQvZnJvbnQtMTQ3MzI3NTc2MS01MzM0OWQzYTI5NGVmYmRhNmUxZmFhMTdlNDUwNTU0Zi5wbmciXSwgeyJ5IjogMTg4LCAieCI6IDE4OCwgImJhY2tncm91bmQiOiAiMTQzMjRlIn1dLCBbImVuY29kZSIsIFsiLnBuZyJdLCB7ImRwaSI6IDMwMH1dXX0=" alt="Shop Dog Workbench Shirt" loading="lazy">
-        </div>
-        <div class="piece-content">
-          <div>
-            <span class="piece-role">Sawdust Supervisor · Deep Slumber</span>
-            <h3>Shop Dog Workbench</h3>
-            <p>Curled up tight beneath the heavy pine and oak workbench. Sawdust rains down on his fur like snow, hand planes whistle above, and he sleeps the peaceful sleep of the truly loyal.</p>
-          </div>
-          <div class="piece-footer">
-            <span class="piece-price">70 Products · From $6.00</span>
-            <a href="https://tallslimcollins.threadless.com/designs/shop-dog-workbench-by-tallslimcollins-shop-dog-society" target="_blank" rel="noopener" class="btn-piece-buy">Shop Workbench →</a>
-          </div>
-        </div>
-      </div>
-
       <!-- Artifact 4: Apprentice -->
       <div class="artifact-piece-card">
         <div class="piece-image-wrap">
           <span class="piece-badge-overlay">Artifact #04</span>
-          <img src="https://cdn-images.threadless.com/~tms/tallslimcollins/products/4145278/shirt-1782241259-f19a2398ff40959b7ce96d831f44c990.png?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJpZl8iLCBbeyJ0IjogImV4cHIiLCAidiI6IFsiaGFzX2FscGhhIiwgbnVsbCwgbnVsbF19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0NTI3OC9zaGlydC0xNzgyMjQxMjU5LWYxOWEyMzk4ZmY0MDk1OWI3Y2U5NmQ4MzFmNDRjOTkwLnBuZyIsIFtbInRyaW0iLCBbdHJ1ZSwgZmFsc2VdLCB7fV0sIFsicmVzaXplIiwgWzQ5OC4yMTQyODU3MTQyODU2NywgNDk4LjIxNDI4NTcxNDI4NTY3XSwgeyJtYXhfc2NhbGUiOiAzLjB9XSwgWyJwYWQiLCBbODMuMDM1NzE0Mjg1NzE0MjgsIDgzLjAzNTcxNDI4NTcxNDI4LCA4My4wMzU3MTQyODU3MTQyOCwgODMuMDM1NzE0Mjg1NzE0MjhdLCB7ImJhY2tncm91bmQiOiAiMTQzMjRlIn1dLCBbImNhbnZhc19jZW50ZXJlZCIsIFs2NjQuMjg1NzE0Mjg1NzE0MiwgNjY0LjI4NTcxNDI4NTcxNDJdLCB7ImJhY2tncm91bmQiOiAiMTQzMjRlIn1dXV19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0NTI3OC9zaGlydC0xNzgyMjQxMjU5LWYxOWEyMzk4ZmY0MDk1OWI3Y2U5NmQ4MzFmNDRjOTkwLnBuZyIsIFtbInJlc2l6ZSIsIFs2NjQuMjg1NzE0Mjg1NzE0MiwgNjY0LjI4NTcxNDI4NTcxNDJdLCB7Im1heF9zY2FsZSI6IDMuMCwgInN0eWxlIjogIkNST1AifV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzY2NC4yODU3MTQyODU3MTQyLCA2NjQuMjg1NzE0Mjg1NzE0Ml0sIHsiYmFja2dyb3VuZCI6ICJmZmZmZmYifV1dXX1dLCB7fV0sIFsicmVzaXplIiwgWzE0MTJdLCB7fV0sIFsib3ZlcmxheSIsIFsidGhyZWFkbGVzcy1tZWRpYS9hcnRpc3Rfc2hvcHMvb3ZlcmxheXMvZmVhOWQ1ZWZmYWZhNzQ2M2UxOGVjOGUwYTEzZmIyZTkvZnJvbnQtMTQ3NjM5MDQyNS1hYjBkYzBiMzFlMWE4NWMzZTBhNDkwMGM1MGU5MjA4Zi5wbmciXSwgeyJ5IjogMjkzLCAieCI6IDI5MCwgImJhY2tncm91bmQiOiAiMTQzMjRlIn1dLCBbImVuY29kZSIsIFsiLnBuZyJdLCB7ImRwaSI6IDMwMH1dXX0=" alt="Shop Dog Society Apprentice Shirt" loading="lazy">
+          <img src="assets/shop-dog/shop-dog-apprentice.png" alt="Shop Dog Society Apprentice French Bulldog Artwork" loading="lazy">
         </div>
         <div class="piece-content">
           <div>
-            <span class="piece-role">Loyal Companion · In Training</span>
+            <span class="piece-role">Loyal Companion · French Bulldog Heritage</span>
             <h3>Shop Dog Apprentice</h3>
-            <p>Eager, curious, and constantly underfoot. Carrying off wood scraps, testing sawdust pile softness, and learning the trade from the ground up.</p>
+            <p>Eager, curious, and constantly underfoot. Carrying off wood scraps, testing sawdust pile softness, and learning the honest trade from the ground up under the watchful guidance of the Foreman.</p>
           </div>
           <div class="piece-footer">
             <span class="piece-price">66 Products · From $6.00</span>
@@ -758,20 +797,39 @@
         </div>
       </div>
 
-      <!-- Artifact 5: The Official Bandana -->
+      <!-- Artifact 5: Workbench -->
       <div class="artifact-piece-card">
         <div class="piece-image-wrap">
-          <span class="piece-badge-overlay">Wearable Artifact</span>
-          <img src="https://cdn-images.threadless.com/~tms/tallslimcollins/products/4142733/scarf-1781797442-a28b787ddc0cfb79c4300e76b484f96e.jpg?v=3&d=eyJvbmx5X21ldGEiOiBmYWxzZSwgImZvcmNlIjogZmFsc2UsICJvcHMiOiBbWyJpZl8iLCBbeyJ0IjogImV4cHIiLCAidiI6IFsiaGFzX2FscGhhIiwgbnVsbCwgbnVsbF19LCB7InQiOiAiY29tcCIsICJ2IjogWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9zaG9wcy90YWxsc2xpbWNvbGxpbnMvcHJvZHVjdHMvNDE0MjczMy9zY2FyZi0xNzgxNzk3NDQyLWEyOGI3ODdkZGMwY2ZiNzljNDMwMGU3NmI0ODRmOTZlLmpwZyIsIFtbInRyaW0iLCBbdHJ1ZSwgZmFsc2VdLCB7fV0sIFsicmVzaXplIiwgWzk0Mi44NTcxNDI4NTcxNDI4LCA5NDIuODU3MTQyODU3MTQyOF0sIHsibWF4X3NjYWxlIjogMy4wfV0sIFsicGFkIiwgWzExNy44NTcxNDI4NTcxNDI4NSwgMTE3Ljg1NzE0Mjg1NzE0Mjg1LCAxMTcuODU3MTQyODU3MTQyODUsIDExNy44NTcxNDI4NTcxNDI4NV0sIHsiYmFja2dyb3VuZCI6ICJmZmZmZmYifV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzExNzguNTcxNDI4NTcxNDI4NCwgMTE3OC41NzE0Mjg1NzE0Mjg0XSwgeyJiYWNrZ3JvdW5kIjogImZmZmZmZiJ9XV1dfSwgeyJ0IjogImNvbXAiLCAidiI6IFsidGhyZWFkbGVzcy1tZWRpYS9hcnRpc3Rfc2hvcHMvc2hvcHMvdGFsbHNsaW1jb2xsaW5zL3Byb2R1Y3RzLzQxNDI3MzMvc2NhcmYtMTc4MTc5NzQ0Mi1hMjhiNzg3ZGRjMGNmYjc5YzQzMDBlNzZiNDg0Zjk2ZS5qcGciLCBbWyJyZXNpemUiLCBbMTE3OC41NzE0Mjg1NzE0Mjg0LCAxMTc4LjU3MTQyODU3MTQyODRdLCB7Im1heF9zY2FsZSI6IDMuMCwgInN0eWxlIjogIkNST1AifV0sIFsiY2FudmFzX2NlbnRlcmVkIiwgWzExNzguNTcxNDI4NTcxNDI4NCwgMTE3OC41NzE0Mjg1NzE0Mjg0XSwgeyJiYWNrZ3JvdW5kIjogImZmZmZmZiJ9XV1dfV0sIHt9XSwgWyJyZXNpemUiLCBbMTc5Ml0sIHt9XSwgWyJvcGFjaXR5IiwgWzAuOV0sIHt9XSwgWyJvdmVybGF5IiwgWyJ0aHJlYWRsZXNzLW1lZGlhL2FydGlzdF9zaG9wcy9vdmVybGF5cy9iNzhiZGUyY2YwODk5OTFiMjVlOTk1NTJmYzIwNWFhZi9mcm9udC0xNzE1NzA1MDgxLWE4ZTY4ZTg0YmU4YWEzNTBjM2E1ZDM2OTc4NGQzMDIwLnBuZyJdLCB7InkiOiAxMDIsICJ4IjogMTA3LCAiYmFja2dyb3VuZCI6ICJmZmZmZmYifV0sIFsiZW5jb2RlIiwgWyIucG5nIl0sIHsiZHBpIjogMzAwfV1dfQ==" alt="Shop Dog Society Bandana" loading="lazy">
+          <span class="piece-badge-overlay">Artifact #05</span>
+          <img src="assets/shop-dog/shop-dog-workbench-shirt.webp" alt="Shop Dog Workbench Long Sleeve Shirt" loading="lazy">
         </div>
         <div class="piece-content">
           <div>
-            <span class="piece-role">Wearable Companion Standard · Poly-Silk</span>
-            <h3>Shop Dog Bandana</h3>
-            <p>The authentic, lightweight all-over printed bandana for four-legged shop companions (or humans). Durable, washable, and printed with the full Shop Dog Society insignia.</p>
+            <span class="piece-role">Sawdust Slumber · Joinery Apparel Standard</span>
+            <h3>Shop Dog Workbench</h3>
+            <p>Curled up tight beneath the heavy pine and oak workbench with hammer and shavings. Sawdust rains down like snow, hand planes whistle above, and he sleeps the peaceful sleep of the truly loyal.</p>
           </div>
           <div class="piece-footer">
-            <span class="piece-price">Silk-Poly Scarf / Bandana · $25.00</span>
+            <span class="piece-price">70 Products · Long Sleeves &amp; Hoodies</span>
+            <a href="https://tallslimcollins.threadless.com/designs/shop-dog-workbench-by-tallslimcollins-shop-dog-society" target="_blank" rel="noopener" class="btn-piece-buy">Shop Workbench →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artifact 6: The Studio Painter Hound & Bandana -->
+      <div class="artifact-piece-card">
+        <div class="piece-image-wrap">
+          <span class="piece-badge-overlay">Wearable Artifact</span>
+          <img src="assets/shop-dog/shop-dog-studio-painter.png" alt="Shop Dog Society Studio Painter Hound with Bandana" loading="lazy">
+        </div>
+        <div class="piece-content">
+          <div>
+            <span class="piece-role">Studio Painter · Official Bandana Standard</span>
+            <h3>The Studio Painter Hound</h3>
+            <p>Wearing the signature all-over printed bandana with paintbrush in jaws beside the studio paint bucket. The companion standard for four-legged shop assistants and human makers alike.</p>
+          </div>
+          <div class="piece-footer">
+            <span class="piece-price">Poly-Silk Scarf / Bandana · $25.00</span>
             <a href="https://tallslimcollins.threadless.com/designs/shop-dog-bandana" target="_blank" rel="noopener" class="btn-piece-buy">Claim Bandana →</a>
           </div>
         </div>

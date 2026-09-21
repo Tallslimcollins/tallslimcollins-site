@@ -1,4 +1,4 @@
-﻿# TALLSLIMCOLLINS.COM
+# TALLSLIMCOLLINS.COM
 ## Design + Editorial Operating Framework & Constitution
 *The Operating Framework, Content Engine, and Visual Grammar for TallSlimCollins*
 **Author / Vision:** Stevan Collins Lazich  
@@ -65,43 +65,50 @@ Always ask: **“What real thing from the archive has enough life in it to becom
 
 ---
 
-## 03 — THE FIVE CONTENT WORLDS
+## 03 — THE FOUR DOORS INTO THE WORLD (+ SHOP)
 
-Rather than sprawling across dozens of confusing categories, all TallSlimCollins material belongs to one of five major territories:
+Rather than sprawling across confusing taxonomy menus, all TallSlimCollins architecture is compressed into **four doors into the world plus one distinct commercial action**:
+
+> **DISPATCHES · THE WORK · THE OBJECTS · THE ARCHIVE** &nbsp;&nbsp;&nbsp;&nbsp; **[ SHOP THREADLESS ↗ ]**
 
 ### 1. FIELD DISPATCHES — *What happened.*
-The storytelling engine. Real Memphis places, characters, jobs, late nights, buildings, objects, weird encounters, and cultural history.
-- **Established Canon**:
-  - *Dancing Jimmy & The Mid-South Night Watch*
-  - *Babylon Café & The Herb Room (1991–1993)*
-  - *The Antenna Club (1588 Madison)*
-  - *Decadence Manor (Southern Gothic Architectural Salvage)*
+The storytelling engine. Real Memphis places, characters, jobs, late nights, buildings, objects, weird encounters, and oral history.
+- **The Engine**:
+  - *Dancing Jimmy & The Mid-South Night Watch* (1985) ➔ Shirt
+  - *Babylon Café & The Herb Room* (1991–1993) ➔ Shirt
+  - *The Antenna Club* (1588 Madison Ave) ➔ Shirt
+  - *Decadence Manor* (Madison Ave Salvage) ➔ Shirt
+  - *Coiffure Deluxe* (1996 Monte Carlo / Super 8 Film) ➔ Film / Archive
+- Dispatches are not blog posts—they give every physical artifact its provenance.
 
 ### 2. THE WORK — *What Stevan made.*
-Art, design, restoration, interiors, objects, graphics, commissions, and unusual physical builds.
-- **The Architectural Integration**: This is where the architectural and design history appears **without merging Home Revival into TallSlimCollins**.
-- **Framing**: TallSlimCollins presents:  
-  `“The Architectural Works of Stevan Collins Lazich”`  
-  telling the narrative and cultural story of the craft, while Home Revival (`stevancollinslazich.com`) remains the pure, dedicated service business.
+Objects, spaces, restorations, sets, paintings, textiles, repairs, experiments, and physical things Stevan has made.
+- **Brand Firewall Definition**:
+  - **TallSlimCollins documents the maker** (physical oeuvre, materials, creative labor).
+  - **Home Revival sells the service** (residential renovations, drywall, color translation).
+- The work presents the physical oeuvre without pitching contractor scopes or booking client consultations on TallSlimCollins.
 
 ### 3. THE OBJECTS — *What came out of the world.*
-This is where merchandise transforms into meaningful artifacts.
-- A shirt is never just “The Dancing Jimmy T-Shirt”; it is **an artifact from a Memphis oral history**.
-- A *Shop Dog Society* bandana is not a novelty product; it is a piece of the **honest-work mythology of the studio**.
-- *NAVETS* and future capsule releases occupy this space as physical extensions of the stories.
+This is the umbrella where merchandise transforms into meaningful artifacts.
+- **Wearable**: Heavyweight tees, bandanas, jackets, caps.
+- **Home**: Pillows, prints, accessories, future NAVETS objects.
+- **Curated Collections**:
+  - *Shop Dog Society* (studio supervisors in workbench sawdust).
+  - *Root Revival Delta Series* (Arkansas Delta matriarchs & heirloom okra).
+  - *Heritage Revival* (traditional tattoo trade flash swallows and cords).
+  - *Memphis Neighborhood Lore* (Frayser, Orange Mound, Cooper-Young, Central Gardens, Victorian Village, Overton Park).
+- **Art With Purpose (Causes)**: Every eligible purchase participates in Threadless Causes (Mental Health America, ASPCA, Racial Equity, Reproductive Rights).
 
 ### 4. THE ARCHIVE — *What remains.*
-Photographs, vintage flyers, menus, ticket stubs, press clippings, Polaroids, architectural fragments, design scraps, and music ephemera.
-- **The Dossier Spine**: The four-era biographical scrapbook (`timeline-dossier.html`) serves as the permanent skeleton:
-  - *Era 1 (1980s–1990s)*: Drapery Workrooms, Scale & French Antiquities (Callie's Antiques, 1707 Madison, 583 S McLean).
-  - *Era 2 (1990s–2010s)*: Subculture, DJ Decks & Midtown Nightlife (Otherlands, Antenna Club, Babylon, DJ Steve Anne, B-52s, touring VIP hospitality, Rehab at Beauty Shop).
-  - *Era 3 (2010s–2020s)*: Conservation, Fine Art & Studio Practice (Decadence Manor, Daisy Glaze production design, botanical textiles, Rubber Stamp building studio).
-  - *Era 4 (Present)*: Spottswood House & The Dual Practice.
+The museum of Stevan Collins Lazich. Four decades of permanent evidence:
+- **TIMELINE**: The four-era biographical dossier spine (1984–Present).
+- **FIELD NOTES**: Direct craftsman reflections on scale, honest weight, patina vs. factory distress, and homes that work (formerly The Notebook).
+- **PHOTOGRAPHS**: Unscripted documentary captures (B-52s, VIP hospitality, DJ Steve Anne, Dianne Price, Otherlands).
+- **EPHEMERA**: Vintage flyers, ticket stubs, credentials, menus, and receipts.
+- **FILM**: Super 8 cinema stills and video archives.
 
-### 5. THE NOTEBOOK — *What Stevan thinks.*
-Direct, unfiltered, short observations:
-- Design, taste, collecting, craftsmanship, objects, historic houses, music, work, and Mid-South culture.
-- The voice is concise, sharp, personal, and punchy. Not long essays unless the subject demands it.
+### 5. SHOP — *External commerce.*
+The clear, visually distinct action button leading directly to Threadless fulfillment.
 
 ---
 
@@ -181,7 +188,7 @@ The boundary between entities is absolute and permanent:
 
 ---
 
-## 09 — THE HOMEPAGE QUESTION
+## 09 — THE HOMEPAGE QUESTION & EDITORIAL RHYTHM
 
 Every time the TallSlimCollins homepage is edited, ask:
 > ### **“Does this immediately tell somebody that a whole world lives here?”**
@@ -193,6 +200,16 @@ Instead, the emotional journey is:
 3. **Find something.**
 4. **See something.**
 5. **Want something.**
+
+### The Editorial Flow & Hierarchy:
+The homepage is not a menu of content categories; it is an unfolding narrative field dossier:
+1. **Masthead & Identity Declaration**: Establishes Stevan as Artist · Craftsman · Collector · Storyteller with immediate dual pathways (*Explore The Archive* or *Read Field Dispatches*).
+2. **Current Lead Dispatch Narrative**: A high-impact feature (e.g., *Dancing Jimmy*) that immerses the reader immediately in real Memphis lore, accompanied by its physical artifact.
+3. **Dispatch Dossier Grid**: A compact 2×2 grid of companion dispatches (*Babylon Café*, *The Antenna Club*, *Decadence Manor*, *Coiffure Deluxe*).
+4. **The Workbench (Maker Focus)**: Celebrates Stevan’s physical fabrication, historic metal conservation, and studios, while preserving the brand firewall (quiet pointer to Home Revival).
+5. **From the Archive (Visual Evidence)**: Authentic documentary captures and ephemera (B-52s at Dejavu Soulfood, Rehab Monday flyer, *Blown* Super 8 still) acting as an enticing portal into `timeline-dossier.html`.
+6. **The Objects, 901 Neighborhoods & Causes**: Flagship tees, curated collections (*Shop Dog*, *Root Revival*, *Heritage Revival*), the 901 neighborhood roster, and the *Art With Purpose* Threadless Causes giveback strip.
+7. **Field Notes & Working Philosophy**: Craftsman reflections and working aphorisms linking into the notebook dossier.
 
 ---
 
@@ -216,4 +233,4 @@ One real-life Memphis memory has the power to fuel an entire creative and commer
 One memory becomes **Intellectual Property + Authentic Storytelling + Fine Art + Cultural Archive + Physical Commerce**.
 
 ---
-*Maintained at `G:\My Drive\01_TALLSLIMCOLLINS\` and the root of `tallslimcollins-site` repository.*
+*Maintained within the local `tallslimcollins-site` repository enclave (`C:\Users\talls\Documents\antigravity\nifty-mendeleev\`).*

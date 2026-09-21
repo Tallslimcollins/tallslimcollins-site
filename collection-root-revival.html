@@ -31,12 +31,12 @@
       --white: #FFFFFF;
 
       /* Canvas & Surfaces (Threadless Match) */
-      --bg-body: #DFC08C;          /* Warm golden parchment canvas */
-      --bg-header: #517A71;        /* Sage header banner */
+      --bg-body: #FAF8F5;          /* Clean cotton paper canvas */
+      --bg-header: #0E100F;        /* Obsidian black header */
       --bg-card: #FFFFFF;          /* Crisp white card surface */
       --bg-card-hover: #FFFDF9;
-      --text-main: #000000;        /* Bold black typography */
-      --text-muted: #2E3B37;       /* Readable dark slate */
+      --text-main: #121212;        /* Bold charcoal typography */
+      --text-muted: #3D3830;       /* Readable dark slate */
       --border: rgba(0, 0, 0, 0.12);
       --border-focus: #517A71;
       --radius: 8px;
@@ -49,12 +49,30 @@
     }
 
     body {
-      background-color: var(--bg-body);
+      background-color: #FAF8F5;
+      background: radial-gradient(ellipse at 50% 18%, #FAF8F5 0%, #F5EFE6 55%, #EFE7D8 100%);
+      background-attachment: fixed;
       color: var(--text-main);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 720px;
+      height: 720px;
+      background: url('assets/trade-flash/swallow-flash-artboard-15.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
@@ -71,31 +89,35 @@
 
     /* Top Announcement Bar */
     .top-bar {
-      background: var(--sage-dark);
-      color: var(--parchment-light);
-      font-size: 0.8rem;
+      background: #161817;
+      color: #D6CCA9;
+      font-size: 0.78rem;
       font-weight: 600;
       text-align: center;
       padding: 8px 16px;
       letter-spacing: 0.08em;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
     }
 
     .top-bar a {
-      color: var(--parchment);
+      color: #E6392F;
       text-decoration: underline;
       margin-left: 8px;
       font-weight: 700;
     }
 
-    /* Navigation - Threadless Sage Banner */
+    .top-bar a:hover {
+      color: #FF5A4E;
+    }
+
+    /* Navigation - Obsidian Black & Antique Gold Banner */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--sage);
-      border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      background: #0E100F;
+      border-bottom: 2px solid #C5A059;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
 
     .nav-inner {
@@ -115,7 +137,7 @@
       width: 44px;
       height: 44px;
       object-fit: contain;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
     }
 
     .brand-text {
@@ -128,14 +150,14 @@
       font-size: 1.55rem;
       font-weight: 700;
       letter-spacing: 0.06em;
-      color: var(--parchment-light);
+      color: #C5A059;
       text-transform: uppercase;
       line-height: 1.1;
     }
 
     .brand-subtitle {
       font-size: 0.72rem;
-      color: var(--clay);
+      color: #D6CCA9;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 600;
@@ -144,19 +166,24 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 24px;
+      gap: 22px;
       align-items: center;
     }
 
     nav a {
-      font-size: 0.86rem;
+      font-size: 0.84rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--parchment-light);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #D6CCA9;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
     }
 
     nav a:hover {
       color: #FFFFFF;
+      border-bottom-color: #C0392B;
     }
 
     .nav-cta {
@@ -164,19 +191,24 @@
       align-items: center;
       gap: 6px;
       padding: 8px 18px;
-      background: var(--ink);
-      border: 1px solid var(--ink);
+      background: #C0392B;
+      border: 1px solid #A93226;
       border-radius: var(--radius);
       color: #FFFFFF !important;
       font-size: 0.84rem !important;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
     }
 
     .nav-cta:hover {
-      background: var(--sage-dark);
-      border-color: var(--sage-dark);
+      background: #A93226;
+      border-color: #922B21;
       transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(192, 57, 43, 0.45);
+      border-bottom-color: #922B21 !important;
     }
 
     /* Breadcrumbs */
@@ -736,9 +768,10 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html#collections">Collections</a></li>
           <li><a href="index.html#dispatches">Dispatches</a></li>
-          <li><a href="story-dancing-jimmy.html">Dancing Jimmy</a></li>
+          <li><a href="index.html#works">The Work</a></li>
+          <li><a href="index.html#objects">The Objects</a></li>
+          <li><a href="timeline-dossier.html">The Archive</a></li>
           <li><a href="https://tallslimcollins.shop" target="_blank" rel="noopener" class="nav-cta">
             Shop Threadless
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -752,7 +785,7 @@
   <div class="container breadcrumb-bar">
     <a href="index.html">TallSlimCollins</a>
     <span class="breadcrumb-sep">/</span>
-    <a href="index.html#collections">Collections</a>
+    <a href="index.html#objects">The Objects</a>
     <span class="breadcrumb-sep">/</span>
     <span style="color: var(--ink);">Root Revival Lore</span>
   </div>
