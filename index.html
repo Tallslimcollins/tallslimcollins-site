@@ -4,13 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TallSlimCollins — Stevan Collins Lazich | Memphis, TN</title>
-  <meta name="description" content="The visual world, stories (Lifeline), and studio shops & commissions (Bloodline) of Stevan Collins Lazich in Memphis, TN.">
+  <meta name="description" content="The visual world, stories (Lifeline), and studio shops & commissions (Bloodline) of Stevan Collins Lazich in Memphis, TN: wearable art, NAVETS cut-and-sew, PopUpCollins, stretched fabric wall art, and custom graphic design.">
+  <link rel="canonical" href="https://tallslimcollins.com/">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/logos/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/logos/favicon-192.png">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TallSlimCollins">
   <meta property="og:url" content="https://tallslimcollins.com/">
   <meta property="og:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
-  <meta property="og:description" content="Stories from a life lived in Memphis, and the wearable art, studio objects, stretched fabric wall art, and custom design pulled from it.">
-  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/tsc-horizontal-logo-transparent.png">
+  <meta property="og:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
+  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/og-tallslimcollins-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TallSlimCollins — Stevan Collins Lazich Official Wrench & Brush Crest">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
+  <meta name="twitter:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
+  <meta name="twitter:image" content="https://tallslimcollins.com/assets/logos/og-tallslimcollins-1200x630.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Person", "VisualArtist"],
+        "@id": "https://tallslimcollins.com/#stevan",
+        "name": "Stevan Collins Lazich",
+        "alternateName": "TallSlimCollins",
+        "url": "https://tallslimcollins.com/",
+        "image": "https://tallslimcollins.com/assets/logos/tsc-circle-wrench-brush-header.png",
+        "email": "mailto:info@tallslimcollins.com",
+        "jobTitle": "Artist, Designer & Creative Studio Founder",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3117 Spottswood Ave",
+          "addressLocality": "Memphis",
+          "addressRegion": "TN",
+          "postalCode": "38111",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://tallslimcollins.threadless.com",
+          "https://navets.tallslimcollins.shop",
+          "https://popup.tallslimcollins.shop",
+          "https://stevancollinslazich.com",
+          "https://www.instagram.com/tallslimcollins/",
+          "https://www.instagram.com/tallslimcollinsdesign/",
+          "https://www.facebook.com/tallslimcollins",
+          "https://www.pinterest.com/tallslimcollins/"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://tallslimcollins.com/#studio",
+        "name": "TallSlimCollins Design & Studio",
+        "founder": { "@id": "https://tallslimcollins.com/#stevan" },
+        "url": "https://tallslimcollins.com/",
+        "logo": "https://tallslimcollins.com/assets/logos/tsc-circle-wrench-brush-header.png",
+        "image": "https://tallslimcollins.com/assets/logos/og-tallslimcollins-1200x630.jpg",
+        "email": "info@tallslimcollins.com",
+        "description": "Original Memphis wearable flash art, NAVETS cut-and-sew textiles, PopUpCollins after-hours drops, custom large-scale stretched fabric wall art, and bespoke graphic design & merchandise.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3117 Spottswood Ave",
+          "addressLocality": "Memphis",
+          "addressRegion": "TN",
+          "postalCode": "38111",
+          "addressCountry": "US"
+        },
+        "areaServed": "Memphis, TN and Worldwide"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -1269,10 +1334,15 @@
             <h3>Get the Next Story Release, Newest Merch Drop &amp; Subscriber Discount</h3>
             <p>Sign up for the Dispatches—every new story and product write-up goes straight to the list first, along with a subscriber discount on merch.</p>
           </div>
-          <form class="dispatch-cta-form" action="mailto:stevan@tallslimcollins.com?subject=Add%20Me%20to%20the%20TallSlimCollins%20Dispatch%20List%20%2B%20Subscriber%20Discount" method="post" enctype="text/plain">
-            <input type="email" name="email" placeholder="Enter your email address..." required>
-            <button type="submit" class="btn btn-gold">Join &amp; Get Discount &rarr;</button>
+          <form class="dispatch-cta-form" id="dispatch-signup-form" action="https://formsubmit.co/info@tallslimcollins.com" method="POST">
+            <input type="hidden" name="_subject" value="New TallSlimCollins Dispatch List + Subscriber Discount Signup">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="email" name="email" id="dispatch-email-input" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-gold" id="dispatch-submit-btn">Join &amp; Get Discount &rarr;</button>
           </form>
+          <div id="dispatch-confirm-msg" style="display: none; width: 100%; margin-top: 8px; padding: 12px 16px; background: rgba(223, 192, 140, 0.16); border: 1px solid var(--line-gold); border-radius: 6px; font-family: var(--font-mono); font-size: 0.80rem; color: var(--c1-gold);">
+            &#10003; You're on the Dispatch List! Check your inbox or write <a href="mailto:info@tallslimcollins.com" style="text-decoration: underline; color: #FFFFFF;">info@tallslimcollins.com</a> anytime.
+          </div>
         </div>
 
         <div class="dossier-jump-strip">
@@ -1641,8 +1711,11 @@
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Stevan Collins Lazich · Memphis, TN</h4>
-          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.78); max-width: 420px; margin-bottom: 14px;">
+          <p style="font-size: 0.9rem; color: rgba(255,255,255,0.78); max-width: 420px; margin-bottom: 10px;">
             Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom design pulled from it.
+          </p>
+          <p style="font-family: var(--font-mono); font-size: 0.80rem; margin-bottom: 12px;">
+            Studio Direct: <a href="mailto:info@tallslimcollins.com" style="color: var(--line-gold); text-decoration: underline;">info@tallslimcollins.com</a>
           </p>
           <p style="font-size: 0.84rem; color: var(--line-gold);">
             Looking for residential interior craft &amp; room transformations? Visit <a href="https://stevancollinslazich.com" target="_blank" rel="noopener" style="text-decoration: underline;">Home Revival by Stevan Collins Lazich &nearr;</a>
@@ -1674,10 +1747,42 @@
       </div>
       <div class="footer-bottom">
         <div>&copy; 2026 Stevan Collins Lazich · TallSlimCollins &trade; · NAVETS LAZICH &trade; · PopUpCollins &trade;</div>
-        <div>3117 Spottswood · Memphis, Tennessee</div>
+        <div>3117 Spottswood · Memphis, Tennessee · <a href="mailto:info@tallslimcollins.com" style="color: var(--line-gold);">info@tallslimcollins.com</a></div>
       </div>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var form = document.getElementById('dispatch-signup-form');
+      var msg = document.getElementById('dispatch-confirm-msg');
+      var btn = document.getElementById('dispatch-submit-btn');
+      var emailInput = document.getElementById('dispatch-email-input');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = emailInput.value.trim();
+          if (!email) return;
+          btn.textContent = 'Joining...';
+          btn.disabled = true;
+          fetch('https://formsubmit.co/ajax/info@tallslimcollins.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              _subject: 'New TallSlimCollins Dispatch List + Subscriber Discount Signup'
+            })
+          }).then(function() {
+            form.style.display = 'none';
+            msg.style.display = 'block';
+          }).catch(function() {
+            window.location.href = 'mailto:info@tallslimcollins.com?subject=Add%20Me%20to%20the%20TallSlimCollins%20Dispatch%20List%20%2B%20Subscriber%20Discount&body=Please%20add%20' + encodeURIComponent(email) + '%20to%20the%20TallSlimCollins%20Dispatch%20List.';
+            btn.textContent = 'Join & Get Discount →';
+            btn.disabled = false;
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
