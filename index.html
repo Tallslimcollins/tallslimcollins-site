@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://tallslimcollins.com/">
   <meta property="og:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
   <meta property="og:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
-  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=4">
+  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="TallSlimCollins — Stevan Collins Lazich Official Wrench & Brush Crest">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
   <meta name="twitter:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
-  <meta name="twitter:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=4">
+  <meta name="twitter:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@
         "founder": { "@id": "https://tallslimcollins.com/#stevan" },
         "url": "https://tallslimcollins.com/",
         "logo": "https://tallslimcollins.com/assets/logos/tsc-circle-wrench-brush-header.png",
-        "image": "https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=4",
+        "image": "https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5",
         "email": "info@tallslimcollins.com",
         "description": "Original Memphis wearable flash art, NAVETS cut-and-sew textiles, PopUpCollins after-hours drops, custom large-scale stretched fabric wall art, and custom graphic design & merchandise.",
         "address": {
@@ -343,15 +343,31 @@
     }
 
     /* ===================================================================
-       HERO: SHORT INTRO + 2 STACKED CARDS + MAILING LIST CTA
+       TOP MARQUEE SCROLLWORK BANNER + HERO (FEATURED DESIGN -> FEATURED STORY)
        =================================================================== */
+    .studio-marquee-banner {
+      background: #4b6a65;
+      border-bottom: 2.5px solid var(--c1-gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+      padding: 14px 20px 10px;
+    }
+
+    .studio-marquee-banner img {
+      width: 100%;
+      max-width: 1040px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.28));
+    }
+
     .hero-section {
-      padding: 72px 0 84px;
+      padding: 36px 0 84px;
     }
 
     .hero-intro {
       max-width: 820px;
-      margin: 0 auto 48px;
+      margin: 8px auto 32px;
       text-align: center;
     }
 
@@ -383,11 +399,11 @@
       margin: 0 auto;
     }
 
-    /* 2 Stacked Hero Cards (Blonde Stevan in Van on Top, Connected Merch Below) */
+    /* Stacked Hero Flow: 1. Featured Design (Decadence Manor) -> 2. Featured Story + Blonde Cargo Van Photo */
     .hero-pair-grid {
       display: flex;
       flex-direction: column;
-      gap: 44px;
+      gap: 40px;
       max-width: 680px;
       margin: 0 auto 48px;
     }
@@ -1250,26 +1266,54 @@
   <main id="top">
 
     <!-- ===================================================================
-         HERO: SHORT INTRO + 2 STACKED CARDS + MAILING LIST CTA
+         TOP STUDIO SCROLLWORK MARQUEE BANNER
+         =================================================================== -->
+    <div class="studio-marquee-banner">
+      <img src="assets/logos/tsc-scrollwork-header-studio.jpg" alt="Tallslimcollins Studio — Ornate Wrench, Paintbrush &amp; Scrollwork Marquee Banner">
+    </div>
+
+    <!-- ===================================================================
+         HERO: 1. FEATURED DESIGN (DECADENCE MANOR) -> 2. FEATURED STORY -> 3. BLONDE CARGO VAN PHOTO
          =================================================================== -->
     <section class="hero-section" id="hero-release">
       <div class="container">
 
-        <div class="hero-intro">
-          <span class="hero-kicker">Featured Story &amp; Merch Release · 1707 Madison Ave, Midtown Memphis</span>
-          <h1>Living in the Antique Shop Showroom at 1707 Madison</h1>
-          <p>
-            In 1984 we moved to Memphis, and by fifth grade our home was literally inside my mother’s antique shop showroom at <strong>1707 Madison Avenue</strong>—riding home in a cargo van packed to the roof with French antiques, sleeping on the wooden base of a Louis XVI armoire, and stepping out the front door into a Midtown ruled by Dancing Jimmy, the Antenna Club, and <strong>Decadence Manor</strong> across the street.
-          </p>
-        </div>
-
-        <!-- 2 Stacked Hero Cards: Top = Blonde Stevan in Van | Bottom = Decadence Manor Merch -->
         <div class="hero-pair-grid">
 
-          <!-- TOP CARD: LIFELINE STORY -->
+          <!-- #1 ABOVE THE FOLD: FEATURED DESIGN (DECADENCE MANOR MERCH) -->
+          <article class="hero-feature-card card-merch-crimson">
+            <div class="hero-card-tagbar">
+              <span>FEATURED DESIGN // BLOODLINE MERCH</span>
+              <span>LOST MIDTOWN SERIES</span>
+            </div>
+            <div class="hero-card-img-wrap">
+              <img src="assets/counter1/00-decadence-manor-design.jpg" alt="Decadence Manor — Memphis Lost Midtown Artwork by Stevan Collins Lazich">
+            </div>
+            <div class="hero-card-body">
+              <h2>Decadence Manor — Lost Midtown</h2>
+              <p class="hero-card-sub">
+                The shop discovered right across Madison from the antique store—immortalized in original trade-flash illustration.
+              </p>
+              <div class="hero-card-actions">
+                <a href="https://tallslimcollins.threadless.com/designs/decadence-manor-memphis-lost-midtown-tee" target="_blank" rel="noopener" class="btn btn-crimson">Buy Decadence Manor Merch &nearr;</a>
+                <a href="story-decadence-manor.html" class="btn btn-outline-dark">Open Full Post Page &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- #2 THE CONNECTED FEATURED STORY: LIVING IN THE ANTIQUE SHOP SHOWROOM -->
+          <div class="hero-intro">
+            <span class="hero-kicker">Featured Story · 1707 Madison Ave, Midtown Memphis</span>
+            <h1>Living in the Antique Shop Showroom at 1707 Madison</h1>
+            <p>
+              In 1984 we moved to Memphis, and by fifth grade our home was literally inside my mother’s antique shop showroom at <strong>1707 Madison Avenue</strong>—riding home in a cargo van packed to the roof with French antiques, sleeping on the wooden base of a Louis XVI armoire, and stepping out the front door into a Midtown ruled by Dancing Jimmy, the Antenna Club, and <strong>Decadence Manor</strong> across the street.
+            </p>
+          </div>
+
+          <!-- #3 THE BLONDE PHOTO: RIDING IN THE BOTTOM OF THE LOUIS XVI ARMOIRE -->
           <article class="hero-feature-card card-story-gold">
             <div class="hero-card-tagbar">
-              <span>LIFELINE // THE STORY</span>
+              <span>LIFELINE // THE STORY PHOTO</span>
               <span>1707 MADISON AVE · 1985</span>
             </div>
             <div class="hero-card-img-wrap">
@@ -1297,27 +1341,6 @@
                   </div>
                 </div>
               </details>
-            </div>
-          </article>
-
-          <!-- BOTTOM CARD: BLOODLINE MERCH -->
-          <article class="hero-feature-card card-merch-crimson">
-            <div class="hero-card-tagbar">
-              <span>BLOODLINE // THE CONNECTED MERCH</span>
-              <span>LOST MIDTOWN SERIES</span>
-            </div>
-            <div class="hero-card-img-wrap">
-              <img src="assets/counter1/00-decadence-manor-design.jpg" alt="Decadence Manor — Memphis Lost Midtown Artwork by Stevan Collins Lazich">
-            </div>
-            <div class="hero-card-body">
-              <h2>Decadence Manor — Lost Midtown</h2>
-              <p class="hero-card-sub">
-                The shop discovered right across Madison from the antique store—immortalized in original trade-flash illustration.
-              </p>
-              <div class="hero-card-actions">
-                <a href="https://tallslimcollins.threadless.com/designs/decadence-manor-memphis-lost-midtown-tee" target="_blank" rel="noopener" class="btn btn-crimson">Buy Decadence Manor Merch &nearr;</a>
-                <a href="story-decadence-manor.html" class="btn btn-outline-dark">Open Full Post Page &rarr;</a>
-              </div>
             </div>
           </article>
 
