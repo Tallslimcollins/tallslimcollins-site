@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://tallslimcollins.com/">
   <meta property="og:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
   <meta property="og:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
-  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5">
+  <meta property="og:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=6">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="TallSlimCollins — Stevan Collins Lazich Official Wrench & Brush Crest">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TallSlimCollins — Stevan Collins Lazich | Memphis, TN">
   <meta name="twitter:description" content="Stories from a life lived in Memphis, and the wearable art, cut-and-sew studio objects, stretched fabric wall art, and custom graphic design pulled from it.">
-  <meta name="twitter:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5">
+  <meta name="twitter:image" content="https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=6">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +58,7 @@
         "founder": { "@id": "https://tallslimcollins.com/#stevan" },
         "url": "https://tallslimcollins.com/",
         "logo": "https://tallslimcollins.com/assets/logos/tsc-circle-wrench-brush-header.png",
-        "image": "https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=5",
+        "image": "https://tallslimcollins.com/assets/logos/tallslimcollins-share-card-2026.jpg?v=6",
         "email": "info@tallslimcollins.com",
         "description": "Original Memphis wearable flash art, NAVETS cut-and-sew textiles, PopUpCollins after-hours drops, custom large-scale stretched fabric wall art, and custom graphic design & merchandise.",
         "address": {
@@ -187,74 +187,50 @@
       font-weight: 700;
     }
 
-    /* Commanding Official Sticky Header */
-    header {
+    /* Unified Scrollwork Banner Header + Bottom Menu Strip */
+    .site-masthead {
+      background: #4b6a65;
+      padding: 10px 20px 4px;
+      text-align: center;
+    }
+
+    .header-scroll-banner {
+      display: block;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+
+    .header-scroll-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.26));
+    }
+
+    header.header-nav-strip {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: linear-gradient(180deg, rgba(36, 59, 53, 0.96) 0%, rgba(81, 122, 113, 0.94) 100%);
+      background: rgba(58, 86, 80, 0.97);
       backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(223, 192, 140, 0.28);
       border-bottom: 2.5px solid var(--c1-gold);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     }
 
     .nav-inner {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 12px 0;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .brand-logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .brand-logo-wrap img {
-      height: 78px;
-      width: 78px;
-      object-fit: contain;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.32));
-      transition: transform 0.25s ease;
-    }
-
-    .brand-logo-wrap:hover img {
-      transform: scale(1.04);
-    }
-
-    .brand-title-block {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-
-    .brand-title-main {
-      font-family: var(--font-display);
-      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.22);
-    }
-
-    .brand-title-sub {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--c1-gold);
-      margin-top: 4px;
+      padding: 10px 0;
     }
 
     .nav-links {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       list-style: none;
       flex-wrap: wrap;
     }
@@ -263,9 +239,9 @@
       color: #FFFFFF;
       font-size: 0.80rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 4px;
     }
 
@@ -1239,16 +1215,14 @@
     <a href="timeline-dossier.html">Open the Archival Dossier &rarr;</a>
   </div>
 
-  <!-- Commanding Official Sticky Header -->
-  <header>
+  <!-- Unified Scrollwork Banner Header + Bottom Menu Strip -->
+  <div class="site-masthead" id="top">
+    <a href="#top" class="header-scroll-banner">
+      <img src="assets/logos/tsc-scrollwork-header-studio.jpg" alt="Tallslimcollins Studio — Ornate Wrench, Paintbrush &amp; Scrollwork Header">
+    </a>
+  </div>
+  <header class="header-nav-strip">
     <div class="container nav-inner">
-      <a href="#top" class="brand-logo-wrap">
-        <img src="assets/logos/tsc-circle-wrench-brush-header.png" alt="TallSlimCollins Official Wrench &amp; Brush Seal">
-        <div class="brand-title-block">
-          <span class="brand-title-main">TallSlimCollins</span>
-          <span class="brand-title-sub">Stevan Collins Lazich · Memphis, TN</span>
-        </div>
-      </a>
       <nav>
         <ul class="nav-links">
           <li><a href="#hero-release">Latest Release</a></li>
@@ -1263,14 +1237,7 @@
     </div>
   </header>
 
-  <main id="top">
-
-    <!-- ===================================================================
-         TOP STUDIO SCROLLWORK MARQUEE BANNER
-         =================================================================== -->
-    <div class="studio-marquee-banner">
-      <img src="assets/logos/tsc-scrollwork-header-studio.jpg" alt="Tallslimcollins Studio — Ornate Wrench, Paintbrush &amp; Scrollwork Marquee Banner">
-    </div>
+  <main>
 
     <!-- ===================================================================
          HERO: 1. FEATURED DESIGN (DECADENCE MANOR) -> 2. FEATURED STORY -> 3. BLONDE CARGO VAN PHOTO
