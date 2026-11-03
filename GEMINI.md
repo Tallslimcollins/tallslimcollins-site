@@ -17,3 +17,14 @@
 - **Home Revival has its own independent workspace:** `C:\Users\talls\Documents\antigravity\home-revival\`.
 - Never blend portfolios, client scopes, pricing, or brand identities.
 - Do not add client booking, contractor services, or room revival intake forms into this repository.
+
+## 4. Website Integrity & Content Protection (Zero Hallucinated Lore)
+- **No Autonomous File Rewrites:** Never rewrite, refactor, or overhaul HTML, CSS, JavaScript, or content files without explicit, line-by-line direction and confirmation from Stevan.
+- **Strict Narrative Grounding:** All stories, artist statements, bio notes, and portfolio descriptions on tallslimcollins.com must be drawn strictly from Stevan's actual life and verified words. Never invent, embellish, or synthesize background lore from past conversation fragments.
+
+## 5. Visual Promotion & Source Photos Rule
+- When preparing social media announcement cards, marketing visuals, or promotional graphics for real commissions (such as large-scale stretched fabric wall art, original art drops, or Home Revival projects), **always ask Stevan first if real source photos from his portfolio/studio should be referenced or used** before creating or generating visual graphics.
+
+## 6. Truth Barrier & Notion Export Protection (Immutable Ground Truth)
+- **Notion Export Archive (`C:\Users\talls\Documents\Notion_Export\`):** This directory is an immutable, read-only historical ground truth archive. It must NEVER be edited, modified, renamed, or deleted.
+- **No Ingestion of Past Chat Lore:** Never treat unverified past conversation transcripts, automated chat summaries, or old scratch files as brand truth. All factual context must come exclusively from verified SSOT documents (`Notion_Export`, audited `stevan-central-context/SKILL.md`, and direct confirmation from Stevan).

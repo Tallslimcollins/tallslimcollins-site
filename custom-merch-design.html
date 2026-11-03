@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Merch & Graphic Design for Restaurants, Bars, Bands & Small Businesses | TallSlimCollins</title>
+  <meta name="description" content="Original logos, business cards, social media promos, branded employee uniforms/aprons/shirts, barware, band merch, and personalized company gifts by Stevan Collins Lazich in Memphis, TN.">
+  <meta property="og:title" content="Custom Merch & Graphic Design | TallSlimCollins · Memphis, TN">
+  <meta property="og:description" content="Custom logos, print identity, restaurant & bar employee goods, band merch, and personalized company gifts.">
+  <meta property="og:image" content="https://tallslimcollins.com/assets/client-design/barbie-brice-burgundy-card-approved.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper-bg: #F4F1EA;
+      --ink-dark: #121212;
+      --text-muted: #4A443B;
+      --c1-sage: #517A71;
+      --c1-gold: #DFC08C;
+      --line-gold: #C5A059;
+      --line-crimson: #C0392B;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--paper-bg); color: var(--ink-dark); font-family: var(--font-sans); line-height: 1.6; position: relative; }
+    body::before {
+      content: ""; position: fixed; top: 52%; left: 50%; transform: translate(-50%, -50%);
+      width: 820px; height: 820px;
+      background: url('assets/logos/ghost-swallow-wrench-brush.png') no-repeat center center;
+      background-size: contain; opacity: 0.075; pointer-events: none; z-index: 0;
+    }
+    header, section, footer { position: relative; z-index: 1; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    header { background: linear-gradient(180deg, rgba(36, 59, 53, 0.96) 0%, rgba(81, 122, 113, 0.94) 100%); border-bottom: 2.5px solid var(--c1-gold); padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .brand-logo-wrap { display: flex; align-items: center; gap: 14px; }
+    .brand-logo-wrap img { height: 68px; width: 68px; object-fit: contain; }
+    .brand-title-main { font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #FFFFFF; display: block; line-height: 1.05; }
+    .brand-title-sub { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c1-gold); display: block; margin-top: 4px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 4px; border: 1.5px solid transparent; cursor: pointer; }
+    .btn-gold { background: var(--line-gold); color: #121212; }
+    .btn-dark { background: #121212; color: #FAF8F5; border-color: var(--line-gold); }
+    .page-hero { padding: 64px 0 48px; border-bottom: 1px solid rgba(197, 160, 89, 0.45); text-align: center; }
+    .kicker { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #6E5835; display: block; margin-bottom: 10px; }
+    h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 3.8vw, 3.2rem); line-height: 1.12; margin-bottom: 14px; }
+    .lead { max-width: 780px; margin: 0 auto 24px; font-size: 1.06rem; color: var(--text-muted); }
+    .section { padding: 52px 0; border-bottom: 1.5px solid #DDD4C3; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    @media (max-width: 820px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+    .card { background: #FFFFFF; border: 1.5px solid #D5C7B2; border-radius: 8px; overflow: hidden; padding: 20px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); }
+    .card img { width: 100%; height: 340px; object-fit: contain; background: #FBF9F5; border-radius: 4px; margin-bottom: 14px; padding: 10px; }
+    .card h3 { font-family: var(--font-display); font-size: 1.45rem; margin-bottom: 6px; }
+    .card p { font-size: 0.9rem; color: var(--text-muted); }
+    footer { background: #121212; color: #F4F1EA; padding: 36px 0; text-align: center; font-family: var(--font-mono); font-size: 0.78rem; }
+    @media (max-width: 768px) {
+      body::before { width: 90vw; height: 90vw; }
+      .brand-logo-wrap img { height: 54px; width: 54px; }
+      .brand-title-main { font-size: 1.35rem; }
+      .page-hero .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logos/tsc-circle-wrench-brush-header.png" alt="TallSlimCollins Official Seal">
+        <div>
+          <span class="brand-title-main">TallSlimCollins</span>
+          <span class="brand-title-sub">Stevan Collins Lazich · Memphis, TN</span>
+        </div>
+      </a>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="index.html#counter-5" class="btn btn-dark">&larr; Back to Home</a>
+        <a href="timeline-dossier.html" class="btn btn-gold">Open Dossier &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">Graphic Design · Identity · Print · Custom Merchandise</span>
+      <h1>Graphic Design &amp; Custom Merch Studio</h1>
+      <p class="lead">
+        Whether you run a restaurant or bar that needs employee shirts, aprons, hats, coasters, and barware branded in your logo—or you need an original mark, business card, band drop, or personalized company gifts—Stevan designs the artwork and sets up made-to-order or batch production without forcing you to buy 500 shirts upfront.
+      </p>
+      <a href="mailto:stevan@tallslimcollins.com?subject=Start%20a%20Custom%20Merch%20or%20Graphic%20Design%20Project" class="btn btn-dark">Start a Graphic Design or Custom Merch Project &rarr;</a>
+    </div>
+  </section>
+
+  <!-- WHO WE BUILD FOR -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <h3>01 // Restaurants, Bars &amp; Hospitality</h3>
+          <p>Branded employee tees, work shirts, aprons, hats, bar towels, corkwood coasters, and retail counter merch carrying your venue’s real personality—built for the staff working the floor and the regulars sitting at the bar.</p>
+        </div>
+        <div class="card">
+          <h3>02 // Small Businesses &amp; Specialist Trades</h3>
+          <p>Original logos, monograms, single-sided or specialty business cards, and social media promo graphics that make an independent business look established and unmistakable.</p>
+        </div>
+        <div class="card">
+          <h3>03 // Bands, Venues &amp; Special Events</h3>
+          <p>Show posters, tour/event graphics, limited-run hoodies, heavyweight tees, and collector items (playing cards, can coolers, totes) ready for the merch table or online drop.</p>
+        </div>
+        <div class="card">
+          <h3>04 // Personalized Company Gifts &amp; VIP Runs</h3>
+          <p>Custom-designed bags, apparel, drinkware, and keepsakes for client appreciation, crew gifts, or company milestones—available from single pieces to full team runs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT PROOF: BARBIE BRICE / EUROPEAN RESTORATIONS -->
+  <section class="section" style="background: #FAF8F5;">
+    <div class="container">
+      <span class="kicker">Client Identity &amp; Print Proof · Memphis, TN</span>
+      <h2 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 22px;">European Restorations — Barbie Brice Fine Art Restoration</h2>
+      <div class="grid-2">
+        <div class="card">
+          <img src="assets/client-design/barbie-brice-dolphin-er-logo-approved.png" alt="European Restorations Dolphin ER Monogram Logo">
+          <h3>Dolphin “ER” Monogram Logo</h3>
+          <p>Custom acanthus-and-dolphin monogram designed for 18th &amp; 19th century European art conservation.</p>
+        </div>
+        <div class="card">
+          <img src="assets/client-design/barbie-brice-burgundy-card-approved.png" alt="Barbie Brice Single-Sided Burgundy Business Card">
+          <h3>Newest Single-Sided Burgundy Card</h3>
+          <p>Gold-on-burgundy textured card layout pairing the Dolphin ER mark with classical typography.</p>
+        </div>
+        <div class="card">
+          <img src="assets/client-design/barbie-brice-urn-earlier-card.jpg" alt="Barbie Brice Earlier Classical Engraved Urn Business Card">
+          <h3>Earlier Engraved Urn Business Card</h3>
+          <p>Classical engraved Medici/Borghese urn detail with terracotta vertical script panel.</p>
+        </div>
+        <div class="card">
+          <img src="assets/client-design/barbie-brice-urn-social-card.jpg" alt="Barbie Brice Fine Art Restoration Classical Urn Social Media Card">
+          <h3>Classical Urn Social Media Promo Card</h3>
+          <p>Square social media promo pairing the classical urn engraving with bold gallery typography.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Stevan Collins Lazich · TallSlimCollins &trade; · 3117 Spottswood, Memphis, TN
+    </div>
+  </footer>
+
+</body>
+</html>
+

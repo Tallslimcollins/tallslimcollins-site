@@ -2,6 +2,9 @@
 THREADLESS_TERMINATION_EMAIL.txt
 *.tmp.*
 *.bak
+.env
+.env.*
 
 # Master high-res print files (archived on F: vault)
 assets/masters/
+PRINTIFY_KEY.txt

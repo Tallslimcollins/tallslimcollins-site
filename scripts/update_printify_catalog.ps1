@@ -1,0 +1,183 @@
+$lines = Get-Content -Path ".env"
+$tokenLine = $lines | Where-Object { $_ -match "^PRINTIFY_API_TOKEN=" }
+$token = ($tokenLine -replace '^PRINTIFY_API_TOKEN=["'']?','' -replace '["'']?$','').Trim()
+$headers = @{ "Authorization" = "Bearer $token"; "User-Agent" = "TallSlimCollins-App"; "Content-Type" = "application/json" }
+
+$updates = @(
+    @{
+        id = "6aa08a9a3cb3d37af1027698"
+        title = "TIKI Floral Bomber Jacket · NAVETS Edition"
+        tags = @("Women's Apparel", "Bomber Jackets", "NAVETS", "Specialty")
+        description = "<p><strong>TIKI Floral Bomber Jacket · NAVETS Edition</strong><br>Authored print by Stevan Collins Lazich. Cut with a relaxed silhouette, ribbed collar and cuffs, and vibrant all-over archival motif.</p><ul><li>Silky smooth polyester exterior with breathable interior lining</li><li>Full front zipper with ribbed hem and cuffs</li><li>Custom all-over print artwork from the Memphis studio archive</li></ul>"
+    },
+    @{
+        id = "6aa08a993cb3d37af1027697"
+        title = "Hand & Portrait Silkscreen Bomber Jacket"
+        tags = @("Women's Apparel", "Bomber Jackets", "Specialty", "Atelier")
+        description = "<p><strong>Hand & Portrait Silkscreen Bomber Jacket</strong><br>An authored fine-art outerwear piece by Stevan Collins Lazich. Combining classical figural studies with modern street tailoring.</p><ul><li>Premium all-over graphic print with deep tonal contrast</li><li>Durable, lightweight weather-resistant fabric</li><li>Designed in Memphis</li></ul>"
+    },
+    @{
+        id = "6ab0445fff457fb0be04e9ca"
+        title = "Japanese Crane Cut & Sew Racerback Dress"
+        tags = @("Women's Apparel", "Dresses", "Specialty")
+        description = "<p><strong>Japanese Crane Cut & Sew Racerback Dress</strong><br>Flattering, breathable, and effortlessly styled for studio days or evening gatherings. Features custom crane and botanical motifs from Stevan's textile archives.</p><ul><li>Sublimation cut & sew all-over construction</li><li>Silky soft, 4-way stretch fabric for maximum comfort</li><li>Mid-thigh length with athletic racerback cut</li></ul>"
+    },
+    @{
+        id = "6ab0445dff457fb0be04e9c7"
+        title = "Chinese Cloisonné Cut & Sew Racerback Dress"
+        tags = @("Women's Apparel", "Dresses", "Specialty")
+        description = "<p><strong>Chinese Cloisonné Cut & Sew Racerback Dress</strong><br>Intricate enamel cloisonné-inspired ornamental pattern translated onto modern wearable textiles by Stevan Collins Lazich.</p><ul><li>4-way stretch active jersey blend</li><li>Precision cut & sew tailoring</li><li>Breathable, shape-retaining fit</li></ul>"
+    },
+    @{
+        id = "6ab0445c443738322607d720"
+        title = "Art Nouveau Heron Racerback Dress"
+        tags = @("Women's Apparel", "Dresses", "Specialty")
+        description = "<p><strong>Art Nouveau Heron Racerback Dress</strong><br>Graceful wildlife illustration rooted in European Art Nouveau lines and Southern waterway biology.</p><ul><li>Flattering scoop neckline with athletic racerback</li><li>Lightweight, comfortable, moisture-wicking material</li><li>Authored graphic by Stevan Collins Lazich</li></ul>"
+    },
+    @{
+        id = "6ab043f38195ed8913003647"
+        title = "Midtown Tiki Floral Racerback Dress"
+        tags = @("Women's Apparel", "Dresses", "Specialty")
+        description = "<p><strong>Midtown Tiki Floral Racerback Dress</strong><br>Vibrant tropical botanical pattern drawn from Midtown Memphis courtyard greenhouse lore.</p><ul><li>Form-fitting comfortable stretch silhouette</li><li>Vivid long-lasting colorfast dye sublimation</li><li>Machine washable and wrinkle-resistant</li></ul>"
+    },
+    @{
+        id = "6ab0445dff457fb0be04e9c8"
+        title = "Tiki Floral Tailored Pencil Skirt"
+        tags = @("Women's Apparel", "Skirts", "Specialty")
+        description = "<p><strong>Tiki Floral Tailored Pencil Skirt</strong><br>Clean lines, high-waisted fit, and bold botanical print that dresses up easily or layers with casual basics.</p><ul><li>Elastic waistband with snug, flattering silhouette</li><li>Smooth, stretchy microfiber yarn blend</li><li>Made for versatile daily movement</li></ul>"
+    },
+    @{
+        id = "6aa08a9b3cb3d37af102769b"
+        title = "Wave Motif Performance Yoga Leggings · NAVETS"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "NAVETS")
+        description = "<p><strong>Wave Motif Performance Yoga Leggings · NAVETS Edition</strong><br>High-waisted athletic performance leggings engineered for yoga, pilates, and active studio work.</p><ul><li>82% polyester, 18% spandex four-way stretch fabric</li><li>Comfortable high-rise elastic waistband</li><li>Flat-lock stitching to prevent chafing</li></ul>"
+    },
+    @{
+        id = "6aa08a9a3cb3d37af102769a"
+        title = "Louis XV Ornate Movement Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Louis XV Ornate Movement Leggings</strong><br>Baroque filigree and historical French ornamentation reimagined as high-contrast activewear by Stevan Collins Lazich.</p><ul><li>Super soft, second-skin performance feel</li><li>Squat-proof opacity and 4-way stretch</li><li>Precision cut & sewn</li></ul>"
+    },
+    @{
+        id = "6aa08a9a3cb3d37af1027699"
+        title = "Art Nouveau Botanical Movement Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Art Nouveau Botanical Movement Leggings</strong><br>Organic curves, vines, and naturalistic flora rendered across high-waisted athletic leggings.</p><ul><li>High-compression comfort waist</li><li>Moisture-wicking active fabric</li><li>Fade-resistant archival printing</li></ul>"
+    },
+    @{
+        id = "6ab044c4443738322607d723"
+        title = "Cloisonné Botanical Movement Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Cloisonné Botanical Movement Leggings</strong><br>Inspired by historical enamelwork and antique textile arts, adapted for modern pilates, dance, and daily movement.</p><ul><li>Silky four-way stretch fabric</li><li>Flattering high-rise fit</li><li>Designed by Stevan Collins Lazich</li></ul>"
+    },
+    @{
+        id = "6aa08a993cb3d37af1027696"
+        title = "Cloisonné Noir Movement Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Cloisonné Noir Movement Leggings</strong><br>Deep noir background with ornamental botanical motifs.</p><ul><li>High-rise comfort band</li><li>4-way stretch active blend</li><li>Crafted for studio and street wear</li></ul>"
+    },
+    @{
+        id = "6ab044bf0422facf9c0a4c02"
+        title = "Japanese Floral Movement Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Japanese Floral Movement Leggings</strong><br>Rich cherry blossom and botanical graphics on smooth performance fabric.</p><ul><li>Soft peachskin touch with compression recovery</li><li>High waistband stays in place through workouts</li><li>Designed by TallSlimCollins</li></ul>"
+    },
+    @{
+        id = "6ab0445fff457fb0be04e9c9"
+        title = "Japanese Star Geometric Yoga Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga", "Specialty")
+        description = "<p><strong>Japanese Star Geometric Yoga Leggings</strong><br>Hypnotic geometric star patterning created by Stevan Collins Lazich for active movement and yoga practice.</p><ul><li>Four-way stretch recovery</li><li>Reinforced seams for lasting durability</li><li>High-rise athletic silhouette</li></ul>"
+    },
+    @{
+        id = "6ab045eb443738322607d72b"
+        title = "Blue Parasol Performance Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga")
+        description = "<p><strong>Blue Parasol Performance Leggings</strong><br>Intricate vintage parasol and fan illustrations mapped onto sleek active leggings.</p><ul><li>Smooth microfiber stretch blend</li><li>Snug, flattering athletic fit</li><li>Designed in Memphis</li></ul>"
+    },
+    @{
+        id = "6ab045ea443738322607d72a"
+        title = "Blush Minimalist Studio Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga")
+        description = "<p><strong>Blush Minimalist Studio Leggings</strong><br>Warm blush ground with delicate graphic accents for studio workouts and lounging.</p><ul><li>Breathable 4-way stretch material</li><li>High-waisted compression feel</li><li>Precision printed</li></ul>"
+    },
+    @{
+        id = "6ab045e989bb9153cc05f309"
+        title = "Imperial Cloisonné Athletic Leggings"
+        tags = @("Women's Apparel", "Leggings", "Yoga")
+        description = "<p><strong>Imperial Cloisonné Athletic Leggings</strong><br>Rich heritage cloisonné patterning adapted for active lifestyle wear.</p><ul><li>Four-way stretch active jersey</li><li>Non-sheer, squat-proof comfort</li><li>Studio designed</li></ul>"
+    },
+    @{
+        id = "6ab04460ff457fb0be04e9cb"
+        title = "COLD SWEAT Studio & Sport Towel · NAVETS"
+        tags = @("Specialty Objects", "Accessories", "NAVETS", "Sports")
+        description = "<p><strong>COLD SWEAT Studio & Sport Towel · NAVETS Edition</strong><br>Heavyweight absorbent micro-fiber sport towel with brass grommet and carabiner clip. Designed for the gym, golf bag, or studio workbench.</p><ul><li>Absorbent microfiber waffle weave</li><li>Durable metal hanging grommet & clip</li><li>Custom COLD SWEAT / NAVETS graphic</li></ul>"
+    },
+    @{
+        id = "6ab044d6443738322607d725"
+        title = "SIVAD Studio Ceramic Mug (15oz) · Memphis Lore"
+        tags = @("Specialty Objects", "Drinkware", "Memphis Lore", "Studio")
+        description = "<p><strong>SIVAD Studio Ceramic Mug (15oz) · Memphis Lore</strong><br>Dedicated to Memphis late-night monster movie host Sivad (Watson Davis) and the golden era of WHBQ Channel 13 'Fantastic Features'.</p><ul><li>Substantial 15oz ceramic construction</li><li>Lead and BPA-free, microwave and dishwasher safe</li><li>High-gloss finish with vibrant archival print</li></ul>"
+    },
+    @{
+        id = "6ab044cd443738322607d724"
+        title = "SIVAD Corkwood Coaster Set · Memphis Lore"
+        tags = @("Specialty Objects", "Home Goods", "Memphis Lore", "Studio")
+        description = "<p><strong>SIVAD Corkwood Coaster Set · Memphis Lore</strong><br>Set of premium high-gloss coasters backed with genuine non-slip corkwood, featuring the iconic SIVAD artwork.</p><ul><li>Durable MDF high-gloss top surface</li><li>Natural cork backing to protect fine wood finishes</li><li>Set of 4 coasters</li></ul>"
+    },
+    @{
+        id = "6ab044c1443738322607d722"
+        title = "Stormy CASH Corkwood Coaster Set"
+        tags = @("Specialty Objects", "Home Goods", "Memphis Lore")
+        description = "<p><strong>Stormy CASH Corkwood Coaster Set</strong><br>Mid-South subculture tribute coaster set with high-gloss protective finish and non-slip corkwood base.</p><ul><li>High-definition archival print with protective coat</li><li>Natural cork backing</li><li>Set of 4 coasters</li></ul>"
+    },
+    @{
+        id = "6ab045eb443738322607d72d"
+        title = "Memphis Tigers Heritage Weekender Tote"
+        tags = @("Specialty Objects", "Bags", "Memphis Lore")
+        description = "<p><strong>Memphis Tigers Heritage Weekender Tote</strong><br>Generous oversized canvas tote built for weekend travel, studio hauls, and game day.</p><ul><li>Heavyweight spun polyester with durable rope handles</li><li>Spacious wide-mouthed main compartment (24\" x 13\")</li><li>Lined interior with reinforced seams</li></ul>"
+    },
+    @{
+        id = "6ab045eb443738322607d72c"
+        title = "Greek Key Oversized Weekender Tote"
+        tags = @("Specialty Objects", "Bags", "Specialty")
+        description = "<p><strong>Greek Key Oversized Weekender Tote</strong><br>Architectural Greek key geometric motif across an oversized durable travel tote.</p><ul><li>Thick cotton rope handles with metal grommets</li><li>Durable, easy-clean polyester construction</li><li>Spacious 24\" x 13\" capacity</li></ul>"
+    },
+    @{
+        id = "6ab045ea443738322607d729"
+        title = "SIVAD Insulated Can Cooler · Memphis Lore"
+        tags = @("Specialty Objects", "Drinkware", "Memphis Lore")
+        description = "<p><strong>SIVAD Insulated Can Cooler · Memphis Lore</strong><br>Keep drinks cold while rep-ing Memphis horror movie history.</p><ul><li>Durable high-density neoprene insulation</li><li>Foldable and lightweight for easy travel</li><li>Vibrant all-over print</li></ul>"
+    },
+    @{
+        id = "6ab04589e22de4293d0d97f9"
+        title = "All-Over Print Strappy Bikini Set"
+        tags = @("Women's Apparel", "Swimwear", "Specialty")
+        description = "<p><strong>All-Over Print Strappy Bikini Set</strong><br>Custom designed swimwear featuring vibrant studio artwork by Stevan Collins Lazich.</p><ul><li>88% recycled polyester, 12% elastane</li><li>Double-layered with removable padding</li><li>Adjustable straps for tailored fit</li></ul>"
+    },
+    @{
+        id = "6ab0451e89bb9153cc05f305"
+        title = "Spottswood Heavyweight Whiskey Glass"
+        tags = @("Specialty Objects", "Drinkware", "Studio")
+        description = "<p><strong>Spottswood Heavyweight Whiskey Glass</strong><br>Solid heavy-base rock glass with custom studio emblem for evening pours.</p><ul><li>Heavyweight solid glass base</li><li>11oz capacity</li><li>Dishwasher safe</li></ul>"
+    }
+)
+
+$successCount = 0
+foreach ($u in $updates) {
+    $body = @{
+        title = $u.title
+        tags = $u.tags
+        description = $u.description
+    } | ConvertTo-Json -Compress
+
+    try {
+        $res = Invoke-RestMethod -Uri "https://api.printify.com/v1/shops/28867593/products/.json" -Headers $headers -Method Put -Body $body
+        Write-Host "UPDATED: [] -> "
+        $successCount++
+    } catch {
+        Write-Host "FAILED: [] -> "
+    }
+}
+
+Write-Host "
+=== COMPLETED: $successCount of 0 products updated successfully ==="
