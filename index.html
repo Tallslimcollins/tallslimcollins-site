@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -187,16 +187,16 @@
       font-weight: 700;
     }
 
-    /* Unified Scrollwork Banner Header + Bottom Menu Strip */
+    /* Unified Scrollwork Banner Header + Single-Line Bottom Menu Strip */
     .site-masthead {
-      background: #4b6a65;
-      padding: 10px 20px 4px;
+      background: #4F6E69;
+      padding: 6px 16px 0;
       text-align: center;
     }
 
     .header-scroll-banner {
       display: block;
-      max-width: 1020px;
+      max-width: 1120px;
       margin: 0 auto;
     }
 
@@ -205,44 +205,44 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.26));
     }
 
     header.header-nav-strip {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(58, 86, 80, 0.97);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(223, 192, 140, 0.28);
+      background: #4F6E69;
+      border-top: 1px solid rgba(223, 192, 140, 0.22);
       border-bottom: 2.5px solid var(--c1-gold);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
     }
 
     .nav-inner {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 0;
+      padding: 8px 0;
     }
 
     .nav-links {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 18px;
+      gap: clamp(6px, 1.1vw, 15px);
       list-style: none;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
 
     .nav-links a {
       color: #FFFFFF;
-      font-size: 0.80rem;
+      font-size: clamp(0.66rem, 0.86vw, 0.78rem);
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      padding: 6px 12px;
+      padding: 5px 9px;
       border-radius: 4px;
+      white-space: nowrap;
     }
 
     .nav-links a:hover {
